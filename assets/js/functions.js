@@ -1,0 +1,584 @@
+// register split text
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
+// global selectors
+const body = document.body
+const select = (e) => document.querySelector(e)
+const selectAll = (e) => document.querySelectorAll(e)
+const selectId = (id) => document.getElementById(id)
+const vh = (coef) => window.innerHeight * (coef/100)
+const vw = (coef) => window.innerWidth * (coef/100)
+
+// locomotive scroll
+let scroll
+
+// init all click, mouseover and keyup functions
+function initClickAndKeyFunctions() {
+
+	// prevent barba from double clicking buttons more than once
+	// https://stackoverflow.com/a/36794629/4658966
+	function isDoubleClicked(e) {
+		if (e.data('isclicked')) return true
+		e.data('isclicked', true)
+		setTimeout(function () {
+			e.removeData('isclicked')
+		}, 300)
+		return false
+	}
+
+	// make anchor links scroll smoothy
+	$('.sliding-link').click(function(e) {
+		if (isDoubleClicked($(this))) return
+		e.preventDefault()
+		var aid = $(this).attr('href')
+		$('html, body').animate({ scrollTop: $(aid).offset().top }, 1000)
+	})
+
+	// correct label click
+	$('label').click(function(e){
+		if (isDoubleClicked($(this))) return
+		e.stopImmediatePropagation()
+	})
+
+	// open the sub menu inside fs-menu
+	$('#fs-menu .has-sub .wrapper').click(function(){
+		if (isDoubleClicked($(this))) return
+		$(this).toggleClass('active')
+		$(this).siblings('.sub').slideToggle().toggleClass('active')
+	})
+
+	// open / close fs menu
+	$('.open-fs').click(function(){
+		if (isDoubleClicked($(this))) return
+
+		var tl = gsap.timeline()
+
+		tl.to('body', {
+			overflow: 'hidden',
+			duration: 0
+		})
+
+		tl.call(function() {
+			scroll.stop()
+		})
+
+		tl.to('.blur', {
+			opacity: 1,
+			pointerEvents: 'auto',
+			duration: .5
+		})
+
+		tl.to('#fs-menu', {
+			opacity: 1,
+			pointerEvents: 'auto',
+			x: 0
+		}, '-=.5')
+
+		tl.from('#fs-menu .scroll-wrapper > *', {
+			x: 200,
+			opacity: 0,
+			stagger: .1
+		}, '-=.3')
+
+	})
+
+	// close fs
+	function closeFs() {
+
+		var tl = gsap.timeline()
+
+		tl.to('.blur', {
+			opacity: 0,
+			pointerEvents: 'none',
+			duration: .5
+		})
+
+		tl.to('#fs-menu', {
+			pointerEvents: 'none',
+			x: '110%'
+		}, '-=.5')
+
+		tl.to('body', {
+			overflow: 'auto',
+			duration: 0
+		})
+
+		tl.call(function() {
+			scroll.start()
+		})
+	}
+
+	// close fs
+	$('.close-fs, #fs-menu a, .blur').click(function(){
+		if (isDoubleClicked($(this))) return
+		closeFs()
+	})
+
+	// close all opened menus when pressing the ESC key
+	$(document).keyup(function(e) {
+		if(e.key === 'Escape') {
+			closeFs()
+		}
+	})
+
+	// magnet links
+    if ($(window).width() > 993) {
+        const links = selectAll('.magnet')
+        const animateLink = function(e){
+            const link = this.querySelector('span')
+            const { offsetX: x, offsetY: y } = e
+            const { offsetWidth: width, offsetHeight: height } = this
+
+            intensity = 30
+            xMove = x / width * (intensity * 2) - intensity
+            yMove = y / height * (intensity * 2) - intensity
+            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)'
+
+            if(e.type == 'mouseleave') link.style.transform = ''
+        }
+
+        links.forEach(link => {
+            link.addEventListener('mousemove', animateLink)
+            link.addEventListener('mouseleave', animateLink)
+        })
+    }
+}
+
+// change the menu active item according to barba body class
+function updateMenu() {	
+	$('#top-menu .menu a, #top-menu .menu .wrapper').removeClass('active')
+
+	setTimeout(function() {
+		$('#top-menu .menu a').each(function() {
+			var href = $(this).attr('href')
+			if ($('#main-content').attr('class').includes(href)) {
+				$(this).addClass('active')
+			}
+		})
+
+		if ($('#main-content').attr('class').includes('services')) {
+			$('#top-menu .menu .wrapper').addClass('active')
+		}
+	}, 50)
+}
+
+// here goes all the scroll related animations
+function scrollTriggerAnimations() {
+
+	// reveal text animation
+	if($('.reveal-text').length) {
+
+        const texts = selectAll('.reveal-text')
+    
+        texts.forEach(text => {
+            
+            // reset if needed
+            if(text.anim) {
+                text.anim.progress(1).kill()
+            	text.split.revert()
+            }
+
+            text.split = new SplitText(text, { 
+                type: 'lines, words, chars',
+                linesClass: 'split-line'
+            })
+
+            // set up the anim
+            text.anim = gsap.from(text.split.chars, {
+                scrollTrigger: {
+                    trigger: text,
+                    toggleActions: 'restart pause resume reverse',
+                    start: 'top 75%'
+                },
+                duration: 0.5, 
+                ease: 'circ.out', 
+                y: 100 + '%', 
+                stagger: 0.01
+            })
+        })
+
+	}
+    
+}
+
+// page transition in
+function pageTransitionIn() {
+
+	var tl = gsap.timeline()
+
+	tl.set('html', {
+		cursor: 'wait'
+	})
+
+	tl.set('body', {
+		overflow: 'hidden'
+	})
+
+	tl.set('.page-transition', {
+		pointerEvents: 'auto'
+	})
+
+	tl.set('.page-transition .title', {
+		autoAlpha: 0
+	})
+
+	tl.call(function() {
+		scroll.stop()
+		$('.page-transition .title p').html()
+	})
+
+}
+
+// page transition out
+function pageTransitionOut() {
+
+	var tl = gsap.timeline()
+
+	tl.to('html', {
+		cursor: 'auto',
+		duration: 0
+	})
+
+	tl.to('body', {
+		overflow: 'auto',
+		duration: 0
+	})
+
+	tl.call(function() {
+		scroll.start()
+		let pageTitle = $('#main-content').attr('data-page-title')
+		$('.page-transition .title p').html(pageTitle)
+	})
+
+	setTimeout(function(){
+
+		let title = new SplitText($('.page-transition .title p'), { 
+			type: 'lines, words, chars'
+		})
+	
+		let chars = title.chars
+
+		var tl2 = gsap.timeline()
+
+		tl2.to('.page-transition .title', {
+			autoAlpha: 1,
+			duration: 0
+		})
+
+		tl2.from(chars, {
+			duration: 0.8,
+			opacity: 0,
+			y: 30,
+			ease: 'back',
+			stagger: 0.025
+		})
+
+		tl2.call(function(){
+			document.dispatchEvent(new Event('playInternalBanner'))
+		})
+
+		tl2.to(chars, {
+			duration: 0.8,
+			opacity: 0,
+			y: -30,
+			ease: 'back',
+			stagger: 0.025
+		}, '+=.1')
+
+		tl.to('.page-transition', {
+			pointerEvents: 'none'
+		})
+
+	}, 5)
+
+}
+
+// delay function
+function delay(n) {
+	n = n || 2000
+	return new Promise((done) => {
+		setTimeout(() => {
+			done()
+		}, n)
+	})
+}
+
+// init fancybox
+function initFancybox() {
+	Fancybox.bind('[data-fancybox]', {
+		autoFocus: false,
+		dragToClose: false,
+		placeFocusBack: false
+	})
+}
+
+// init lazyload
+function initLazyLoad() {
+	const lazyLoadInstance = new LazyLoad({ 
+		elements_selector: '.lazy',
+		container: select('.main-wrap')
+	})
+}
+
+// validate footer newsletter
+function validateForms() {
+	if ($('.form-validate').length) {
+		$('.form-validate').each(function () {
+			var theForm = $(this)
+
+			// initialize the jquery validation plugin for the form
+			theForm.validate({
+				errorPlacement: function (error, element) {
+					error.appendTo(element.closest('.form-line'))
+					error.addClass('error-msg')
+				},
+				highlight: function(element) {
+					$(element).closest('.form-line').addClass('error')
+				},
+				unhighlight: function(element) {
+					$(element).closest('.form-line').removeClass('error')
+				},
+				submitHandler: function(form) {
+					let originalForm = $(form).get(0)
+					let dataparam = new FormData(originalForm)
+
+					// check if the form has an upload field and attach the file
+					if ($('#file').length) {
+						let attachment = $('#file')[0].files[0]
+						dataparam.append('attachment', attachment)
+					}
+
+					$.ajax({
+						type: 'POST',
+						url: location.origin + '/clients/weagle/assets/php/sender.php', 			// localhost
+						//url: location.origin + '/weagle/assets/php/sender.php', 					// dev.senzdsn
+						//url: location.origin + '/assets/php/sender.php', 							// prod
+						data: dataparam,
+						dataType: 'html',
+                		crossDomain: true,
+						async: true,
+						cache: false,
+						contentType: false,
+						processData: false,
+						beforeSend: function() {
+							theForm.addClass('sending')
+						},
+						success: function(response) {
+							theForm[0].reset()
+							select('.contact-success').click()
+							//console.log('success', response)
+						},
+						error: function(e) {
+							select('.contact-error').click()
+							//console.log('Unsuccessful:', e)
+						},
+						complete: function() {
+							theForm.removeClass('sending')
+						}
+					})
+				}
+			})
+		})
+	}
+}
+
+// init smooth scroll
+function initSmoothScroll(container) {
+
+    scroll = new LocomotiveScroll({
+      	el: container.querySelector('[data-scroll-container]'),
+      	smooth: true
+    })
+
+    window.onresize = scroll.update()
+
+    scroll.on('scroll', () => ScrollTrigger.update())
+
+    ScrollTrigger.scrollerProxy('[data-scroll-container]', {
+      	scrollTop(value) {
+        	return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y
+      	}, // we don't have to define a scrollLeft because we're only scrolling vertically
+      	getBoundingClientRect() {
+        	return {
+				top: 0,
+				left: 0,
+				width: window.innerWidth,
+				height: window.innerHeight
+			}
+      	},
+      	// locomotive scroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the locomotive scroll - controlled element)
+      	pinType: container.querySelector('[data-scroll-container]').style.transform ? 'transform' : 'fixed'
+    })
+
+    ScrollTrigger.defaults({
+      	scroller: document.querySelector('[data-scroll-container]')
+    })
+
+    // each time the window updates, we should refresh scroll trigger and then update locomotive scroll
+    ScrollTrigger.addEventListener('refresh', () => scroll.update())
+
+    // after everything is set up, refresh() scroll trigger and update locomotive scroll because padding may have been added for pinning, etc
+    ScrollTrigger.refresh()
+}
+
+// check is the user is in a touch device
+function initCheckTouchDevice() {
+    
+	function isTouchScreendevice() {
+	  	return 'ontouchstart' in window || navigator.maxTouchPoints
+	}
+	
+	if(isTouchScreendevice()){
+		$('main').addClass('touch')
+		$('main').removeClass('no-touch')
+	} else {
+		$('main').removeClass('touch')
+		$('main').addClass('no-touch')
+	}
+
+	$(window).resize(function() {
+	  	if(isTouchScreendevice()){
+			$('main').addClass('touch')
+			$('main').removeClass('no-touch')
+	  	} else {
+			$('main').removeClass('touch')
+			$('main').addClass('no-touch')
+	  	}
+	})
+  
+}
+
+// disable console warnings and show the copyright message
+function initCopyright() {
+	console.clear()
+	const message = 'Design VVE Fight 🔗 www.vvefight.com \nCode Senz Design 🔗 www.senzdsn.com'
+	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
+	console.log(`%c${message}`, style)
+}
+
+// opening animation
+function openingAnimation() {
+
+	const opening = gsap.timeline()
+
+	opening.set('html', {
+		cursor: 'wait'
+	})
+
+	opening.set('body', {
+		overflow: 'hidden'
+	})
+
+	opening.call(function() {
+		scroll.stop()
+	})
+
+	opening.to('html', {
+		cursor: 'auto'
+	})
+
+	opening.to('body', {
+		overflow: 'auto'
+	})
+
+	opening.call(function() {
+		scroll.start()
+	})
+}
+
+// fire all scripts on page load
+function initScripts() {
+	initLazyLoad()
+	scrollTriggerAnimations()
+	initCheckTouchDevice()
+	initFancybox()
+	initCopyright()
+	initClickAndKeyFunctions()
+	validateForms()
+	updateMenu()
+}
+
+function initBarba() {
+
+	// config barba
+	barba.init({
+		sync: true,
+		timeout: 6000,
+		debug: true,
+		transitions: [
+			{
+				once(data) {
+					initSmoothScroll(data.next.container)
+					initScripts()
+					document.dispatchEvent(new Event('playInternalBanner'))
+				},
+				async leave(data) {
+					pageTransitionIn(data.current)
+					await delay(800)
+					data.current.container.remove()
+				},
+				async enter(data) {
+					pageTransitionOut(data.next)
+				},
+				async beforeEnter(data) {
+					ScrollTrigger.getAll().forEach(t => t.kill())
+					scroll.destroy()
+					initSmoothScroll(data.next.container)
+					initScripts()
+				}
+			}, {
+				name: 'opening-animation',
+				to: {
+					namespace: ['home']
+				},
+				once(data) {
+					initSmoothScroll(data.next.container)
+					initScripts()
+					openingAnimation()
+				}
+			}
+		],
+
+		views: [
+			{
+				namespace: 'internal',
+				afterEnter() {
+
+					// about us / contact pages functions
+					if ($('#main-content').hasClass('about-us') || $('#main-content').hasClass('contact')) {
+						
+					}
+
+					// services page functions
+					if ($('#main-content').hasClass('services')) {
+						
+					}
+				}
+			}
+		]
+	})
+
+	// do something before the transition starts
+	barba.hooks.before(() => {
+		select('html').classList.add('is-transitioning')
+	})
+	
+	// do something after the transition finishes
+	barba.hooks.after(() => {
+		select('html').classList.remove('is-transitioning')
+		// reinit locomotive scroll
+		scroll.init()
+		scroll.stop()
+	})
+	
+	barba.hooks.enter(() => {
+		scroll.destroy()
+	})
+	
+	barba.hooks.afterEnter(() => {
+		window.scrollTo(0, 0)
+	})
+}
+
+// init barba
+initBarba()

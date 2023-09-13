@@ -1,0 +1,231 @@
+#fs-menu {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    height: 100vh;
+    background-color: $black;
+    color: $white;
+    pointer-events: none;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+
+    @media #{$mq-sm-min} {
+        width: 80vw;
+    }
+
+    .close-fs {
+        position: absolute;
+        z-index: 3;
+        top: 4vw;
+        right: 4vw;
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        color: $white;
+        padding: .5rem;
+
+        &:hover {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            transition: .6s ease-in-out;
+        }
+    }
+
+    .scroll-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: scroll;
+        padding-bottom: 9vh;
+        padding-left: 9vw;
+        padding-right: 4vw;
+
+        @media #{$mq-sm-min} {
+            padding-left: 7vw;
+            padding-right: 8vw;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .menu {
+        width: fit-content;
+        margin-top: auto;
+
+        &:hover > li:not(:hover) > a,
+        &:hover li:not(:hover) p,
+        &:hover li:not(:hover) svg {
+            color: $gray-medium!important;
+        }
+
+        > li {
+            display: block;
+            width: fit-content;
+
+            &.has-sub {
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 1rem;
+                    padding: 2vw 0;
+
+                    @media #{$mq-sm-min} {
+                        gap: 1.5rem;
+                    }
+
+                    &.active {
+                        p {
+                            color: $white!important;
+                        }
+
+                        .arrow {
+                            svg {
+                                transform: rotate(180deg);
+                                color: $white!important;
+                            }
+                        }
+                    }
+
+                    p {
+                        color: $white;
+                        letter-spacing: -.08vw;
+                        font-size: 12vw;
+                        line-height: 1.17;
+                        cursor: pointer;
+                        transition: .3s ease-in-out;
+        
+                        @media #{$mq-sm-min} {
+                            font-size: 8vw;
+                        }
+                    }
+
+                    .arrow {
+                        display: flex;
+                        width: 4vw;
+                        min-width: 4vw;
+                        height: 4vw;
+                        transform: translateY(1vw);
+                        transition: .3s ease-in-out;
+
+                        @media #{$mq-sm-min} {
+                            width: 3vw;
+                            min-width: 3vw;
+                            height: 3vw;
+                        }
+
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                            transition: .3s ease-in-out;
+                        }
+                    }
+                }
+
+                .sub {
+                    display: none;
+                    padding-bottom: 1rem;
+
+                    &.active {
+                        li {
+                            a {
+                                color: $white;
+
+                                &:hover {
+                                    color: $green;
+                                }
+                            }
+                        }
+                    }
+
+                    li {
+                        display: block;
+
+                        a {
+                            font-size: 1.15rem;
+                            display: block;
+                            margin-bottom: .325rem;
+                            transition: .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            &:not(.has-sub) {
+                a {
+                    color: $white;
+                    letter-spacing: -.08vw;
+                    font-size: 12vw;
+                    line-height: 1.17;
+                    padding: 2vw 0;
+                    transition: .3s ease-in-out;
+
+                    @media #{$mq-sm-min} {
+                        font-size: 8vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.25rem;
+        margin: 6vh 0 4vh 0;
+        width: fit-content;
+
+        @media #{$mq-sm-min} {
+            font-size: 1.175rem;
+            gap: 2rem;
+        }
+
+        &:hover {
+            a:not(:hover) {
+                color: $gray-medium;
+            }
+        }
+
+        a {
+            transition: .3s ease-in-out;
+        }
+    }
+
+    .contact {
+        @media #{$mq-sm-min} {
+            font-size: 1.175rem;
+        }
+
+        a {
+            font-weight: $semi-bold;
+            color: $gray-medium;
+        }
+    }
+}
+
+.blur {
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    backdrop-filter: blur(.25rem);
+    background-color: transparentize($white, .75);
+    opacity: 0;
+}
