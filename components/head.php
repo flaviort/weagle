@@ -35,10 +35,7 @@
 			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css' />
 			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css' />
 			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' />
-			
-			<link rel='preconnect' href='https://fonts.googleapis.com'>
-			<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-			<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'>
+			<link rel='stylesheet' href='https://use.typekit.net/reg5nhf.css' />
 			
 			<link rel='stylesheet' href='assets/css/bootstrap-grid.css' type='text/css'>
 			<link rel='stylesheet' href='assets/css/main.css' type='text/css'>
@@ -50,6 +47,7 @@
 			<header>
 				<?php include('components/page-transition.php');?>
 				<?php include('components/fs-menu.php');?>
+				<?php include('components/floating-menu.php');?>
 				<div id='mouse'></div>
 			</header>
 

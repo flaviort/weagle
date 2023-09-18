@@ -5,12 +5,12 @@
 	include('components/head.php');
 ?>
 
-<section id='banner'>
+<section id='banner' data-scroll-section>
 	<div class='container'>
 
 	</div>
 </section>
 
-<div style='height: 100vh; background-color: #ddd;'></div>
+<section style='height: 120vh; background: #fff;' data-scroll-section></section>
 
 <?php include('components/footer.php');?>

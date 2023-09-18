@@ -19,27 +19,84 @@ $mq-2xl-max:            'only screen and (max-width: 1600px)';
 $mq-landscape:          'screen and (orientation:landscape)';
 
 // fonts
-$inter:                 'Inter', sans-serif;
+$loos:                  'loos-condensed', sans-serif;
 
 // weights
+$light:                 200;
 $regular: 				400;
-$semi-bold:             600;
+$medium:                500;
 $bold: 					700;
+$extra-bold:            800;
 
 // colors
 $pure-white:		    #fff;
-$white:			        #f8f8f8;
+$white:			        #f0f0f0;
 $gray-lightest:			#e2e2e2;
-$gray-lighter:			#bbb;
+$gray-lighter:			#d2d2e1;
 $gray-light:			#999;
 $gray-medium:			#666;
-$gray-dark:				#333;
+$gray-dark:				#323246;
 $gray-darker:			#222;
 $gray-darkest:			#111;
 $black:					#0d0e13;
 $pure-black:			#000;
-
 $red:                   #ff3838;
 $green:                 #4bb749;
+$blue:                  #3232dc;
 
-$bg:                    #faebcc;
+// color vars
+html {
+    --pure-white:		#fff;
+    --white:			#f0f0f0;
+    --gray-lightest:	#e2e2e2;
+    --gray-lighter:	    #d2d2e1;
+    --gray-light:		#999;
+    --gray-medium:		#666;
+    --gray-dark:		#323246;
+    --gray-darker:		#222;
+    --gray-darkest:		#111;
+    --black:			#0d0e13;
+    --pure-black:		#000;
+    --red:              #ff3838;
+    --green:            #4bb749;
+    --blue:             #3232dc;
+}
+
+// color classes
+.pure-white { color: $pure-white; }
+.white { color: $white; }
+.gray-lightest { color: $gray-lightest; }
+.gray-lighter { color: $gray-lighter; }
+.gray-light { color: $gray-light; }
+.gray-medium { color: $gray-medium; }
+.gray-dark { color: $gray-dark; }
+.gray-darker { color: $gray-darker; }
+.gray-darkest { color: $gray-darkest; }
+.black { color: $black; }
+.pure-black { color: $pure-black; }
+.red { color: $red; }
+.green { color: $green; }
+.blue { color: $blue; }
+
+// bg-color classes
+.bg-pure-white { background-color: $pure-white; }
+.bg-white { background-color: $white; }
+.bg-gray-lightest { background-color: $gray-lightest; }
+.bg-gray-lighter { background-color: $gray-lighter; }
+.bg-gray-light { background-color: $gray-light; }
+.bg-gray-medium { background-color: $gray-medium; }
+.bg-gray-dark { background-color: $gray-dark; }
+.bg-gray-darker { background-color: $gray-darker; }
+.bg-gray-darkest { background-color: $gray-darkest; }
+.bg-black { background-color: $black; }
+.bg-pure-black { background-color: $pure-black; }
+.bg-red { background-color: $red; }
+.bg-green { background-color: $green; }
+.bg-blue { background-color: $blue; }
+
+// font-weights classes
+.light { font-weight: $light; }
+.regular { font-weight: $regular; }
+.medium { font-weight: $medium; }
+.bold { font-weight: $bold; }
+.extra-bold { font-weight: $extra-bold; }

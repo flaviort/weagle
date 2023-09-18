@@ -1,170 +1,49 @@
 #top-menu {
-    overflow: visible;
+    position: absolute;
     z-index: 9;
-    background-color: $white;
-    padding: 1rem 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    padding-right: 7rem;
 
     @media #{$mq-sm-min} {
-        padding: 2rem 0;
+        padding: 1.325rem 0;
     }
 
-    .flex {
+    .container {
+        display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-
-        @media #{$mq-xxs-max} {
-            gap: 1.25rem;
-        }
+        justify-content: flex-start;
+        gap: 5vw;
 
         .logo {
             display: flex;
-            width: 11rem;
-
-            @media #{$mq-md-min} {
-                width: 13rem;
-            }
-
-            .black {
-                transition: .3s ease-in-out;
-            }
+            width: 12rem;
 
             &:hover {
-                .black {
-                    fill: $green;
+                svg {
+                    .letter {
+                        fill: $blue;
+                    }
+                }
+            }
+
+            svg {
+                width: 100%;
+                height: auto;
+
+                path {
+                    transition: .3s ease-in-out;
                 }
             }
         }
 
-        .menu {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
+        p {
+            text-transform: uppercase;
 
-            @media #{$mq-sm-min} {
-                gap: 2rem;
-            }
-
-            @media #{$mq-lg-min} {
-                gap: 3rem;
-            }
-
-            @media #{$mq-xl-min} {
-                gap: 4rem;
-            }
-
-            li {
-                &.has-sub {
-                    position: relative;
-                    transform: translateY(-2px);
-
-                    &:hover {
-                        .wrapper {
-                            background-size: 100% var(--border-width);
-                        }
-
-                        .sub {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-
-                    .wrapper {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: .5rem;
-                        margin-bottom: 2rem;
-                        transform: translateY(1.05rem);
-
-                        svg {
-                            width: .675rem;
-                            height: .675rem;
-                            min-width: .675rem;
-                            color: $green;
-                        }
-                    }
-
-                    .sub {
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        background: $white;
-                        padding: .75rem 1.5rem;
-                        border-radius: .5rem;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: .3s;
-                        border-radius: .75rem;
-                        box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-
-                        li {
-                            display: block;
-
-                            a {
-                                white-space: nowrap;
-                                transition: color .3s ease-in-out;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                gap: 2rem;
-                                margin: .5rem 0;
-
-                                &:hover {
-                                    color: $green;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &:not(.last) {
-                    @media #{$mq-lg-max} {
-                        display: none;
-                    }
-
-                    a {
-                        display: inline-block;
-                    }
-                }
-
-                &.mobile {
-                    display: block;
-
-                    @media #{$mq-lg-min} {
-                        display: none;
-                    }
-
-                    .open-fs {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: .75rem;
-
-                        &:hover {
-                            svg {
-                                transform: rotate(90deg);
-                            }
-                        }
-
-                        svg {
-                            width: 1rem;
-                            min-width: 1rem;
-                            height: 1rem;
-                            transition: .3s ease-in-out;
-                        }
-                    }
-                }
-
-                .hollow-green-button {
-                    span {
-                        @media #{$mq-sm-max} {
-                            padding: .75rem 1.25rem;
-                            font-size: .825rem;
-                        }
-                    }
-                }
+            @media #{$mq-sm-max} {
+                display: none;
             }
         }
     }

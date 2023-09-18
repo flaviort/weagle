@@ -198,6 +198,21 @@ function scrollTriggerAnimations() {
         })
 
 	}
+
+	// reveal text animation
+	if($('.animated-truck').length) {
+		gsap.to('.animated-truck', {
+			x: '110vw',
+			duration: 8,
+			ease: Power1.easeIn,
+			scrollTrigger: {
+				trigger: '#truck',
+				toggleActions: 'restart pause resume reverse',
+				start: '0 110%',
+				markers: true
+			},
+		})
+	}
     
 }
 
