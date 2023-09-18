@@ -1,5 +1,5 @@
 // register split text
-gsap.registerPlugin(ScrollTrigger, SplitText)
+gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin)
 
 // global selectors
 const body = document.body
@@ -201,17 +201,33 @@ function scrollTriggerAnimations() {
 
 	// reveal text animation
 	if($('.animated-truck').length) {
-		gsap.to('.animated-truck', {
-			x: '110vw',
-			duration: 8,
-			ease: Power1.easeIn,
+
+		var tl = gsap.timeline({
+			paused: true,
 			scrollTrigger: {
 				trigger: '#truck',
 				toggleActions: 'restart pause resume reverse',
-				start: '0 110%',
-				markers: true
-			},
+				start: '0 110%'
+			}
 		})
+
+		tl.to('.animated-truck', {
+			x: vw(100),
+			duration: 7,
+			ease: Power1.easeOut
+		})
+
+		tl.to('.animated-truck', {
+			motionPath: {
+				path: '#shape',
+				align: '#shape',
+				alignOrigin: [.5, .975],
+				autoRotate: true
+			},
+			duration: 3,
+			ease: Power1.easeIn
+		})
+
 	}
     
 }
