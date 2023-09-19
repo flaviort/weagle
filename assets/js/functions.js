@@ -204,17 +204,18 @@ function scrollTriggerAnimations() {
 
 		var tl = gsap.timeline({
 			paused: true,
+			delay: .5,
 			scrollTrigger: {
 				trigger: '#truck',
-				toggleActions: 'restart pause resume reverse',
+				toggleActions: 'restart pause resume none',
 				start: '0 110%'
 			}
 		})
 
 		tl.to('.animated-truck', {
 			x: vw(100),
-			duration: 7,
-			ease: Power1.easeOut
+			duration: 5,
+			ease: Power3.easeOut
 		})
 
 		tl.to('.animated-truck', {
@@ -224,8 +225,15 @@ function scrollTriggerAnimations() {
 				alignOrigin: [.5, .975],
 				autoRotate: true
 			},
-			duration: 3,
+			duration: .5,
 			ease: Power1.easeIn
+		})
+
+		tl.to('.animated-truck', {
+			y: -3000,
+			autoAlpha: 0,
+			duration: 2,
+			ease: 'none'
 		})
 
 	}
@@ -413,6 +421,44 @@ function validateForms() {
 	}
 }
 
+// custom mouse cursor
+function initMouseCursor() {
+
+	let links = selectAll('a, button')
+	let mouse = selectId('mouse')
+
+	for (let i = 0; i < links.length; i++) {
+		links[i].addEventListener('mouseover', function(){
+			gsap.to(mouse, {
+				width: '5rem',
+				height: '5rem',
+				marginTop: '-2.5rem',
+				marginLeft: '-2.5rem'
+			})
+		})
+	}
+	
+	for (let i = 0; i < links.length; i++) {
+		links[i].addEventListener('mouseleave', function(){
+			gsap.to(mouse, {
+				width: '1.5rem',
+				height: '1.5rem',
+				marginTop: '-.75rem',
+				marginLeft: '-.75rem'
+			})
+		})
+	}
+
+	function moveCircle(e) {
+		gsap.to(mouse, .5, {
+			x: e.clientX,
+			y: e.clientY
+		})
+	}
+	
+	window.addEventListener('mousemove', moveCircle)
+}
+
 // init smooth scroll
 function initSmoothScroll(container) {
 
@@ -462,18 +508,22 @@ function initCheckTouchDevice() {
 	if(isTouchScreendevice()){
 		$('main').addClass('touch')
 		$('main').removeClass('no-touch')
+		$('#mouse').remove()
 	} else {
 		$('main').removeClass('touch')
 		$('main').addClass('no-touch')
+		initMouseCursor()
 	}
 
 	$(window).resize(function() {
 	  	if(isTouchScreendevice()){
 			$('main').addClass('touch')
 			$('main').removeClass('no-touch')
+			$('#mouse').remove()
 	  	} else {
 			$('main').removeClass('touch')
 			$('main').addClass('no-touch')
+			initMouseCursor()
 	  	}
 	})
   

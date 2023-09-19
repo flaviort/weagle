@@ -41,6 +41,7 @@
 
         p {
             text-transform: uppercase;
+            opacity: .75;
 
             @media #{$mq-sm-max} {
                 display: none;
