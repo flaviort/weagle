@@ -1,0 +1,27 @@
+#bottom-text {
+    z-index: 4;
+    padding-top: clamp(3rem, 6vw, 5rem);
+    margin-bottom: -2.5rem;
+
+    @media #{$mq-sm-min} {
+        padding-bottom: 1rem;
+        margin-bottom: -2rem;
+    }
+
+    @media #{$mq-md-min} {
+        margin-bottom: -4rem;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-direction: column;
+
+        @media #{$mq-sm-min} {
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}

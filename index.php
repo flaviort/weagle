@@ -13,4 +13,6 @@
 
 <section style='height: 120vh; background: #fff;' data-scroll-section></section>
 
+<?php include('components/bottom-text.php');?>
+
 <?php include('components/footer.php');?>

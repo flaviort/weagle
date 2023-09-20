@@ -237,6 +237,35 @@ function scrollTriggerAnimations() {
 		})
 
 	}
+
+	// rotating button
+	if($('.rotating-button').length) {
+		let forward = gsap.timeline({
+			repeat: -1,
+			onReverseComplete: function() {
+				forward.reverse(0)
+			}
+		})
+
+		forward.to('.rotating-button .inner-text svg', {
+			rotation: '+=359deg',
+			duration: 7,
+			ease: 'linear'
+		})
+
+		/*
+		scroll.on('scroll', (d) => {
+			if($('.rotating-button .inner-text').hasClass('is-inview')) {
+				$('.rotating-button .inner-text').attr('data-direction', d.direction)
+				if ($('.rotating-button .inner-text').attr('data-direction') === 'up') {
+					forward.reverse()
+				} else {
+					forward.play()
+				}
+			}
+		})
+		*/
+	}
     
 }
 
@@ -464,7 +493,8 @@ function initSmoothScroll(container) {
 
     scroll = new LocomotiveScroll({
       	el: container.querySelector('[data-scroll-container]'),
-      	smooth: true
+      	smooth: true,
+		getDirection: true
     })
 
     window.onresize = scroll.update()
