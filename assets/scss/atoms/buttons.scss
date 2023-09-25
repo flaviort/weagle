@@ -139,10 +139,39 @@
     min-width: 8rem;
     height: 8rem;
     padding: .825rem;
-    transition: .3s ease-in-out;
+
+    &.white {
+        .rotating-text {
+            path {
+                fill: $white;
+            }
+        }
+
+        .circle {
+            background-color: $blue;
+
+            svg {
+                &:first-child {
+                    color: $white;
+                }
+    
+                &:last-child {
+                    color: $blue;
+                }
+            }
+        }
+    }
 
     &:hover {
-        transform: scale(1.1);
+        &.white {
+            .circle {
+                svg {
+                    &:last-child {
+                        color: $white;
+                    }
+                }
+            }
+        }
 
         .rotating-text {
             transform: scale(1.1);

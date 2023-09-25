@@ -3,17 +3,15 @@
         <div class='flex'>
 
             <h2 class='text-bigger'>
-                <strong>
-                    <span class='blue'>Eleve sua empresa: <br />
-                    da média</span> à excelência <br />
-                    com o Diagnóstico Weagle®
-                </strong>
+                <span class='blue'>Eleve sua empresa: <br />
+                da média</span> à excelência <br />
+                com o Diagnóstico Weagle®
             </h2>
 
-            <a href='diagnostico' class='rotating-button'>
+            <a href='diagnostico' class='rotating-button magnetic' data-strength='100'>
                 
                 <div class='rotating-text'>
-                    <div class='inner-text' data-scroll data-scroll-repeat>
+                    <div class='inner-text'>
                         <?php echo file_get_contents('assets/svg/circle-text-1.svg'); ?>
                     </div>
                 </div>

@@ -6,6 +6,8 @@
     width: 100%;
     text-align: right;
     pointer-events: none;
+    background-color: transparent;
+    overflow: visible;
 
     .open-fs {
         pointer-events: all;
@@ -17,7 +19,7 @@
         padding: .5rem 1.75rem;
         border-top-left-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
-        transition: .3s ease-in-out;
+        transition: border-radius .3s ease-in-out, background-color .3s ease-in-out;
 
         @media #{$mq-sm-min} {
             padding: .5rem 2rem;

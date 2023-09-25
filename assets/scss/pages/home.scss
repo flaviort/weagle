@@ -1,5 +1,148 @@
 #main-content {
     &.home {
-        
+        #banner {
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 30vh;
+                background: linear-gradient(180deg, $pure-black 0%, transparentize($pure-black, 1) 100%);
+            }
+
+            .side {
+                position: absolute;
+                z-index: 3;
+                bottom: 0;
+                right: 0;
+                width: 30vw;
+                height: 30vw;
+
+                @media #{$mq-sm-min} {
+                    width: 25vw;
+                    height: 25vw;
+                }
+
+                @media #{$mq-md-min} {
+                    width: 20vw;
+                    height: 20vw;
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            video {
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: .325;
+            }
+
+            .container {
+                min-height: 100svh;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 1.5rem;
+                padding-top: 6rem;
+                padding-bottom: clamp(2rem, 4vw, 3rem);
+
+                h1 {
+                    text-transform: uppercase;
+                }
+
+                .desc {
+                    display: block;
+                    width: 23.5rem;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        #problems {
+            padding: clamp(3rem, 6vw, 5rem) 0 clamp(5rem, 9vw, 7rem) 0;
+
+            .side {
+                position: absolute;
+                z-index: 3;
+                bottom: 0;
+                left: 0;
+                width: 10vw;
+                height: 10vw;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .top {
+                position: relative;
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+
+                @media #{$mq-lg-min} {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    margin-bottom: 4rem;
+                }
+
+                h2 {
+                    white-space: nowrap;
+                    margin-bottom: 1rem;
+
+                    @media #{$mq-lg-min} {
+                        margin-bottom: 0;
+                    }
+                }
+                
+                .line {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $white;
+                }
+            }
+
+            .problems-slider {
+                clip-path: inset(0 -100% 0 0);
+                cursor: grab;
+
+                &.is-dragging {
+                    cursor: grabbing;
+
+                    .inner {
+                        transform: scale(.85);
+                    }
+                }
+
+                .inner {
+                    transition: .6s ease-in-out;
+                    
+                    @media #{$mq-sm-min} {
+                        padding-right: 2rem;
+                    }
+
+                    h3 {
+                        display: block;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
     }
 }

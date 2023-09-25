@@ -1,15 +1,9 @@
 #bottom-text {
-    z-index: 4;
-    padding-top: clamp(3rem, 6vw, 5rem);
-    margin-bottom: -2.5rem;
+    background-color: $white;
+    padding-top: clamp(3rem, 9vw, 8rem);
 
     @media #{$mq-sm-min} {
         padding-bottom: 1rem;
-        margin-bottom: -2rem;
-    }
-
-    @media #{$mq-md-min} {
-        margin-bottom: -4rem;
     }
 
     .flex {

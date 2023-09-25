@@ -1,5 +1,9 @@
                 <section id='truck' data-scroll-section>
 
+                    <div class='side'>
+                        <?php echo file_get_contents('assets/svg/curve-bottom-right.svg'); ?>
+                    </div>
+
                     <div class='shape'>
                         <?php echo file_get_contents('assets/svg/shape.svg'); ?>
                     </div>
@@ -14,7 +18,7 @@
                     <div class='footer-wrapper' data-scroll data-scroll-speed='-4' data-scroll-position='bottom'>
                         <div class='container'>
 
-                            <a href='./' class='logo'>
+                            <a href='./' class='logo magnetic' data-strength='30'>
                                 <?php echo file_get_contents('assets/svg/icon.svg'); ?>
                             </a>
 

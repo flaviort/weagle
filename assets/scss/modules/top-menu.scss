@@ -49,3 +49,23 @@
         }
     }
 }
+
+#main-content {
+    &.home {
+        #top-menu {
+            background-color: transparent;
+
+            .container {
+                .logo {
+                    .letter {
+                        fill: $white;
+                    }
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

@@ -120,35 +120,53 @@ function initClickAndKeyFunctions() {
 			closeFs()
 		}
 	})
-
-	// magnet links
-    if ($(window).width() > 993) {
-        const links = selectAll('.magnet')
-        const animateLink = function(e){
-            const link = this.querySelector('span')
-            const { offsetX: x, offsetY: y } = e
-            const { offsetWidth: width, offsetHeight: height } = this
-
-            intensity = 30
-            xMove = x / width * (intensity * 2) - intensity
-            yMove = y / height * (intensity * 2) - intensity
-            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)'
-
-            if(e.type == 'mouseleave') link.style.transform = ''
-        }
-
-        links.forEach(link => {
-            link.addEventListener('mousemove', animateLink)
-            link.addEventListener('mouseleave', animateLink)
-        })
-    }
 }
+
+// init magnetic buttons
+function initMagneticButtons() {
+    
+	// found via: https://codepen.io/tdesero/pen/RmoxQg
+	var magnets = document.querySelectorAll('.magnetic')
+	var strength = 100
+
+	if(window.innerWidth > 540){
+		magnets.forEach( (magnet) => {
+			magnet.addEventListener('mousemove', moveMagnet )
+			$(this.parentNode).removeClass('not-active')
+			magnet.addEventListener('mouseleave', function(event) {
+				gsap.to( event.currentTarget, 1.5, {
+					x: 0, 
+					y: 0, 
+					ease: Elastic.easeOut
+				})
+			})
+		})
+
+		function moveMagnet(event) {
+			var magnetButton = event.currentTarget
+			var bounding = magnetButton.getBoundingClientRect()
+			var magnetsStrength = magnetButton.getAttribute('data-strength')
+				
+			gsap.to( magnetButton, 1.5, {
+				x: ((( event.clientX - bounding.left)/magnetButton.offsetWidth) - 0.5) * magnetsStrength,
+				y: ((( event.clientY - bounding.top)/magnetButton.offsetHeight) - 0.5) * magnetsStrength,
+				rotate: "0.001deg",
+				ease: Power4.easeOut
+			})
+		}
+	}
+}
+  
 
 // change the menu active item according to barba body class
 function updateMenu() {	
 	$('#top-menu .menu a, #top-menu .menu .wrapper').removeClass('active')
 
 	setTimeout(function() {
+
+		var currentUrl = window.location.href
+		$("link[rel='canonical']").attr('href', currentUrl)
+		
 		$('#top-menu .menu a').each(function() {
 			var href = $(this).attr('href')
 			if ($('#main-content').attr('class').includes(href)) {
@@ -159,13 +177,34 @@ function updateMenu() {
 		if ($('#main-content').attr('class').includes('services')) {
 			$('#top-menu .menu .wrapper').addClass('active')
 		}
+		
 	}, 50)
 }
 
 // here goes all the scroll related animations
 function scrollTriggerAnimations() {
 
-	// reveal text animation
+	// fill title
+	if($('.fill-title').length) {
+
+		const title = new SplitText('.fill-title', { type: 'lines' })
+
+		title.lines.forEach((target) => {
+			gsap.to(target, {
+				backgroundPositionX: 0,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: target,
+					scrub: 2,
+					start: 'top 75%',
+					end: 'bottom 25%',
+					markers: true
+				}
+			})
+		})
+	}
+
+	// reveal text
 	if($('.reveal-text').length) {
 
         const texts = selectAll('.reveal-text')
@@ -187,19 +226,19 @@ function scrollTriggerAnimations() {
             text.anim = gsap.from(text.split.chars, {
                 scrollTrigger: {
                     trigger: text,
-                    toggleActions: 'restart pause resume reverse',
-                    start: 'top 75%'
+                    start: 'top 85%'
                 },
-                duration: 0.5, 
+                duration: .75,
                 ease: 'circ.out', 
-                y: 100 + '%', 
-                stagger: 0.01
+                y: '100%',
+				autoAlpha: 0, 
+                stagger: 0.0375
             })
         })
 
 	}
 
-	// reveal text animation
+	// footer truck
 	if($('.animated-truck').length) {
 
 		var tl = gsap.timeline({
@@ -238,6 +277,21 @@ function scrollTriggerAnimations() {
 
 	}
 
+	// animated lines
+	if($('.animated-line').length) {
+		gsap.utils.toArray('.animated-line').forEach(item => {
+			gsap.from(item, {
+				scaleX: 0,
+				duration: 1,
+				ease: 'power1.inOut',
+				scrollTrigger: {
+					trigger: item,
+					start: 'top 90%'
+				}
+			})
+		})
+	}
+
 	// rotating button
 	if($('.rotating-button').length) {
 		let forward = gsap.timeline({
@@ -252,21 +306,111 @@ function scrollTriggerAnimations() {
 			duration: 7,
 			ease: 'linear'
 		})
+	}
 
-		/*
-		scroll.on('scroll', (d) => {
-			if($('.rotating-button .inner-text').hasClass('is-inview')) {
-				$('.rotating-button .inner-text').attr('data-direction', d.direction)
-				if ($('.rotating-button .inner-text').attr('data-direction') === 'up') {
-					forward.reverse()
-				} else {
-					forward.play()
+	// animate sliders entrance
+	if($('.animated-slider').length) {
+		gsap.utils.toArray('.animated-slider').forEach(item => {
+
+			const slides = gsap.utils.toArray(item.querySelectorAll('.swiper-slide'))
+
+			gsap.from(slides, {
+				x: vw(75),
+				autoAlpha: 0,
+				duration: 1,
+				stagger: .125,
+				scrollTrigger: {
+					trigger: item,
+					start: '0 100%'
+				}
+			})
+
+		})
+	}
+    
+}
+
+// init all sliders
+function initSliders() {
+
+	// weagle cast slider
+	if($('.weagle-cast-slider').length) {
+
+		const weagle_cast_slider = new Swiper('.weagle-cast-slider', {
+			slidesPerView: 1.1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 10,
+			speed: 600,
+			autoplay: {
+				delay: 4000,
+			},
+			breakpoints: {
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: 2.3,
+					spaceBetween: 30
+				}
+			},
+			on: {
+				touchStart(){
+					$('.weagle-cast-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.weagle-cast-slider').removeClass('is-dragging')
 				}
 			}
 		})
-		*/
+
+		setTimeout(function(){
+			weagle_cast_slider.update()
+		}, 50)
 	}
-    
+
+	// problemas slider
+	if($('.problems-slider').length) {
+
+		const problems_slider = new Swiper('.problems-slider', {
+			slidesPerView: 1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 15,
+			speed: 600,
+			autoplay: {
+				delay: 6000,
+			},
+			breakpoints: {
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 30
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				}
+			},
+			on: {
+				touchStart(){
+					$('.problems-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.problems-slider').removeClass('is-dragging')
+				}
+			}
+		})
+
+		setTimeout(function(){
+			problems_slider.update()
+		}, 50)
+	}
+
 }
 
 // page transition in
@@ -607,6 +751,8 @@ function initScripts() {
 	initClickAndKeyFunctions()
 	validateForms()
 	updateMenu()
+	initSliders()
+	initMagneticButtons()
 }
 
 function initBarba() {
