@@ -327,6 +327,47 @@ function scrollTriggerAnimations() {
 
 		})
 	}
+
+	// animated-number
+	if($('.animated-blocks').length) {
+		gsap.from('.animated-blocks .rounded-blue-block', {
+			scale: 0,
+			duration: 1.5,
+			stagger: .125,
+			ease: 'power1.inOut',
+			scrollTrigger: {
+				trigger: '.animated-blocks',
+				start: 'top 90%'
+			}
+		})
+	}
+
+	// animated numbers
+	if($('.animated-number').length) {
+
+		// animated counter
+		gsap.utils.toArray('.animated-number span').forEach(item => {
+			gsap.from(item, {
+				textContent: '0',
+				duration: 2,
+				ease: 'power1.inOut',
+				modifiers: {
+					textContent: value => formatNumber(value, 0)
+				},
+				scrollTrigger: {
+					trigger: item,
+					start: 'top 90%'
+				}
+			})
+		})
+
+		// format the number in US standard
+		function formatNumber(value, decimals) {
+			let s = (+value).toLocaleString('en-US').split('.')
+			return decimals ? s[0] + '.' + ((s[1] || '') + '00000000').substr(0, decimals) : s[0]
+		}
+
+	}
     
 }
 

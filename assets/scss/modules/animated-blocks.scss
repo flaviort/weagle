@@ -1,0 +1,35 @@
+.animated-blocks {
+    overflow: visible;
+    
+    .row > div {
+        height: auto;
+        display: flex;
+
+        &:nth-child(even) {
+            @media #{$mq-sm-max} {
+                padding-left: .25rem;
+            }
+        }
+
+        &:nth-child(odd) {
+            @media #{$mq-sm-max} {
+                padding-right: .25rem;
+            }
+        }
+
+        .rounded-blue-block {
+            @media #{$mq-lg-max} {
+                margin-bottom: 2rem;
+            }
+
+            @media #{$mq-sm-max} {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    .bottom {
+        margin-top: clamp(.25rem, 4vw, 3rem);
+        text-align: center;
+    }
+}

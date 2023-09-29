@@ -1,0 +1,35 @@
+.rounded-blue-block {
+    background-color: $blue;
+    color: $white;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: .25rem;
+    width: 100%;
+
+    @media #{$mq-sm-min} {
+        border-top-right-radius: clamp(.5rem, 3vw, 4rem);
+        border-bottom-left-radius: clamp(.5rem, 3vw, 4rem);
+        padding: 4rem .5rem;
+        gap: .5rem;
+    }
+
+    .animated-number {
+        @media #{$mq-sm-max} {
+            font-size: 3.5rem;
+        }
+    }
+
+    .desc {
+        line-height: 1.4;
+
+        br {
+            @media #{$mq-sm-max} {
+                display: none;
+            }
+        }
+    }
+}

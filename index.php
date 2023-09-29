@@ -46,7 +46,7 @@
 
 </section>
 
-<section id='problems' class='bg-blue white' data-scroll-section>
+<section id='problems' class='bg-blue white section-padding-top section-padding-bottom-big' data-scroll-section>
 
 	<div class='side'>
 		<?php echo file_get_contents('assets/svg/curve-bottom-left.svg'); ?>
@@ -147,6 +147,12 @@
 	</div>
 
 </section>
+
+<?php include('components/animated-blocks.php');?>
+
+<?php include('components/logos-grid.php');?>
+
+<?php include('components/team.php');?>
 
 <?php include('components/weagle-cast.php');?>
 

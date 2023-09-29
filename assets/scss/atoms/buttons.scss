@@ -52,83 +52,29 @@
     }
 }
 
-.hollow-blue-button,
-.hollow-white-button {
+.gray-button {
+    cursor: pointer;
     display: inline-block;
-    padding: 1rem 2rem;
-    margin: -1rem -2rem;
-    transition: all .3s ease;
+    background-color: $gray-dark;
+    color: $white;
+    text-transform: uppercase;
+    padding: .5rem 1.75rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: border-radius .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
     width: fit-content;
 
-    span {
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        gap: .25rem;
-        font-weight: $bold;
-        padding: 1.25rem 3rem;
-        line-height: 1;
-        border-radius: 10rem;
-        white-space: nowrap;
-        text-align: center;
-        transition: transform .6s cubic-bezier(0.3, 1, 0.7, 1), background-color .3s, color .3s;
-        will-change: transform;
-
-        > svg {
-            width: 1rem;
-            height: 1rem;
-            color: currentColor;
-        }
-
-        .loading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 3;
-            width: 1.5rem;
-            height: 1.5rem;
-            opacity: 0;
-            
-            svg {
-                animation: rotation 1s infinite linear;
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                color: $white;
-            }
-        }
+    @media #{$mq-sm-min} {
+        padding: .75rem 3rem;
     }
-}
 
-.hollow-blue-button {
-    span {
-        background-color: transparent;
-        box-shadow: inset 0 0 0 1px $blue;
-        color: $blue;
-
-        &:hover {
-            background-color: $blue;
-            color: $white;
-        }
-    }
-}
-
-.hollow-white-button {
-    span {
-        background-color: transparent;
-        box-shadow: inset 0 0 0 1px $white;
+    &:hover {
+        background-color: $blue;
         color: $white;
-
-        &:hover {
-            background-color: $white;
-            color: $black;
-        }
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
     }
 }
 

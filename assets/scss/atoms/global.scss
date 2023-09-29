@@ -180,3 +180,19 @@ body {
 .z5 {
 	z-index: 5;
 }
+
+.section-padding-top {
+	padding-top: clamp(3rem, 9vw, 7rem);
+}
+
+.section-padding-top-big {
+	padding-top: clamp(5rem, 9vw, 7rem);
+}
+
+.section-padding-bottom {
+	padding-bottom: clamp(3rem, 9vw, 7rem);
+}
+
+.section-padding-bottom-big {
+	padding-bottom: clamp(5rem, 9vw, 7rem);
+}

@@ -13,7 +13,7 @@
         pointer-events: all;
         display: inline-block;
         vertical-align: middle;
-        background-color: $blue;
+        background-color: darken($blue, 2);
         color: $white;
         text-transform: uppercase;
         padding: .5rem 1.75rem;
