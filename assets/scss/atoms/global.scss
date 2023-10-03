@@ -196,3 +196,19 @@ body {
 .section-padding-bottom-big {
 	padding-bottom: clamp(5rem, 9vw, 7rem);
 }
+
+.section-margin-top {
+	margin-top: clamp(3rem, 9vw, 7rem);
+}
+
+.section-margin-top-big {
+	margin-top: clamp(5rem, 9vw, 7rem);
+}
+
+.section-margin-bottom {
+	margin-bottom: clamp(3rem, 9vw, 7rem);
+}
+
+.section-margin-bottom-big {
+	margin-bottom: clamp(5rem, 9vw, 7rem);
+}

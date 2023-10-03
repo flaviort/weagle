@@ -108,8 +108,40 @@
         }
     }
 
+    &.blue {
+        .rotating-text {
+            path {
+                fill: $black;
+            }
+        }
+
+        .circle {
+            background-color: darken($blue, 5);
+
+            svg {
+                &:first-child {
+                    color: $white;
+                }
+    
+                &:last-child {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
     &:hover {
         &.white {
+            .circle {
+                svg {
+                    &:last-child {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &.blue {
             .circle {
                 svg {
                     &:last-child {

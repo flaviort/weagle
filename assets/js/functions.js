@@ -120,6 +120,18 @@ function initClickAndKeyFunctions() {
 			closeFs()
 		}
 	})
+
+	// accordion open / close
+	$('.accordion .question').click(function(){
+		if (isDoubleClicked($(this))) return
+
+		$(this).toggleClass('active')
+		$(this).siblings('.answer').slideToggle()
+
+		setTimeout(function(){
+			scroll.update()
+		}, 450)
+	})
 }
 
 // init magnetic buttons
@@ -196,9 +208,8 @@ function scrollTriggerAnimations() {
 				scrollTrigger: {
 					trigger: target,
 					scrub: 2,
-					start: 'top 75%',
-					end: 'bottom 25%',
-					markers: true
+					start: 'top 97%',
+					end: 'top 50%'
 				}
 			})
 		})
@@ -368,6 +379,67 @@ function scrollTriggerAnimations() {
 		}
 
 	}
+
+	// follow mouse object
+	if($('.follow-mouse-object').length) {
+		gsap.utils.toArray('.follow-mouse-object').forEach(item => {
+
+			const parent = item.closest('.follow-mouse-section')
+
+			function moveCircle(e) {
+				gsap.to(item, 1.75, {
+					x: e.clientX - $(parent).offset().left,
+					y: e.clientY - $(parent).offset().top,
+					ease: Elastic.easeOut
+				})
+			}
+
+			$(parent).on('mousemove', moveCircle)
+			$(parent).on('mousewheel', moveCircle)
+
+			$(parent).on('mouseenter', function(){
+				gsap.to(item, {
+					scale: 1.25,
+					opacity: 1,
+					duration: .5,
+					ease: 'circ.out'
+				})
+			})
+
+			$(parent).on('mouseleave', function(){
+				gsap.to(item, {
+					scale: 0,
+					opacity: 0,
+					duration: .5,
+					ease: 'circ.out'
+				})
+			})
+
+		})
+	}
+
+	// stagger from right to left
+	if($('.stagger-right-left').length) {
+
+		gsap.set('.stagger-right-left > *', {
+			autoAlpha: 0,
+			x: vw(20)
+		})
+
+		ScrollTrigger.batch('.stagger-right-left > *', {
+			start: '0 95%',
+			once: true,
+			onEnter: elements => {
+				gsap.to(elements, {
+					autoAlpha: 1,
+					x: 0,
+					duration: 1,
+					ease: 'circ.out'
+				})
+			}
+		})
+
+	}
     
 }
 
@@ -386,9 +458,11 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 10,
 			speed: 600,
+			/*
 			autoplay: {
 				delay: 4000,
 			},
+			*/
 			breakpoints: {
 				575: {
 					slidesPerView: 1.5,
@@ -413,7 +487,7 @@ function initSliders() {
 		}, 50)
 	}
 
-	// problemas slider
+	// problems slider
 	if($('.problems-slider').length) {
 
 		const problems_slider = new Swiper('.problems-slider', {
@@ -664,9 +738,10 @@ function initMouseCursor() {
 	}
 
 	function moveCircle(e) {
-		gsap.to(mouse, .5, {
+		gsap.to(mouse, 1.5, {
 			x: e.clientX,
-			y: e.clientY
+			y: e.clientY,
+			ease: Elastic.easeOut
 		})
 	}
 	

@@ -1,0 +1,52 @@
+.accordion {
+    .accordion-block {
+        margin-bottom: .5rem;
+
+        @media #{$mq-sm-min} {
+            margin-bottom: 1rem;
+        }
+
+        .question {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            cursor: pointer;
+            padding: 1rem 1.5rem;
+            background-color: $pure-white;
+            border: 1px solid $white;
+            border-radius: clamp(.125rem, 1vw, .5rem);
+
+            &.active {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+
+            span {
+                font-size: 1.175rem;
+            }
+
+            svg {
+                min-width: .825rem;
+                width: .825rem;
+                height: .825rem;
+                transition: .3s ease-in-out;
+                color: $blue;
+            }
+        }
+
+        .answer {
+            display: none;
+            font-size: 90%;
+            padding: 2rem 1.5rem 1rem 1.5rem;
+            background-color: $pure-white;
+            margin-top: -1rem;
+            border-bottom-left-radius: clamp(.125rem, 1vw, .5rem);
+            border-bottom-right-radius: clamp(.125rem, 1vw, .5rem);
+        }
+    }
+}
