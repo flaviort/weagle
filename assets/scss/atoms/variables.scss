@@ -77,6 +77,7 @@ html {
 .red { color: $red; }
 .green { color: $green; }
 .blue { color: $blue; }
+.blue-light { color: lighten(adjust-hue($blue, -60), 5); }
 
 // bg-color classes
 .bg-pure-white { background-color: $pure-white; }
@@ -93,6 +94,7 @@ html {
 .bg-red { background-color: $red; }
 .bg-green { background-color: $green; }
 .bg-blue { background-color: $blue; }
+.bg-blue-light { background-color: lighten(adjust-hue($blue, -60), 5); }
 
 // font-weights classes
 .light { font-weight: $light; }

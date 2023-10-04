@@ -25,7 +25,8 @@
             padding: .5rem 2rem;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             background-color: darken(saturate($blue, 20), 10);
             border-top-left-radius: 0;
             border-bottom-right-radius: 0;

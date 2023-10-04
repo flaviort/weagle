@@ -1,5 +1,6 @@
 .animated-blocks {
     overflow: visible;
+    z-index: 7;
     
     .row > div {
         height: auto;

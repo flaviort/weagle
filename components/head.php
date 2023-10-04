@@ -46,8 +46,8 @@
 
 			<header>
 				<?php include('components/page-transition.php');?>
-				<?php include('components/fs-menu.php');?>
 				<?php include('components/floating-menu.php');?>
+				<?php include('components/fs-menu.php');?>
 				<div id='mouse'></div>
 			</header>
 

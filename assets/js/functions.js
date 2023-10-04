@@ -40,13 +40,6 @@ function initClickAndKeyFunctions() {
 		e.stopImmediatePropagation()
 	})
 
-	// open the sub menu inside fs-menu
-	$('#fs-menu .has-sub .wrapper').click(function(){
-		if (isDoubleClicked($(this))) return
-		$(this).toggleClass('active')
-		$(this).siblings('.sub').slideToggle().toggleClass('active')
-	})
-
 	// open / close fs menu
 	$('.open-fs').click(function(){
 		if (isDoubleClicked($(this))) return
@@ -60,6 +53,7 @@ function initClickAndKeyFunctions() {
 
 		tl.call(function() {
 			scroll.stop()
+			$('.open-fs').addClass('active')
 		})
 
 		tl.to('.blur', {
@@ -68,17 +62,21 @@ function initClickAndKeyFunctions() {
 			duration: .5
 		})
 
-		tl.to('#fs-menu', {
-			opacity: 1,
-			pointerEvents: 'auto',
-			x: 0
+		tl.to('.open-fs', {
+			scale: 0,
+			transformOrigin: '100% 0',
+			duration: .3
 		}, '-=.5')
 
-		tl.from('#fs-menu .scroll-wrapper > *', {
-			x: 200,
-			opacity: 0,
-			stagger: .1
+		tl.to('#fs-menu', {
+			pointerEvents: 'auto'
 		}, '-=.3')
+
+		tl.to('#fs-menu .blue-box', {
+			scale: 1,
+			ease: 'elastic.out(.5, .3)',
+			duration: 1
+		}, '-=.5')
 
 	})
 
@@ -93,10 +91,20 @@ function initClickAndKeyFunctions() {
 			duration: .5
 		})
 
-		tl.to('#fs-menu', {
-			pointerEvents: 'none',
-			x: '110%'
+		tl.to('#fs-menu .blue-box', {
+			scale: 0,
+			ease: Power4.easeOut,
+			duration: .5
 		}, '-=.5')
+
+		tl.to('#fs-menu', {
+			pointerEvents: 'none'
+		}, '-=.5')
+
+		tl.to('.open-fs', {
+			scale: 1,
+			duration: .3
+		}, '-=.2')
 
 		tl.to('body', {
 			overflow: 'auto',
@@ -105,6 +113,7 @@ function initClickAndKeyFunctions() {
 
 		tl.call(function() {
 			scroll.start()
+			$('.open-fs').removeClass('active')
 		})
 	}
 
@@ -124,13 +133,8 @@ function initClickAndKeyFunctions() {
 	// accordion open / close
 	$('.accordion .question').click(function(){
 		if (isDoubleClicked($(this))) return
-
 		$(this).toggleClass('active')
 		$(this).siblings('.answer').slideToggle()
-
-		setTimeout(function(){
-			scroll.update()
-		}, 450)
 	})
 }
 
@@ -440,7 +444,26 @@ function scrollTriggerAnimations() {
 		})
 
 	}
-    
+
+	// parallax img
+	/*
+    if($('.parallax-img').length) {
+		gsap.utils.toArray('.parallax-img').forEach(item => {
+
+			const strength = $(item).attr('data-strength')
+
+			gsap.from(item, {
+				yPercent: strength * -1,
+				scrollTrigger: {
+					trigger: item,
+					scrub: true,
+					start: 'top bottom',
+					end: '+=' + vh(300)
+				}
+			})
+		})
+	}
+	*/
 }
 
 // init all sliders
@@ -757,6 +780,10 @@ function initSmoothScroll(container) {
 		getDirection: true
     })
 
+	new ResizeObserver(() => scroll.update()).observe(
+		document.querySelector('[data-scroll-container]')
+	)
+
     window.onresize = scroll.update()
 
     scroll.on('scroll', () => ScrollTrigger.update())
@@ -821,7 +848,7 @@ function initCheckTouchDevice() {
 
 // disable console warnings and show the copyright message
 function initCopyright() {
-	console.clear()
+	//console.clear()
 	const message = 'Design VVE Fight 🔗 www.vvefight.com \nCode Senz Design 🔗 www.senzdsn.com'
 	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
 	console.log(`%c${message}`, style)

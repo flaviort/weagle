@@ -312,7 +312,7 @@
 
 <section id='ship' data-scroll-section>
 
-	<img data-src='assets/img/ship.jpg' alt='Navio' width='1920' height='1080' class='lazy cover' data-scroll data-scroll-speed='-4'>
+	<img data-src='assets/img/ship.jpg' alt='Navio' width='1920' height='1080' class='lazy cover accordion-fix' data-scroll data-scroll-speed='-2'>
 
 	<div class='container section-padding-top section-padding-bottom-big'>
 

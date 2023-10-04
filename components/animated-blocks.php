@@ -1,4 +1,4 @@
-<section class='animated-blocks section-padding-top z5' data-scroll-section>
+<section class='animated-blocks section-padding-top' data-scroll-section>
     <div class='container'>
 
         <div class='row'>

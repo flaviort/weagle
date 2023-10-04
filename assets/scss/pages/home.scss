@@ -285,11 +285,16 @@
 
         #ship {
             z-index: 0;
+            background-color: $black;
+
+            .cover {
+                opacity: .125;
+            }
 
             .container {
                 display: flex;
                 gap: 5vw;
-                height: 100vh;
+                height: 100svh;
                 text-transform: uppercase;
             }
         }
