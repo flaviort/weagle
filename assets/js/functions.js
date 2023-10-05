@@ -871,17 +871,101 @@ function openingAnimation() {
 		scroll.stop()
 	})
 
+	opening.to('#opening .box', {
+		autoAlpha: 0,
+		duration: 0
+	})
+
+	opening.from('#opening .logo svg .icon', {
+		xPercent: 81.7,
+		duration: 1,
+		ease: Power2.easeOut,
+		delay: .75
+	})
+
+	opening.from('#opening .logo svg .letter', {
+		xPercent: -150,
+		autoAlpha: 0,
+		duration: 1.25,
+		stagger: .1,
+		ease: 'elastic.out(.5, .3)'
+	}, '-=.7')
+
 	opening.to('html', {
-		cursor: 'auto'
+		cursor: 'auto',
+		duration: 0
 	})
 
 	opening.to('body', {
-		overflow: 'auto'
+		overflow: 'auto',
+		duration: 0
 	})
 
 	opening.call(function() {
 		scroll.start()
 	})
+
+	if ($(window).width() > 993) { 
+		opening.set('#opening .rounded-div-wrap.bottom', { 
+		  	height: '10vh'
+		})
+	} else {
+		opening.set('#opening .rounded-div-wrap.bottom', { 
+		  	height: '5vh'
+		})
+	}
+
+	opening.to('#opening .logo svg path', {
+		yPercent: -150,
+		duration: 1,
+		stagger: .05,
+		ease: 'elastic.out(.5, .3)'
+	})
+
+	opening.to('#opening .bg', {
+		duration: .8,
+		yPercent: -100,
+		ease: 'Power3.easeInOut'
+	}, '-=.9')
+
+	opening.to('#opening .rounded-div-wrap.bottom', {
+		duration: .85,
+		height: '0',
+		ease: 'Power3.easeInOut'
+	}, '-=.6')
+
+	opening.to('#opening', {
+		pointerEvents: 'none',
+		autoAlpha: 0,
+		duration: 0
+	})
+
+	var text = new SplitText('#banner h1', { 
+		type: 'lines, words, chars',
+		linesClass: 'split-line'
+	})
+
+	opening.from('#banner video', {
+		autoAlpha: 0, 
+		yPercent: 40,
+		duration: 1,
+		ease: 'circ.out', 
+	}, '-=1')
+
+	opening.from(text.chars, {
+		duration: .75,
+		ease: 'circ.out', 
+		yPercent: 100,
+		autoAlpha: 0, 
+		stagger: 0.0375
+	}, '-=.75')
+
+	opening.from('#banner .side', {
+		scale: 0,
+		duration: .6,
+		ease: 'circ.out',
+		transformOrigin: '100% 100%'
+	}, '-=1.5')
 }
 
 // fire all scripts on page load

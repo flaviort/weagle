@@ -8,7 +8,7 @@
 <section id='banner' class='bg-black' data-scroll-section>
 
 	<video autoplay playsinline muted loop class='lazy' preload='none' data-scroll data-scroll-speed='-3' data-scroll-position='top'>
-		<source data-src='assets/videos/banner.mp4'>
+		<source data-src='assets/videos/professor.mp4'>
 	</video>
 
 	<div class='side blue'>
@@ -17,7 +17,7 @@
 
 	<div class='container white' data-scroll data-scroll-speed='3' data-scroll-position='top'>
 
-		<h1 class='text-biggest reveal-text'>
+		<h1 class='text-biggest'>
 			Na Prática <br />
 			a teoria <br />
 			é outra
@@ -312,17 +312,19 @@
 
 <section id='ship' data-scroll-section>
 
-	<img data-src='assets/img/ship.jpg' alt='Navio' width='1920' height='1080' class='lazy cover accordion-fix' data-scroll data-scroll-speed='-2'>
+	<video autoplay playsinline muted loop class='lazy' preload='none' data-scroll data-scroll-speed='-3'>
+		<source data-src='assets/videos/icebreaker.mp4'>
+	</video>
 
-	<div class='container section-padding-top section-padding-bottom-big'>
+	<div class='container section-padding-top section-padding-bottom-big white'>
 
-		<p class='white text-medium'>
+		<p class='text-medium'>
 			Weagle governance. <br />
 			de onde viemos & <br />
 			para onde vamos.
 		</p>
 
-		<p class='blue text-medium bold'>
+		<p class='text-medium bold'>
 			Conheça a <br />
 			história <br />
 			Weagle®
