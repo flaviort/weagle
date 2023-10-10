@@ -81,15 +81,16 @@
 
                     &:last-child {
                         border-bottom: none;
-
-                        a {
-                            color: lighten(adjust-hue($blue, -60), 5);
-                        }
                     }
 
                     a {
                         display: inline-block;
                         font-size: 5vh;
+                        transition: .3s ease-in-out;
+
+                        &:hover {
+                            color: lighten(adjust-hue($blue, -60), 5);
+                        }
                     }
                 }
             }

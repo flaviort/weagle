@@ -24,6 +24,15 @@
 	$phone = "+55 41 3501-9556";
 	$phone2 = "+55 41 99511-6797";
 	$address = "R. Verbo Divino, 14";
+
+	// links
+	$sobre = "sobre";
+	$diagnostico = "diagnostico";
+	$consultoria = "consultoria";
+	$podcast = "podcast";
+	$podcastInner = "podcast-inner";
+	$blog = "blog";
+	$blogInner = "blog-inner";
 	
 ?>
 

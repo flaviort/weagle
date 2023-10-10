@@ -173,6 +173,7 @@ body {
 	color: $black;
 	font-weight: $regular;
 	font-style: normal;
+	font-display: swap;
 	font-size: 15px;
 	font-size: clamp(15px, 1.325vw, 20px);
 	line-height: 1.6;
@@ -187,7 +188,7 @@ body {
 }
 
 .section-padding-top-big {
-	padding-top: clamp(5rem, 9vw, 7rem);
+	padding-top: clamp(5rem, 10vw, 9rem);
 }
 
 .section-padding-bottom {
@@ -195,7 +196,7 @@ body {
 }
 
 .section-padding-bottom-big {
-	padding-bottom: clamp(5rem, 9vw, 7rem);
+	padding-bottom: clamp(5rem, 10vw, 9rem);
 }
 
 .section-margin-top {

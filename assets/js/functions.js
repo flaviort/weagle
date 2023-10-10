@@ -317,8 +317,8 @@ function scrollTriggerAnimations() {
 		})
 
 		forward.to('.rotating-button .inner-text svg', {
-			rotation: '+=359deg',
-			duration: 7,
+			rotation: '-=359deg',
+			duration: 10,
 			ease: 'linear'
 		})
 	}
@@ -391,7 +391,7 @@ function scrollTriggerAnimations() {
 			const parent = item.closest('.follow-mouse-section')
 
 			function moveCircle(e) {
-				gsap.to(item, 1.75, {
+				gsap.to(item, 4, {
 					x: e.clientX - $(parent).offset().left,
 					y: e.clientY - $(parent).offset().top,
 					ease: Elastic.easeOut

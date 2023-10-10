@@ -66,7 +66,7 @@
         </div>
 
         <div class='bottom'>
-            <a href='diagnostico' class='gray-button magnetic' data-strength='30'>
+            <a href='<?php echo($diagnostico); ?>' class='gray-button magnetic' data-strength='30'>
                 Diagnóstico do Futuro
             </a>
         </div>

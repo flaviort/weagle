@@ -29,19 +29,19 @@
                                 <ul>
                                     
                                     <li>
-                                        <a href='sobre-nos' class='hover-underline'>
+                                        <a href='<?php echo($sobre); ?>' class='hover-underline'>
                                             Sobre Nós
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href='diagnostico' class='hover-underline'>
+                                        <a href='<?php echo($diagnostico); ?>' class='hover-underline'>
                                             Diagnóstico
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href='weaglecast' class='hover-underline'>
+                                        <a href='<?php echo($podcast); ?>' class='hover-underline'>
                                             Podcast Weagle
                                         </a>
                                     </li>

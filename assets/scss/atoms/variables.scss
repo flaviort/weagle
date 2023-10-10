@@ -19,14 +19,11 @@ $mq-2xl-max:            'only screen and (max-width: 1600px)';
 $mq-landscape:          'screen and (orientation:landscape)';
 
 // fonts
-$loos:                  'loos-condensed', sans-serif;
+$loos:                  'Loos Condensed', sans-serif;
 
 // weights
-$light:                 200;
 $regular: 				400;
-$medium:                500;
 $bold: 					700;
-$extra-bold:            800;
 
 // colors
 $pure-white:		    #fff;
@@ -97,8 +94,5 @@ html {
 .bg-blue-light { background-color: lighten(adjust-hue($blue, -60), 5); }
 
 // font-weights classes
-.light { font-weight: $light; }
 .regular { font-weight: $regular; }
-.medium { font-weight: $medium; }
 .bold { font-weight: $bold; }
-.extra-bold { font-weight: $extra-bold; }

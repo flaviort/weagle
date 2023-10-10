@@ -8,7 +8,7 @@
                 com o Diagnóstico Weagle®
             </h2>
 
-            <a href='diagnostico' class='rotating-button magnetic' data-strength='100'>
+            <a href='<?php echo($diagnostico); ?>' class='rotating-button magnetic' data-strength='100'>
                 
                 <div class='rotating-text'>
                     <div class='inner-text'>

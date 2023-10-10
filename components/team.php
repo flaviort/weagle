@@ -4,6 +4,8 @@
             <div class='swiper-wrapper'>
 
                 <div class='swiper-slide'>
+
+                    <img src='' alt='' loading='lazy'>
                     
                 </div>
 

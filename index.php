@@ -27,7 +27,7 @@
 			Vamos de ajudar a construir, organizar e vender o seu negócio. Frase em construção.
 		</p>
 
-		<a href='diagnostico' class='rotating-button white magnetic' data-strength='100'>
+		<a href='<?php echo($diagnostico); ?>' class='rotating-button white magnetic' data-strength='100'>
 
 			<div class='rotating-text'>
 				<div class='inner-text'>
@@ -184,29 +184,32 @@
 		</div>
 	</div>
 
-	<div class='big-text section-margin-top section-margin-bottom follow-mouse-section'>
-
-		<div class='follow-mouse-object'>
-			<div class='rotating-button blue'>
-                
-                <div class='rotating-text'>
-                    <div class='inner-text'>
-                        <?php echo file_get_contents('assets/svg/circle-text-1.svg'); ?>
-                    </div>
-                </div>
-
-                <div class='circle'>
-                    <?php echo file_get_contents('assets/svg/ux/arrow-right.svg'); ?>
-                    <?php echo file_get_contents('assets/svg/ux/arrow-right.svg'); ?>
-                </div>
-
-			</div>
-		</div>
-
+	<div class='big-text section-margin-top section-margin-bottom'>
 		<div class='container'>
-			<a href='#' class='text-biggest bold'>
-				First Day
-				<span class='fill-title'>Everyday</span>
+			<a href='<?php echo($diagnostico); ?>'>
+
+				<div class='parallax' data-scroll data-scroll-speed='-1'>
+					<div class='rotating-button blue'>
+						
+						<div class='rotating-text'>
+							<div class='inner-text'>
+								<?php echo file_get_contents('assets/svg/circle-text-1.svg'); ?>
+							</div>
+						</div>
+
+						<div class='circle'>
+							<?php echo file_get_contents('assets/svg/ux/arrow-right.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/arrow-right.svg'); ?>
+						</div>
+
+					</div>
+				</div>
+
+				<p class='text-biggest bold'>
+					First Day
+					<span class='fill-title'>Everyday</span>
+				</p>
+
 			</a>
 		</div>
 		
@@ -214,6 +217,7 @@
 
 	<div class='accordion'>
 		<div class='container'>
+			
 			<div class='row'>
 
 				<div class='col-md-6'>
@@ -305,6 +309,13 @@
 				</div>
 
 			</div>
+
+			<div class='bottom'>
+				<a href='<?php echo($diagnostico); ?>' class='gray-button'>
+					Diagnóstico do Futuro
+				</a>
+			</div>
+
 		</div>
 	</div>
 
@@ -324,11 +335,11 @@
 			para onde vamos.
 		</p>
 
-		<p class='text-medium bold'>
+		<a href='<?php echo($sobre); ?>' class='text-medium bold hover-underline white'>
 			Conheça a <br />
 			história <br />
 			Weagle®
-		</p>
+		</a>
 		
 	</div>
 

@@ -7,7 +7,7 @@
                 Weagle Cast
             </h3>
 
-            <a href='weagle-cast' class='hover-underline'>
+            <a href='<?php echo($podcast); ?>' class='hover-underline'>
                 Ver todos
             </a>
 
@@ -17,7 +17,7 @@
             <div class='swiper-wrapper'>
 
                 <div class='swiper-slide'>
-                    <a href='weagle-cast-inner' class='weagle-cast-box'>
+                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
                         
                         <div class='youtube-icon'>
                             <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='weagle-cast-inner' class='weagle-cast-box'>
+                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
                         
                         <div class='youtube-icon'>
                             <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='weagle-cast-inner' class='weagle-cast-box'>
+                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
                         
                         <div class='youtube-icon'>
                             <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='weagle-cast-inner' class='weagle-cast-box'>
+                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
                         
                         <div class='youtube-icon'>
                             <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
@@ -65,7 +65,7 @@
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='weagle-cast-inner' class='weagle-cast-box'>
+                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
                         
                         <div class='youtube-icon'>
                             <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>

@@ -17,44 +17,38 @@
             <ul class='menu text-big'>
 
                 <li>
-                    <a href='./' class='magnetic' data-strength='30'>
+                    <a href='./'>
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href='sobre' class='magnetic' data-strength='30'>
+                    <a href='<?php echo($sobre); ?>'>
                         Sobre
                     </a>
                 </li>
 
                 <li>
-                    <a href='diagnostico' class='magnetic' data-strength='30'>
+                    <a href='<?php echo($diagnostico); ?>'>
                         Diagnóstico
                     </a>
                 </li>
 
                 <li>
-                    <a href='consultoria' class='magnetic' data-strength='30'>
+                    <a href='<?php echo($consultoria); ?>'>
                         Consultoria
                     </a>
                 </li>
 
                 <li>
-                    <a href='weagle-cast' class='magnetic' data-strength='30'>
+                    <a href='<?php echo($podcast); ?>'>
                         Podcast
                     </a>
                 </li>
 
                 <li>
-                    <a href='blog' class='magnetic' data-strength='30'>
+                    <a href='<?php echo($blog); ?>'>
                         Blog
-                    </a>
-                </li>
-
-                <li>
-                    <a href='#' class='magnetic' data-strength='30'>
-                        Nosso Livro
                     </a>
                 </li>
 
