@@ -1,10 +1,12 @@
 #main-content {
     &.home {
         #banner {
+            overflow: visible;
+
             .side {
                 position: absolute;
                 z-index: 3;
-                bottom: 0;
+                bottom: -1px;
                 right: 0;
                 width: 30vw;
                 height: 30vw;
@@ -17,6 +19,16 @@
                 @media #{$mq-md-min} {
                     width: 20vw;
                     height: 20vw;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    right: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $blue;
                 }
 
                 svg {
@@ -67,13 +79,25 @@
         }
 
         #problems {
+            overflow: visible;
+
             .side {
                 position: absolute;
                 z-index: 3;
-                bottom: 0;
+                bottom: -1px;
                 left: 0;
                 width: 6vw;
                 height: 6vw;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $white;
+                }
 
                 svg {
                     width: 100%;
@@ -397,7 +421,20 @@
                 margin-top: -30vw;
 
                 @media #{$mq-md-min} {
-                    margin-top: -1rem;
+                    margin-top: -1px;
+                }
+
+                &:before {
+                    @media #{$mq-md-min} {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -50vw;
+                        z-index: 0;
+                        background-color: $white;
+                        width: 200vw;
+                        height: 5px;
+                    }
                 }
 
                 .left {
