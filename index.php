@@ -423,14 +423,14 @@
 
 </section>
 
-<?php include('components/animated-blocks.php');?>
+<?php include('components/animated-blocks.php'); ?>
 
-<?php include('components/logos-grid.php');?>
+<?php include('components/logos-grid.php'); ?>
 
-<?php include('components/team.php');?>
+<?php include('components/team.php'); ?>
 
-<?php include('components/weagle-cast.php');?>
+<?php include('components/weagle-cast.php'); ?>
 
-<?php include('components/bottom-text.php');?>
+<?php include('components/bottom-text.php'); ?>
 
-<?php include('components/footer.php');?>
+<?php include('components/footer.php'); ?>

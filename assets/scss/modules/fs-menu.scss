@@ -11,6 +11,7 @@
     .container {
         display: flex;
         justify-content: flex-end;
+        pointer-events: none;
 
         .blue-box {
             background-color: darken(saturate($blue, 20), 10);

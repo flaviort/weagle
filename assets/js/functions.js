@@ -68,13 +68,10 @@ function initClickAndKeyFunctions() {
 			duration: .3
 		}, '-=.5')
 
-		tl.to('#fs-menu', {
-			pointerEvents: 'auto'
-		}, '-=.3')
-
 		tl.to('#fs-menu .blue-box', {
 			scale: 1,
 			ease: 'elastic.out(.5, .3)',
+			pointerEvents: 'auto',
 			duration: 1
 		}, '-=.5')
 
@@ -94,17 +91,19 @@ function initClickAndKeyFunctions() {
 		tl.to('#fs-menu .blue-box', {
 			scale: 0,
 			ease: Power4.easeOut,
+			pointerEvents: 'none',
 			duration: .5
-		}, '-=.5')
-
-		tl.to('#fs-menu', {
-			pointerEvents: 'none'
 		}, '-=.5')
 
 		tl.to('.open-fs', {
 			scale: 1,
 			duration: .3
 		}, '-=.2')
+
+		tl.to('.blur', {
+			pointerEvents: 'none',
+			duration: 0
+		})
 
 		tl.to('body', {
 			overflow: 'auto',
@@ -522,9 +521,6 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 15,
 			speed: 600,
-			autoplay: {
-				delay: 6000,
-			},
 			breakpoints: {
 				575: {
 					slidesPerView: 2,
@@ -546,6 +542,40 @@ function initSliders() {
 
 		setTimeout(function(){
 			problems_slider.update()
+		}, 50)
+	}
+
+	// team slider
+	if($('.team-slider').length) {
+
+		const team_slider = new Swiper('.team-slider', {
+			slidesPerView: 1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 10,
+			speed: 600,
+			breakpoints: {
+				575: {
+					spaceBetween: 25
+				},
+				1200: {
+					spaceBetween: 40
+				}
+			},
+			on: {
+				touchStart(){
+					$('.team-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.team-slider').removeClass('is-dragging')
+				}
+			}
+		})
+
+		setTimeout(function(){
+			team_slider.update()
 		}, 50)
 	}
 
