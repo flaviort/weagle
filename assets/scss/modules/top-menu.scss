@@ -6,6 +6,7 @@
     width: 100%;
     padding: 1.5rem 0;
     padding-right: 7rem;
+    background-color: transparent;
 
     @media #{$mq-sm-min} {
         padding: 1.325rem 0;
@@ -51,10 +52,8 @@
 }
 
 #main-content {
-    &.home {
+    &.reverse-menu {
         #top-menu {
-            background-color: transparent;
-
             .container {
                 .logo {
                     .letter {

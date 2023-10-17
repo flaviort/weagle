@@ -17,62 +17,72 @@
             <div class='swiper-wrapper'>
 
                 <div class='swiper-slide'>
-                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
+                    <a href='https://www.youtube.com/watch?v=RsZYCwp6oYs&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
+                        <div class='image'>
                         
-                        <div class='youtube-icon'>
-                            <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            <div class='youtube-icon'>
+                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            </div>
+
+                            <img src='assets/img/cast/09.jpg' alt='Weagle Cast #09' loading='lazy'>
+
                         </div>
-
-                        <img src='assets/img/cast/09.jpg' alt='Weagle Cast #09' loading='lazy'>
-
                     </a>
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
+                    <a href='https://www.youtube.com/watch?v=QcxnFd6qFZk&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
+                        <div class='image'>
                         
-                        <div class='youtube-icon'>
-                            <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            <div class='youtube-icon'>
+                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            </div>
+
+                            <img src='assets/img/cast/08.jpg' alt='Weagle Cast #08' loading='lazy'>
+
                         </div>
-
-                        <img src='assets/img/cast/08.jpg' alt='Weagle Cast #08' loading='lazy'>
-
                     </a>
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
+                    <a href='https://www.youtube.com/watch?v=KbSocZ_1t2Y&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
+                        <div class='image'>
                         
-                        <div class='youtube-icon'>
-                            <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            <div class='youtube-icon'>
+                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            </div>
+
+                            <img src='assets/img/cast/07.jpg' alt='Weagle Cast #07' loading='lazy'>
+
                         </div>
-
-                        <img src='assets/img/cast/07.jpg' alt='Weagle Cast #07' loading='lazy'>
-
                     </a>
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
+                    <a href='https://www.youtube.com/watch?v=wEQjYCnqBDo&t=2s&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
+                        <div class='image'>
                         
-                        <div class='youtube-icon'>
-                            <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            <div class='youtube-icon'>
+                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            </div>
+
+                            <img src='assets/img/cast/06.jpg' alt='Weagle Cast #06' loading='lazy'>
+
                         </div>
-
-                        <img src='assets/img/cast/06.jpg' alt='Weagle Cast #06' loading='lazy'>
-
                     </a>
                 </div>
 
                 <div class='swiper-slide'>
-                    <a href='<?php echo($podcastInner); ?>' class='weagle-cast-box'>
+                    <a href='https://www.youtube.com/watch?v=LRvhnCGAOhE&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
+                        <div class='image'>
                         
-                        <div class='youtube-icon'>
-                            <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            <div class='youtube-icon'>
+                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                            </div>
+
+                            <img src='assets/img/cast/05.jpg' alt='Weagle Cast #05' loading='lazy'>
+
                         </div>
-
-                        <img src='assets/img/cast/05.jpg' alt='Weagle Cast #05' loading='lazy'>
-
                     </a>
                 </div>
 

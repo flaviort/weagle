@@ -90,6 +90,12 @@
                                 padding: .25rem;
                                 border-top-left-radius: .25rem;
                                 border-bottom-right-radius: .25rem;
+                                transition: .3s ease-in-out;
+
+                                &:hover {
+                                    background-color: $white;
+                                    color: $blue;
+                                }
 
                                 svg {
                                     width: 100%;

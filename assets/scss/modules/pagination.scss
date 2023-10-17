@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .5rem;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @media #{$mq-sm-min} {
+        justify-content: center;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: $gray-lightest;
+        transition: .3s ease-in-out;
+
+        &:hover,
+        &.active {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}

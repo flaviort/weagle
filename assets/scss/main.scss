@@ -20,7 +20,7 @@
 @import 'modules/page-transition';
 @import 'modules/mouse';
 @import 'modules/weagle-cast';
-@import 'modules/weagle-cast-box';
+@import 'modules/weagle-cast-item';
 @import 'modules/bottom-text';
 @import 'modules/animated-blocks';
 @import 'modules/rounded-blue-block';
@@ -28,11 +28,14 @@
 @import 'modules/logo-block';
 @import 'modules/accordion';
 @import 'modules/team';
+@import 'modules/pagination';
 
 // pages
 @import 'pages/home';
 //@import 'pages/about';
-//@import 'pages/services';
-//@import 'pages/contact';
+//@import 'pages/diagnostic';
+//@import 'pages/consultancy';
+@import 'pages/podcast';
+//@import 'pages/blog';
+//@import 'pages/blog-inner';
 //@import 'pages/error-404';
-//@import 'pages/terms';

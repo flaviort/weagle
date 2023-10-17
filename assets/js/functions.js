@@ -581,98 +581,6 @@ function initSliders() {
 
 }
 
-// page transition in
-function pageTransitionIn() {
-
-	var tl = gsap.timeline()
-
-	tl.set('html', {
-		cursor: 'wait'
-	})
-
-	tl.set('body', {
-		overflow: 'hidden'
-	})
-
-	tl.set('.page-transition', {
-		pointerEvents: 'auto'
-	})
-
-	tl.set('.page-transition .title', {
-		autoAlpha: 0
-	})
-
-	tl.call(function() {
-		scroll.stop()
-		$('.page-transition .title p').html()
-	})
-
-}
-
-// page transition out
-function pageTransitionOut() {
-
-	var tl = gsap.timeline()
-
-	tl.to('html', {
-		cursor: 'auto',
-		duration: 0
-	})
-
-	tl.to('body', {
-		overflow: 'auto',
-		duration: 0
-	})
-
-	tl.call(function() {
-		scroll.start()
-		let pageTitle = $('#main-content').attr('data-page-title')
-		$('.page-transition .title p').html(pageTitle)
-	})
-
-	setTimeout(function(){
-
-		let title = new SplitText($('.page-transition .title p'), { 
-			type: 'lines, words, chars'
-		})
-	
-		let chars = title.chars
-
-		var tl2 = gsap.timeline()
-
-		tl2.to('.page-transition .title', {
-			autoAlpha: 1,
-			duration: 0
-		})
-
-		tl2.from(chars, {
-			duration: 0.8,
-			opacity: 0,
-			y: 30,
-			ease: 'back',
-			stagger: 0.025
-		})
-
-		tl2.call(function(){
-			document.dispatchEvent(new Event('playInternalBanner'))
-		})
-
-		tl2.to(chars, {
-			duration: 0.8,
-			opacity: 0,
-			y: -30,
-			ease: 'back',
-			stagger: 0.025
-		}, '+=.1')
-
-		tl.to('.page-transition', {
-			pointerEvents: 'none'
-		})
-
-	}, 5)
-
-}
-
 // delay function
 function delay(n) {
 	n = n || 2000
@@ -878,7 +786,7 @@ function initCheckTouchDevice() {
 
 // disable console warnings and show the copyright message
 function initCopyright() {
-	//console.clear()
+	console.clear()
 	const message = 'Design VVE Fight 🔗 www.vvefight.com \nCode Senz Design 🔗 www.senzdsn.com'
 	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
 	console.log(`%c${message}`, style)
@@ -933,6 +841,7 @@ function openingAnimation() {
 
 	opening.call(function() {
 		scroll.start()
+		document.dispatchEvent(new Event('animationIn'))
 	})
 
 	if ($(window).width() > 993) { 
@@ -970,32 +879,160 @@ function openingAnimation() {
 		duration: 0
 	})
 
-	var text = new SplitText('#banner h1', { 
-		type: 'lines, words, chars',
-		linesClass: 'split-line'
+	
+}
+
+// page transition in
+function pageTransitionIn() {
+
+	var tl = gsap.timeline()
+
+	tl.set('html', {
+		cursor: 'wait'
 	})
 
-	opening.from('#banner video', {
-		autoAlpha: 0, 
-		yPercent: 40,
-		duration: 1,
-		ease: 'circ.out', 
-	}, '-=1')
+	tl.set('body', {
+		overflow: 'hidden'
+	})
 
-	opening.from(text.chars, {
-		duration: .75,
-		ease: 'circ.out', 
-		yPercent: 100,
-		autoAlpha: 0, 
-		stagger: 0.0375
-	}, '-=.75')
+	tl.set('.page-transition', {
+		pointerEvents: 'auto',
+		autoAlpha: 1
+	})
 
-	opening.from('#banner .side', {
-		scale: 0,
-		duration: .6,
-		ease: 'circ.out',
-		transformOrigin: '100% 100%'
-	}, '-=1.5')
+	tl.set('.page-transition .title', {
+		autoAlpha: 0
+	})
+
+	tl.call(function() {
+		scroll.stop()
+		$('.page-transition .title p').html()
+	})
+
+	tl.set('.page-transition .bg', { 
+		y: '100%' 
+	})
+
+	if ($(window).width() > 993) { 
+		tl.set('.page-transition .rounded-div-wrap.bottom', { 
+		  	height: '10vh',
+		})
+	} else {
+		tl.set('.page-transition .rounded-div-wrap.bottom', { 
+		  	height: '5vh',
+		})
+	}
+	
+	tl.to('.page-transition .bg', {
+		duration: .5,
+		y: '0%',
+		ease: 'Power4.easeIn'
+	})
+	
+	if ($(window).width() > 993) { 
+		tl.to('.page-transition .rounded-div-wrap.top', {
+			duration: .4,
+			height: '10vh',
+			ease: 'Power4.easeIn'
+		},'=-.5')
+	} else {
+		tl.to('.page-transition .rounded-div-wrap.top', {
+			duration: .4,
+			height: '10vh',
+			ease: 'Power4.easeIn'
+		},'=-.5')
+	}
+
+}
+
+// page transition out
+function pageTransitionOut() {
+
+	var tl = gsap.timeline()
+
+	tl.to('html', {
+		cursor: 'auto',
+		duration: 0
+	})
+
+	tl.to('body', {
+		overflow: 'auto',
+		duration: 0
+	})
+
+	tl.call(function() {
+		scroll.start()
+		let pageTitle = $('#main-content').attr('data-page-title')
+		$('.page-transition .title p').html(pageTitle)
+	})
+
+	setTimeout(function(){
+
+		let title = new SplitText($('.page-transition .title p'), { 
+			type: 'lines, words, chars'
+		})
+	
+		let chars = title.chars
+
+		var tl2 = gsap.timeline()
+
+		tl2.to('.page-transition .title', {
+			autoAlpha: 1,
+			duration: 0
+		})
+
+		tl2.from(chars, {
+			duration: 0.8,
+			opacity: 0,
+			y: 30,
+			ease: 'back',
+			stagger: 0.025
+		})
+
+		tl2.to(chars, {
+			duration: 0.8,
+			opacity: 0,
+			y: -30,
+			ease: 'back',
+			stagger: 0.025
+		}, '+=.1')
+
+	}, 5)
+
+	tl.to('.page-transition', {
+		pointerEvents: 'none'
+	})
+
+	tl.set('.page-transition .rounded-div-wrap.top', {
+		height: '0vh'
+	})
+
+	tl.to('.page-transition .bg', {
+		duration: .8,
+		y: '-100%',
+		ease: 'Power3.easeInOut'
+	}, '=+.8')
+
+	tl.to('.page-transition .rounded-div-wrap.bottom', {
+		duration: .85,
+		height: '0',
+		ease: 'Power3.easeInOut'
+	}, '=-.6')
+
+	if ($(window).width() > 993) { 
+		tl.set('.page-transition .rounded-div-wrap.bottom', {
+			height: '10vh'
+		})
+	} else {
+		tl.set('.page-transition .rounded-div-wrap.bottom', {
+			height: '5vh'
+		})
+	}
+
+	tl.set('.page-transition .bg', { 
+		y: '100%'
+	})
+
 }
 
 // fire all scripts on page load
@@ -1004,7 +1041,6 @@ function initScripts() {
 	scrollTriggerAnimations()
 	initCheckTouchDevice()
 	initFancybox()
-	initCopyright()
 	initClickAndKeyFunctions()
 	validateForms()
 	updateMenu()
@@ -1024,15 +1060,16 @@ function initBarba() {
 				once(data) {
 					initSmoothScroll(data.next.container)
 					initScripts()
-					document.dispatchEvent(new Event('playInternalBanner'))
+					initCopyright()
+					openingAnimation()
 				},
 				async leave(data) {
-					pageTransitionIn(data.current)
+					pageTransitionIn()
 					await delay(800)
 					data.current.container.remove()
 				},
-				async enter(data) {
-					pageTransitionOut(data.next)
+				async enter() {
+					pageTransitionOut()
 				},
 				async beforeEnter(data) {
 					ScrollTrigger.getAll().forEach(t => t.kill())
@@ -1048,6 +1085,7 @@ function initBarba() {
 				once(data) {
 					initSmoothScroll(data.next.container)
 					initScripts()
+					initCopyright()
 					openingAnimation()
 				}
 			}
@@ -1055,6 +1093,44 @@ function initBarba() {
 
 		views: [
 			{
+				namespace: 'home',
+				afterEnter() {
+
+					// if the user is entering the website for the first time, this will detect the opening animation and animate the banner accordingly
+					document.addEventListener('animationIn', function() {
+
+						var tl = gsap.timeline()
+
+						var text = new SplitText('#banner h1', { 
+							type: 'lines, words, chars',
+							linesClass: 'split-line'
+						})
+					
+						tl.from('#banner video', {
+							autoAlpha: 0, 
+							yPercent: 40,
+							duration: 1,
+							ease: 'circ.out', 
+						}, '+=.7')
+					
+						tl.from(text.chars, {
+							duration: .75,
+							ease: 'circ.out', 
+							yPercent: 100,
+							autoAlpha: 0, 
+							stagger: 0.0375
+						}, '-=.75')
+					
+						tl.from('#banner .side', {
+							scale: 0,
+							duration: .6,
+							ease: 'circ.out',
+							transformOrigin: '100% 100%'
+						}, '-=1.5')
+
+					})
+				}
+			}, {
 				namespace: 'internal',
 				afterEnter() {
 

@@ -1,0 +1,16 @@
+#main-content {
+    &.podcast {
+        #banner {
+            padding-top: 4.275rem;
+
+            @media #{$mq-sm-min} {
+                padding-top: 3.75rem;
+            }
+        }
+
+        .bottom-section {
+            padding-top: clamp(1rem, 3vw, 2rem);
+            padding-bottom: clamp(2rem, 5vw, 4rem);
+        }
+    }
+}

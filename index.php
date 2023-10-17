@@ -1,5 +1,5 @@
 <?php
-	$currentPage = 'home';
+	$currentPage = 'home reverse-menu';
 	$nameSpace = 'home';
 	$pageTitle = 'Home';
 	include('components/head.php');
