@@ -31,10 +31,11 @@
 @import 'modules/pagination';
 @import 'modules/blog-item';
 @import 'modules/also-like';
+@import 'modules/testimonials';
 
 // pages
 @import 'pages/home';
-//@import 'pages/about';
+@import 'pages/about';
 //@import 'pages/diagnostic';
 //@import 'pages/consultancy';
 @import 'pages/podcast';

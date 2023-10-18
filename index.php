@@ -166,7 +166,7 @@
 	</div>
 </section>
 
-<section id='methodology' class='section-padding-top section-padding-bottom-big bg-white' data-scroll-section>
+<section id='methodology' class='section-padding-top section-padding-bottom-big' data-scroll-section>
 	
 	<div class='container'>
 		<div class='top'>

@@ -37,7 +37,7 @@
 
 	<div class='container z5'>
 
-		<h2 class='title-top text-big reveal-text blue'>
+		<h2 class='title-top text-big blue'>
 			Episódios
 		</h2>
 

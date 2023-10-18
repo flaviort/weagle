@@ -30,7 +30,6 @@
 	$diagnostico = "diagnostico";
 	$consultoria = "consultoria";
 	$podcast = "podcast";
-	$podcastInner = "podcast-inner";
 	$blog = "blog";
 	$blogInner = "blog-inner";
 	

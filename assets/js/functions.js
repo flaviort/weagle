@@ -479,6 +479,76 @@ function scrollTriggerAnimations() {
 	*/
 }
 
+// 
+function initScrollLetters() {
+
+	// Scrolling Letters Both Direction
+	// https://codepen.io/GreenSock/pen/rNjvgjo
+	// Fixed example with resizing
+	// https://codepen.io/GreenSock/pen/QWqoKBv?editors=0010
+
+	// 1 = forward, -1 = backward scroll
+	let direction = 1;
+
+	const roll1 = roll('.roll-text', { duration: 60 })
+	const roll2 = roll('.roll-text-reverse', { duration: 60 }, true)
+
+	const scroll = ScrollTrigger.create({
+		trigger: document.querySelector('[data-scroll-container]'),
+		onUpdate(self) {
+			if (self.direction !== direction) {
+				direction *= -1
+				gsap.to([roll1, roll2], {
+					timeScale: direction,
+					overwrite: true
+				})
+			}
+		}
+	})
+
+	// helper function that clones the targets, places them next to the original, then animates the xPercent in a loop to make it appear to roll across the screen in a seamless loop.
+	function roll(targets, vars, reverse) {
+		vars = vars || {}
+		vars.ease || (vars.ease = 'none')
+		
+		const tl = gsap.timeline({
+			repeat: -1,
+			onReverseComplete() { 
+				// otherwise when the playhead gets back to the beginning, it'd stop. So push the playhead forward 10 iterations (it could be any number)
+				this.totalTime(this.rawTime() + this.duration() * 10)
+			}
+		})
+
+		const elements = gsap.utils.toArray(targets)
+
+		const clones = elements.map(el => {
+			let clone = el.cloneNode(true)
+			el.parentNode.appendChild(clone)
+			return clone
+		})
+
+		const positionClones = () => elements.forEach((el, i) => gsap.set(clones[i], {
+			position: 'absolute',
+			overwrite: false,
+			top: el.offsetTop,
+			left: el.offsetLeft + (reverse ? -el.offsetWidth : el.offsetWidth)
+		}))
+
+		positionClones()
+
+		elements.forEach((el, i) => tl.to([el, clones[i]], {xPercent: reverse ? 100 : -100, ...vars}, 0))
+
+		window.addEventListener('resize', () => {
+			let time = tl.totalTime() // record the current time
+			tl.totalTime(0) // rewind and clear out the timeline
+			positionClones() // reposition
+			tl.totalTime(time) // jump back to the proper time
+		})
+
+		return tl
+	}
+}
+
 // init all sliders
 function initSliders() {
 
@@ -556,6 +626,42 @@ function initSliders() {
 
 		setTimeout(function(){
 			also_like_slider.update()
+		}, 50)
+	}
+
+	// testimonials slider
+	if($('.testimonials-slider').length) {
+
+		const testimonials_slider = new Swiper('.testimonials-slider', {
+			slidesPerView: 1.1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 10,
+			speed: 600,
+			breakpoints: {
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: 2.3,
+					spaceBetween: 30
+				}
+			},
+			on: {
+				touchStart(){
+					$('.testimonials-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.testimonials-slider').removeClass('is-dragging')
+				}
+			}
+		})
+
+		setTimeout(function(){
+			testimonials_slider.update()
 		}, 50)
 	}
 
@@ -1116,6 +1222,7 @@ function initScripts() {
 	updateMenu()
 	initSliders()
 	initMagneticButtons()
+	initScrollLetters()
 }
 
 function initBarba() {
