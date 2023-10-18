@@ -11,11 +11,11 @@
 		<source data-src='assets/videos/professor.mp4'>
 	</video>
 
-	<div class='side blue'>
+	<div class='side blue transitionUp'>
 		<?php echo file_get_contents('assets/svg/curve-bottom-right.svg'); ?>
 	</div>
 
-	<div class='container white' data-scroll data-scroll-speed='3' data-scroll-position='top'>
+	<div class='container white transitionUp' data-scroll data-scroll-speed='3' data-scroll-position='top'>
 
 		<h1 class='text-biggest'>
 			Na Prática <br />

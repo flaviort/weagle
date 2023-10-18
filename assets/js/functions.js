@@ -260,7 +260,7 @@ function scrollTriggerAnimations() {
 			delay: .5,
 			scrollTrigger: {
 				trigger: '#truck',
-				toggleActions: 'restart pause resume none',
+				toggleActions: 'restart none resume none',
 				start: '0 110%'
 			}
 		})
@@ -878,7 +878,6 @@ function openingAnimation() {
 		autoAlpha: 0,
 		duration: 0
 	})
-
 	
 }
 
@@ -950,16 +949,6 @@ function pageTransitionOut() {
 
 	var tl = gsap.timeline()
 
-	tl.to('html', {
-		cursor: 'auto',
-		duration: 0
-	})
-
-	tl.to('body', {
-		overflow: 'auto',
-		duration: 0
-	})
-
 	tl.call(function() {
 		scroll.start()
 		let pageTitle = $('#main-content').attr('data-page-title')
@@ -1019,6 +1008,27 @@ function pageTransitionOut() {
 		ease: 'Power3.easeInOut'
 	}, '=-.6')
 
+	var text = new SplitText('#banner h1', { 
+		type: 'lines, words, chars',
+		linesClass: 'split-line'
+	})
+
+	tl.from('.transitionUp', {
+		autoAlpha: 0, 
+		yPercent: 40,
+		duration: 1,
+		ease: 'circ.out',
+		stagger: 0.0725
+	}, '-=.8')
+
+	tl.from(text.chars, {
+		duration: .75,
+		ease: 'circ.out', 
+		yPercent: 100,
+		autoAlpha: 0, 
+		stagger: 0.0375
+	}, '-=1')
+
 	if ($(window).width() > 993) { 
 		tl.set('.page-transition .rounded-div-wrap.bottom', {
 			height: '10vh'
@@ -1031,6 +1041,16 @@ function pageTransitionOut() {
 
 	tl.set('.page-transition .bg', { 
 		y: '100%'
+	})
+
+	tl.to('body', {
+		overflow: 'auto',
+		duration: 0
+	})
+
+	tl.to('html', {
+		cursor: 'auto',
+		duration: 0
 	})
 
 }

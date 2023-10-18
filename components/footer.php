@@ -42,7 +42,7 @@
 
                                     <li>
                                         <a href='<?php echo($podcast); ?>' class='hover-underline'>
-                                            Podcast Weagle
+                                            Podcast
                                         </a>
                                     </li>
 

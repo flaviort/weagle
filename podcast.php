@@ -5,14 +5,39 @@
 	include('components/head.php');
 ?>
 
-<section id='banner' data-scroll-section>
+<section id='banner' class='z5' data-scroll-section>
+	<div class='container transitionUp'>
 
+		<h1 class='text-biggest white bold'>
+			Weagle Cast
+		</h1>
+
+		<div class='texts'>
+
+			<p>
+				Estratégias, insights e dicas em um bom bate papo sobre
+			</p>
+
+			<p>
+				governança, inovação e planejamento empresarial!
+			</p>
+
+		</div>
+
+		<img data-src='assets/img/microphone.png' alt='Microfone' class='lazy'>
+
+	</div>
 </section>
 
-<section id='middle' class='' data-scroll-section>
-	<div class='container'>
+<section id='middle' class='section-padding-top transitionUp' data-scroll-section>
 
-		<h2 class='text-big reveal-text blue'>
+	<div class='bg'>
+		<?php echo file_get_contents('assets/svg/curve-top-right.svg'); ?>
+	</div>
+
+	<div class='container z5'>
+
+		<h2 class='title-top text-big reveal-text blue'>
 			Episódios
 		</h2>
 
