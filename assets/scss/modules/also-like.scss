@@ -1,0 +1,51 @@
+#also-like {
+    background-color: $white;
+
+    .animated-line {
+        margin: calc(clamp(3rem, 9vw, 7rem) / 2) 0;
+        width: 100%;
+        height: 1px;
+        background-color: $black;
+    }
+
+    .flex {
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: clamp(2rem, 4vw, 3rem);
+
+        a {
+            color: $blue;
+        }
+    }
+
+    .also-like-slider {
+        cursor: grab;
+
+        &.is-dragging {
+            cursor: grabbing;
+
+            .blog-item {
+                transform: scale(.85);
+            }
+        }
+
+        .blog-item {
+            transition: .6s ease-in-out;
+
+            &:hover {
+                .image {
+                    img {
+                        transform: scale(1.175);
+                        opacity: .5;
+                    }
+                }
+
+                .infos {
+                    .hover-underline {
+                        background-size: 100% var(--border-width);
+                    }
+                }
+            }
+        }
+    }
+}

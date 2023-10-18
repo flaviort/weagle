@@ -52,7 +52,7 @@
 							<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
 						</div>
 
-						<img src='assets/img/cast/09.jpg' alt='Weagle Cast #09' loading='lazy'>
+						<img data-src='assets/img/cast/09.jpg' alt='Weagle Cast #09' class='lazy'>
 
 					</div>
 
@@ -80,7 +80,7 @@
 							<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
 						</div>
 
-						<img src='assets/img/cast/08.jpg' alt='Weagle Cast #08' loading='lazy'>
+						<img data-src='assets/img/cast/08.jpg' alt='Weagle Cast #08' class='lazy'>
 
 					</div>
 
@@ -108,7 +108,7 @@
 							<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
 						</div>
 
-						<img src='assets/img/cast/07.jpg' alt='Weagle Cast #07' loading='lazy'>
+						<img data-src='assets/img/cast/07.jpg' alt='Weagle Cast #07' class='lazy'>
 
 					</div>
 
@@ -136,7 +136,7 @@
 							<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
 						</div>
 
-						<img src='assets/img/cast/06.jpg' alt='Weagle Cast #06' loading='lazy'>
+						<img data-src='assets/img/cast/06.jpg' alt='Weagle Cast #06' class='lazy'>
 
 					</div>
 
@@ -164,7 +164,7 @@
 							<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
 						</div>
 
-						<img src='assets/img/cast/05.jpg' alt='Weagle Cast #05' loading='lazy'>
+						<img data-src='assets/img/cast/05.jpg' alt='Weagle Cast #05' class='lazy'>
 
 					</div>
 
@@ -192,7 +192,7 @@
 							<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
 						</div>
 
-						<img src='assets/img/cast/04.jpg' alt='Weagle Cast #04' loading='lazy'>
+						<img data-src='assets/img/cast/04.jpg' alt='Weagle Cast #04' class='lazy'>
 
 					</div>
 

@@ -89,7 +89,8 @@
                         font-size: 5vh;
                         transition: .3s ease-in-out;
 
-                        &:hover {
+                        &:hover,
+                        &.active {
                             color: lighten(adjust-hue($blue, -60), 5);
                         }
                     }

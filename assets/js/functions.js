@@ -175,22 +175,36 @@ function initMagneticButtons() {
 
 // change the menu active item according to barba body class
 function updateMenu() {	
-	$('#top-menu .menu a, #top-menu .menu .wrapper').removeClass('active')
+	$('#fs-menu .menu a').removeClass('active')
 
 	setTimeout(function() {
 
-		var currentUrl = window.location.href
-		$("link[rel='canonical']").attr('href', currentUrl)
-		
-		$('#top-menu .menu a').each(function() {
-			var href = $(this).attr('href')
-			if ($('#main-content').attr('class').includes(href)) {
-				$(this).addClass('active')
-			}
-		})
+		if ($('#main-content').attr('class').includes('home')) {
+			$('#fs-menu .menu li:first-child a').addClass('active')
+		}
 
-		if ($('#main-content').attr('class').includes('services')) {
-			$('#top-menu .menu .wrapper').addClass('active')
+		else if ($('#main-content').attr('class').includes('about')) {
+			$('#fs-menu .menu li:nth-child(2) a').addClass('active')
+		}
+
+		else if ($('#main-content').attr('class').includes('diagnosis')) {
+			$('#fs-menu .menu li:nth-child(3) a').addClass('active')
+		}
+	
+		else if ($('#main-content').attr('class').includes('consultancy')) {
+			$('#fs-menu .menu li:nth-child(4) a').addClass('active')
+		}
+
+		else if ($('#main-content').attr('class').includes('podcast')) {
+			$('#fs-menu .menu li:nth-child(5) a').addClass('active')
+		}
+
+		else if ($('#main-content').attr('class').includes('blog')) {
+			$('#fs-menu .menu li:last-child a').addClass('active')
+		}
+
+		else if ($('#main-content').attr('class').includes('blog-inner')) {
+			$('#fs-menu .menu li:last-child a').addClass('active')
 		}
 		
 	}, 50)
@@ -506,6 +520,42 @@ function initSliders() {
 
 		setTimeout(function(){
 			weagle_cast_slider.update()
+		}, 50)
+	}
+
+	// also like slider
+	if($('.also-like-slider').length) {
+
+		const also_like_slider = new Swiper('.also-like-slider', {
+			slidesPerView: 1.1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 10,
+			speed: 600,
+			breakpoints: {
+				575: {
+					slidesPerView: 1.5,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: 2.3,
+					spaceBetween: 30
+				}
+			},
+			on: {
+				touchStart(){
+					$('.also-like-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.also-like-slider').removeClass('is-dragging')
+				}
+			}
+		})
+
+		setTimeout(function(){
+			also_like_slider.update()
 		}, 50)
 	}
 

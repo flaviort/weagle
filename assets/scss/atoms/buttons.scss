@@ -78,6 +78,55 @@
     }
 }
 
+.blue-button {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $blue;
+    color: $white;
+    text-transform: uppercase;
+    padding: .5rem 1.75rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    transition: border-radius .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
+    width: fit-content;
+
+    @media #{$mq-sm-min} {
+        padding: .75rem 3rem;
+    }
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+    }
+}
+
+.blue-button-small {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $blue;
+    color: $white;
+    text-transform: uppercase;
+    padding: .25rem 1.25rem;
+    border-top-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    transition: border-radius .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
+    width: fit-content;
+    font-size: .85rem;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+}
+
 .rotating-button {
     position: relative;
     display: block;

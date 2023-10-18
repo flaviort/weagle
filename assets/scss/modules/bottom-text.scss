@@ -1,6 +1,7 @@
 #bottom-text {
     background-color: $white;
     padding-top: clamp(3rem, 9vw, 8rem);
+    margin-top: -1px;
 
     @media #{$mq-sm-min} {
         padding-bottom: 1rem;

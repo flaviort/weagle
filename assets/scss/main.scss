@@ -29,6 +29,8 @@
 @import 'modules/accordion';
 @import 'modules/team';
 @import 'modules/pagination';
+@import 'modules/blog-item';
+@import 'modules/also-like';
 
 // pages
 @import 'pages/home';
@@ -36,6 +38,6 @@
 //@import 'pages/diagnostic';
 //@import 'pages/consultancy';
 @import 'pages/podcast';
-//@import 'pages/blog';
-//@import 'pages/blog-inner';
+@import 'pages/blog';
+@import 'pages/blog-inner';
 //@import 'pages/error-404';

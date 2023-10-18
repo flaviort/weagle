@@ -1,6 +1,6 @@
 #main-content {
-    &.podcast {
-        background-color: $gray-lighter;
+    &.blog {
+        background-color: $blue;
 
         #banner {
             padding-top: calc(4.275rem + 5vh);
@@ -35,11 +35,11 @@
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
-                    gap: 7rem;
+                    gap: 11rem;
                 }
 
                 @media #{$mq-lg-min} {
-                    width: 41vw;
+                    width: 42vw;
                 }
 
                 p {
@@ -57,6 +57,10 @@
                         @media #{$mq-lg-min} {
                             text-align: right;
                         }
+
+                        @media #{$mq-2xl-min} {
+                            padding-left: 2rem;
+                        }
                     }
                 }
             }
@@ -65,30 +69,29 @@
                 position: relative;
                 z-index: 2;
                 pointer-events: none;
-                margin: 1.5rem auto -3rem auto;
+                margin: 1.5rem auto -4rem auto;
                 display: block;
-                width: 16rem;
-                max-width: 30vw;
+                width: 20rem;
+                max-width: 50vw;
 
                 @media #{$mq-sm-min} {
-                    margin-bottom: -4rem;
-                    
-                }
-
-                @media #{$mq-md-min} {
-                    margin-bottom: -6rem;
+                    margin-bottom: -5rem;
                     
                 }
 
                 @media #{$mq-lg-min} {
-                    margin: -3rem auto -8rem auto;
-                    transform: translateX(.75rem);
+                    margin: -4rem auto -6rem auto;
+                }
+
+                @media #{$mq-xl-min} {
+                    transform: translateX(-.25rem);
                 }
             }
         }
 
         #middle {
             z-index: 4;
+            overflow: visible;
 
             .bg {
                 position: absolute;
@@ -96,22 +99,28 @@
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 20vw;
+                height: 15vw;
                 background-color: $white;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    top: -1px;
+                    right: 0;
+                    width: 12vw;
+                    height: 2px;
+                    background-color: $blue;
+                }
 
                 svg {
                     position: absolute;
                     top: 0;
-                    right: 0;
+                    right: -1px;
                     width: auto;
                     height: 100%;
-                    color: $gray-lighter;
+                    color: $blue;
                 }
-            }
-
-            .title-top {
-                display: block;
-                padding-bottom: clamp(2rem, 4vw, 3rem);
             }
         }
 

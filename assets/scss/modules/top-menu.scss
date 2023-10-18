@@ -67,4 +67,21 @@
             }
         }
     }
+
+    &.full-white-menu {
+        #top-menu {
+            .container {
+                .logo {
+                    .icon,
+                    .letter {
+                        fill: $white;
+                    }
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
 }

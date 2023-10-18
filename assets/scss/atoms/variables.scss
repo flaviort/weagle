@@ -60,6 +60,7 @@ html {
 }
 
 // color classes
+.transparent { color: transparent; }
 .pure-white { color: $pure-white; }
 .white { color: $white; }
 .gray-lightest { color: $gray-lightest; }
@@ -77,6 +78,7 @@ html {
 .blue-light { color: lighten(adjust-hue($blue, -60), 5); }
 
 // bg-color classes
+.bg-transparent { background-color: transparent; }
 .bg-pure-white { background-color: $pure-white; }
 .bg-white { background-color: $white; }
 .bg-gray-lightest { background-color: $gray-lightest; }
