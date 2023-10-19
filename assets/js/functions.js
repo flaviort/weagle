@@ -458,25 +458,30 @@ function scrollTriggerAnimations() {
 
 	}
 
-	// parallax img
-	/*
-    if($('.parallax-img').length) {
-		gsap.utils.toArray('.parallax-img').forEach(item => {
+	// mountains parallax (about page)
+    if($('.mountains-parallax').length) {
 
-			const strength = $(item).attr('data-strength')
-
-			gsap.from(item, {
-				yPercent: strength * -1,
-				scrollTrigger: {
-					trigger: item,
-					scrub: true,
-					start: 'top bottom',
-					end: '+=' + vh(300)
-				}
-			})
+		gsap.to('.mountain-back', {
+			y: vh(-5),
+			scrollTrigger: {
+				trigger: '#next',
+				scrub: true,
+				start: '-20% 120%',
+				end: '120% -20%'
+			}
 		})
+
+		gsap.to('.mountain-front', {
+			y: $(window).width() > 993 ? vh(30) : vh(20),
+			scrollTrigger: {
+				trigger: '#next',
+				scrub: true,
+				start: '-20% 120%',
+				end: '120% -20%'
+			}
+		})
+
 	}
-	*/
 }
 
 // 

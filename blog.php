@@ -8,18 +8,14 @@
 <section id='banner' class='z5' data-scroll-section>
 	<div class='container transitionUp white'>
 
-		<h1 class='text-biggest bold'>
-			Weagle Blog
-		</h1>
+		<div class='left'>
 
-		<div class='texts'>
-			
-			<p>
-				Vamos te ajudar a construir, organizar e vender o seu negócio.
-			</p>
-
-			<p>
-				Todo negócio terá apenas 3 destinos: Sucessão, venda ou falência.
+			<h1 class='text-biggest bold'>
+				Weagle Blog
+			</h1>
+		
+			<p class='text'>
+				Vamos te ajudar a construir, organizar e vender o seu negócio. Todo negócio terá apenas 3 destinos: Sucessão, venda ou falência.
 			</p>
 
 		</div>

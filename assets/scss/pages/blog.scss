@@ -6,85 +6,61 @@
             padding-top: calc(4.275rem + 5vh);
             overflow: visible;
             background-color: transparent;
+            text-align: center;
 
             @media #{$mq-sm-min} {
                 padding-top: calc(3.75rem + 10vh);
             }
 
-            @media #{$mq-lg-max} {
-                text-align: center;
+            @media #{$mq-md-min} {
+                text-align: left;
             }
 
-            h1 {
-                position: relative;
-                z-index: 1;
-                display: block;
-                text-transform: uppercase;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            .texts {
-                position: relative;
-                z-index: 1;
-                margin: 1rem auto 0 auto;
-                width: 25rem;
-                max-width: 95%;
-
-                @media #{$mq-lg-min} {
+            .container {
+                @media #{$mq-md-min} {
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
-                    gap: 11rem;
                 }
 
-                @media #{$mq-lg-min} {
-                    width: 42vw;
-                }
-
-                p {
-                    @media #{$mq-lg-max} {
-                        display: inline;
+                .left {
+                    h1 {
+                        text-transform: uppercase;
                     }
 
-                    &:first-child {
+                    p {
+                        display: block;
+                        margin-top: 1.5rem;
+                        max-width: 100%;
+
+                        @media #{$mq-md-min} {
+                            width: 20rem;
+                        }
+
                         @media #{$mq-lg-min} {
-                            text-align: left;
-                        }
-                    }
-
-                    &:last-child {
-                        @media #{$mq-lg-min} {
-                            text-align: right;
-                        }
-
-                        @media #{$mq-2xl-min} {
-                            padding-left: 2rem;
+                            width: 35rem;
                         }
                     }
                 }
-            }
 
-            img {
-                position: relative;
-                z-index: 2;
-                pointer-events: none;
-                margin: 1.5rem auto -4rem auto;
-                display: block;
-                width: 20rem;
-                max-width: 50vw;
+                img {
+                    width: 20rem;
+                    max-width: 70%;
+                    margin: 1.5rem auto -5rem auto;
 
-                @media #{$mq-sm-min} {
-                    margin-bottom: -5rem;
-                    
-                }
+                    @media #{$mq-md-min} {
+                        width: auto;
+                        margin: 0 0 -5rem 0;
+                        height: 100%;
+                        max-height: 65vh;
+                        max-width: 40%;
+                    }
 
-                @media #{$mq-lg-min} {
-                    margin: -4rem auto -6rem auto;
-                }
-
-                @media #{$mq-xl-min} {
-                    transform: translateX(-.25rem);
+                    @media #{$mq-lg-min} {
+                        margin-top: -1rem;
+                        margin-bottom: -6rem;
+                        margin-right: 5%;
+                    }
                 }
             }
         }

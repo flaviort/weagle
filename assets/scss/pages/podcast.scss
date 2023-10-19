@@ -6,83 +6,61 @@
             padding-top: calc(4.275rem + 5vh);
             overflow: visible;
             background-color: transparent;
+            text-align: center;
 
             @media #{$mq-sm-min} {
                 padding-top: calc(3.75rem + 10vh);
             }
 
-            @media #{$mq-lg-max} {
-                text-align: center;
+            @media #{$mq-md-min} {
+                text-align: left;
             }
 
-            h1 {
-                position: relative;
-                z-index: 1;
-                display: block;
-                text-transform: uppercase;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            .texts {
-                position: relative;
-                z-index: 1;
-                margin: 1rem auto 0 auto;
-                width: 25rem;
-                max-width: 95%;
-
-                @media #{$mq-lg-min} {
+            .container {
+                @media #{$mq-md-min} {
                     display: flex;
                     align-items: flex-start;
                     justify-content: space-between;
-                    gap: 7rem;
                 }
 
-                @media #{$mq-lg-min} {
-                    width: 41vw;
-                }
-
-                p {
-                    @media #{$mq-lg-max} {
-                        display: inline;
+                .left {
+                    h1 {
+                        text-transform: uppercase;
                     }
 
-                    &:first-child {
-                        @media #{$mq-lg-min} {
-                            text-align: left;
+                    p {
+                        display: block;
+                        margin-top: 1.5rem;
+                        max-width: 100%;
+
+                        @media #{$mq-md-min} {
+                            width: 25rem;
                         }
-                    }
 
-                    &:last-child {
                         @media #{$mq-lg-min} {
-                            text-align: right;
+                            width: 35rem;
                         }
                     }
                 }
-            }
 
-            img {
-                position: relative;
-                z-index: 2;
-                pointer-events: none;
-                margin: 1.5rem auto -3rem auto;
-                display: block;
-                width: 16rem;
-                max-width: 30vw;
+                img {
+                    width: 15rem;
+                    max-width: 50%;
+                    margin: 1.5rem auto -4rem auto;
 
-                @media #{$mq-sm-min} {
-                    margin-bottom: -4rem;
-                    
-                }
+                    @media #{$mq-md-min} {
+                        width: auto;
+                        margin: -1rem 5% -7rem 0;
+                        height: 100%;
+                        max-height: 65vh;
+                        max-width: 40%;
+                    }
 
-                @media #{$mq-md-min} {
-                    margin-bottom: -6rem;
-                    
-                }
-
-                @media #{$mq-lg-min} {
-                    margin: -3rem auto -8rem auto;
-                    transform: translateX(.75rem);
+                    @media #{$mq-lg-min} {
+                        margin-top: -2rem;
+                        margin-bottom: -7rem;
+                        margin-right: 10%;
+                    }
                 }
             }
         }

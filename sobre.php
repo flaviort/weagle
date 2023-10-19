@@ -5,73 +5,117 @@
 	include('components/head.php');
 ?>
 
-<section id='banner' class='bg-gray-lighter' data-scroll-section>
+<section id='banner' class='z5' data-scroll-section>
 
-</section>
-
-<section class='texts-block section-padding-top z5' data-scroll-section>
-
-	<div class='top-side'>
-		<?php echo file_get_contents('assets/svg/curve-bottom-right.svg'); ?>
+	<div class='side'>
+		<?php echo file_get_contents('assets/svg/curve-bottom-left.svg'); ?>
 	</div>
 
+	<div class='container z5 transitionUp'>
+
+		<div class='left'>
+
+			<h1 class='text-biggest bold white'>
+				Conselheiros <br />
+				Inovativos
+			</h1>
+		
+			<p class='text'>
+				Mentoria Visionária, Resultados Revolucionários: O Poder do Nosso Time de Conselheiros Weagle. Texto em Construção
+			</p>
+
+		</div>
+
+		<img data-src='assets/img/chess.png' alt='Peça de xadrez' class='lazy'>
+
+	</div>
+</section>
+
+<section class='texts-block section-padding-top-big' data-scroll-section>
 	<div class='container'>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /><br />
-
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 
 		<div class='line animated-line'></div>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /><br />
-
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 
 	</div>
-
 </section>
 
-<section id='earth' data-scroll-section>
+<section id='earth' class='section-padding-top section-padding-bottom' data-scroll-section>
 	<div class='container'>
+
+		<div class='texts'>
+			<p class='bold fill-title'>
+				<span class='line'>Weagle®</span>
+				<span class='line'>For <span>The</span></span>
+				<span class='line'>Nations</span>
+			</p>
+		</div>
+
+		<div class='video' data-scroll data-scroll-speed='-2'>
+			<video autoplay playsinline muted loop class='lazy cover' preload='none'>
+				<source data-src='assets/videos/earth-spinning.mp4'>
+			</video>
+		</div>
 
 	</div>
 </section>
 
 <section class='texts-block section-padding-bottom-big' data-scroll-section>
-
 	<div class='container'>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /><br />
-
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 
 		<div class='line animated-line'></div>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /><br />
-
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 
 	</div>
-
 </section>
 
-<section id='next' data-scroll-section>
-	<div class='container'>
+<section id='next' class='section-padding-top-big section-padding-bottom-big' data-scroll-section>
+
+	<div class='mountains-parallax' data-scroll data-scroll-speed='-2'>
+
+		<div class='mountain mountain-back'>
+			<img src='assets/img/mountains.png' alt='Montanhas de gelo'>
+		</div>
+
+		<div class='mountain mountain-front'>
+			<img src='assets/img/mountains.png' alt='Montanhas de gelo'>
+		</div>
 
 	</div>
+
+	<div class='container z5'>
+
+		<a href='consultoria' class='text magnetic hover-underline' data-strength='30'>
+			Conheça a nossa consultoria NEXT
+		</a>
+
+		<a href='consultoria' class='logo magnetic' data-strength='30'>
+
+			<?php echo file_get_contents('assets/svg/next.svg'); ?>
+
+		</a>
+
+	</div>
+
 </section>
 
-<section id='manifest' data-scroll-section>
+<section id='manifest' class='section-padding-top' data-scroll-section>
 
-	<div class='texts'>
+	<div class='texts pure-white'>
 
 		<div data-scroll data-scroll-direction='horizontal' data-scroll-speed='2'>
 			<p class='roll-text'>
@@ -80,7 +124,7 @@
 		</div>
 
 		<div data-scroll data-scroll-direction='horizontal' data-scroll-speed='-2'>
-			<p class='roll-text-reverse'>
+			<p class='roll-text-reverse blue'>
 				Manifesto Manifesto Manifesto&nbsp;
 			</p>
 		</div>

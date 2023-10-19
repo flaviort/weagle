@@ -8,18 +8,14 @@
 <section id='banner' class='z5' data-scroll-section>
 	<div class='container transitionUp'>
 
-		<h1 class='text-biggest white bold'>
-			Weagle Cast
-		</h1>
+		<div class='left'>
 
-		<div class='texts'>
-
-			<p>
-				Estratégias, insights e dicas em um bom bate papo sobre
-			</p>
-
-			<p>
-				governança, inovação e planejamento empresarial!
+			<h1 class='text-biggest bold white'>
+				Weagle Cast
+			</h1>
+		
+			<p class='text'>
+				Estratégias, insights e dicas em um bom bate papo sobre governança, inovação e planejamento empresarial!
 			</p>
 
 		</div>

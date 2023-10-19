@@ -1,5 +1,281 @@
 #main-content {
     &.about {
+        background-color: $gray-lighter;
+
+        #banner {
+            padding-top: calc(4.275rem + 5vh);
+            overflow: visible;
+            background-color: transparent;
+            text-align: center;
+
+            @media #{$mq-sm-min} {
+                padding-top: calc(3.75rem + 10vh);
+            }
+
+            @media #{$mq-md-min} {
+                text-align: left;
+            }
+
+            .side {
+                position: absolute;
+                z-index: 0;
+                bottom: calc(3.5rem + -1px);
+                left: 0;
+                width: 30vw;
+                height: 30vw;
+
+                @media #{$mq-sm-min} {
+                    bottom: calc(5rem + -1px);
+                }
+
+                @media #{$mq-md-min} {
+                    bottom: -1px;
+                    width: 10vw;
+                    height: 10vw;
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    color: $white;
+                }
+            }
+
+            .container {
+                @media #{$mq-md-min} {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                }
+
+                .left {
+                    h1 {
+                        text-transform: uppercase;
+
+                        @media #{$mq-sm-max} {
+                            font-size: 12.275vw;
+                        }
+                    }
+
+                    p {
+                        display: block;
+                        margin-top: 1.5rem;
+                        max-width: 100%;
+
+                        @media #{$mq-md-min} {
+                            width: 25rem;
+                        }
+
+                        @media #{$mq-lg-min} {
+                            width: 35rem;
+                        }
+                    }
+                }
+
+                img {
+                    width: 25rem;
+                    max-width: 60%;
+                    margin: 1.5rem auto -3.5rem auto;
+
+                    @media #{$mq-sm-min} {
+                        margin-bottom: -5rem;
+                    }
+
+                    @media #{$mq-md-min} {
+                        width: auto;
+                        margin: 0 0 -5rem 0;
+                        height: 100%;
+                        max-height: 65vh;
+                        max-width: 40%;
+                    }
+
+                    @media #{$mq-lg-min} {
+                        margin-bottom: -6rem;
+                    }
+                }
+            }
+        }
+
+        .texts-block {
+            .container {
+                @media #{$mq-md-min} {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 5vw;
+                }
+
+                .line {
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $black;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+
+                    @media #{$mq-md-min} {
+                        margin-bottom: 0;
+                        margin-top: 1.25rem;
+                    }
+
+                    @media #{$mq-xl-min} {
+                        margin-top: 1.675rem;
+                    }
+                }
+            }
+        }
+
+        #earth {
+            margin-top: -1px;
+            margin-bottom: -1px;
+
+            .texts {
+                font-size: 21vw;
+                line-height: .825;
+                text-transform: uppercase;
+
+                @media #{$mq-sm-min} {
+                    font-size: 21.5vw;
+                }
+
+                @media #{$mq-md-min} {
+                    font-size: 20.75vw;
+                }
+
+                @media #{$mq-xl-min} {
+                    font-size: 21vw;
+                }
+
+                .fill-title {
+                    div {
+                        background: linear-gradient(
+                            to right,
+                            $blue 50%,
+                            $pure-white 50%
+                        );
+                        background-size: 200% 100%;
+                        background-position-x: 100%;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+
+                        .line {
+                            display: flex;
+                            justify-content: space-between;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            .video {
+                position: absolute;
+                z-index: 2;
+                top: 15%;
+                left: 0;
+                width: 100%;
+                height: 80%;
+                clip-path: circle(22% at center);
+
+                @media #{$mq-sm-min} {
+                    clip-path: circle(22.5% at center);
+                }
+
+                @media #{$mq-md-min} {
+                    clip-path: circle(23.25% at center);
+                }
+
+                @media #{$mq-lg-min} {
+                    top: 10%;
+                }
+
+                @media #{$mq-xl-min} {
+                    clip-path: circle(23.5% at center);
+                }
+
+                video {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                    transform: translateX(-.625%) translateY(-.675%);
+                }
+            }
+        }
+
+        #next {
+            text-align: center;
+            overflow: visible;
+
+            .mountains-parallax {
+                position: absolute;
+                overflow: hidden;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                .mountain {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 0 0;
+                    }
+
+                    &.mountain-back {
+                        z-index: 1;
+                        height: 100%;
+                        bottom: 0;
+
+                        img {
+                            transform: scaleX(-1);
+                        }
+                    }
+
+                    &.mountain-front {
+                        z-index: 2;
+                        height: 100%;
+                        bottom: 5vh;
+
+                        @media #{$mq-md-min} {
+                            height: 85%;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .text {
+                display: inline-block;
+                color: $pure-white;
+                padding-top: 5vh;
+
+                @media #{$mq-md-min} {
+                    padding-top: 10vh;
+                }
+            }
+
+            .logo {
+                display: block;
+                width: 30rem;
+                max-width: 65%;
+                margin: auto;
+                margin-top: 3vh;
+
+                @media #{$mq-md-min} {
+                    margin-top: 5vh;
+                }
+
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+
         #manifest {
             .texts {
                 position: absolute;
@@ -16,10 +292,10 @@
                         text-transform: uppercase;
                         font-weight: $bold;
                         white-space: nowrap;
-                        color: transparent;
-                        -webkit-text-stroke: $gray-lighter;
-                        -webkit-text-stroke-width: 1px;
-                        -webkit-text-fill-color: transparent;
+                        //color: $gray-lighter;
+                        //-webkit-text-stroke: $gray-lighter;
+                        //-webkit-text-stroke-width: 1px;
+                        //-webkit-text-fill-color: transparent;
 
                         @media #{$mq-md-min} {
                             font-size: 20vw;
