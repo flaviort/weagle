@@ -138,7 +138,7 @@
 	</div>
 
 	<div class='container z5'>
-		<a href='https://www.youtube.com/watch?v=lTyUoaYV3-Q&ab_channel=WeagleGovernance' data-fancybox class='video'>
+		<a href='https://www.youtube.com/watch?v=lTyUoaYV3-Q?controls=0&showinfo=0&rel=0' data-fancybox class='video'>
 
 			<div class='youtube-icon'>
 				<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>

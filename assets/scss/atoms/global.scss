@@ -213,3 +213,55 @@ body {
 .section-margin-bottom-big {
 	margin-bottom: clamp(5rem, 9vw, 7rem);
 }
+
+// fancyapp video
+body[data-barba='wrapper'] {
+	.fancybox__container {
+		.fancybox__slide {
+			&.has-youtube {
+				padding: 0;
+				justify-content: center;
+
+				&:before,
+				&:after {
+					content: none;
+				}
+
+				.fancybox__content {
+					width: 100%!important;
+					height: 100%!important;
+
+					.is-close-btn {
+						position: absolute;
+						z-index: 5;
+						top: 1rem;
+						right: 1rem;
+						width: 3rem;
+						height: 3rem;
+						padding: .875rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-align: center;
+						background-color: $blue;
+						color: $white;
+						border-radius: 50%;
+						opacity: 1;
+
+						&:hover {
+							svg {
+								transform: rotate(180deg);
+							}
+						}
+
+						svg {
+							transition: .3s ease-in-out;
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
