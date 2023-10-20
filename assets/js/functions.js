@@ -403,6 +403,15 @@ function scrollTriggerAnimations() {
 
 			const parent = item.closest('.follow-mouse-section')
 
+			const middleX = item.offsetWidth / 2
+			const middleY = item.offsetHeight / 2 
+
+			gsap.set(item, {
+				position: 'absolute',
+				top: '-' + middleX,
+				left: '-' + middleY
+			})
+
 			function moveCircle(e) {
 				gsap.to(item, 4, {
 					x: e.clientX - $(parent).offset().left,

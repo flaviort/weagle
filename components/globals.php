@@ -8,7 +8,7 @@
 	}
 
 	// global vars
-	$siteUrl = "https://dev.senzdsn.com/weagle";
+	$siteUrl = "https://senzdsn.com/sites/weagle";
 	$siteTitle = "Weagle®";
 	$siteDesc = "A Weagle® oferece soluções corporativas abrangentes, com consultoria em governança, planejamento estratégico e análises detalhadas.";
 

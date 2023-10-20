@@ -5,7 +5,23 @@
 	include('components/head.php');
 ?>
 
-<section id='banner' class='z5' data-scroll-section>
+<section id='banner' class='z5 follow-mouse-section' data-scroll-section>
+
+	<a href='<?php echo($form); ?>' target='_blank' rel='noopener' class='follow-mouse-object rotating-button'>
+
+		<div class='rotating-text'>
+			<div class='inner-text'>
+				<?php echo file_get_contents('assets/svg/circle-text-1.svg'); ?>
+			</div>
+		</div>
+
+		<div class='circle'>
+			<?php echo file_get_contents('assets/svg/ux/arrow-right.svg'); ?>
+			<?php echo file_get_contents('assets/svg/ux/arrow-right.svg'); ?>
+		</div>
+
+	</a>
+
 	<div class='container transitionUp'>
 
 		<div class='left'>

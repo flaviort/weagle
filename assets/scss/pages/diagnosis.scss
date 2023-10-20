@@ -16,6 +16,12 @@
                 text-align: left;
             }
 
+            .rotating-button {
+                z-index: 9;
+                mix-blend-mode: difference;
+                transform: scale(0);
+            }
+
             .container {
                 @media #{$mq-md-min} {
                     display: flex;
