@@ -19,7 +19,7 @@
                         <div class='bottom'>
 
                             <div class='thumb'>
-                                <img src='assets/img/testimonials/mauro.jpg' alt='Mauro José Auache' loading='lazy' class='cover'>
+                                <img src='assets/img/testimonials/mauro.jpg' alt='Mauro José Auache' width='150' height='150' loading='lazy' class='cover'>
                             </div>
 
                             <div class='name'>
@@ -48,7 +48,7 @@
                         <div class='bottom'>
 
                             <div class='thumb'>
-                                <img src='assets/img/testimonials/josue.jpg' alt='Josué Eraldo Silva' loading='lazy' class='cover'>
+                                <img src='assets/img/testimonials/josue.jpg' alt='Josué Eraldo Silva' width='150' height='150' loading='lazy' class='cover'>
                             </div>
 
                             <div class='name'>
@@ -77,7 +77,7 @@
                         <div class='bottom'>
 
                             <div class='thumb'>
-                                <img src='assets/img/testimonials/cassia.jpg' alt='Cassia Gonsalves' loading='lazy' class='cover'>
+                                <img src='assets/img/testimonials/cassia.jpg' alt='Cassia Gonsalves' width='150' height='150' loading='lazy' class='cover'>
                             </div>
 
                             <div class='name'>

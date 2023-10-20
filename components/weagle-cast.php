@@ -24,7 +24,7 @@
                                 <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
                             </div>
 
-                            <img src='assets/img/cast/09.jpg' alt='Weagle Cast #09' loading='lazy'>
+                            <img src='assets/img/cast/09.jpg' alt='Weagle Cast #09' width='1200' height='675' loading='lazy'>
 
                         </div>
                     </a>
@@ -38,7 +38,7 @@
                                 <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
                             </div>
 
-                            <img src='assets/img/cast/08.jpg' alt='Weagle Cast #08' loading='lazy'>
+                            <img src='assets/img/cast/08.jpg' alt='Weagle Cast #08' width='1200' height='675' loading='lazy'>
 
                         </div>
                     </a>
@@ -52,7 +52,7 @@
                                 <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
                             </div>
 
-                            <img src='assets/img/cast/07.jpg' alt='Weagle Cast #07' loading='lazy'>
+                            <img src='assets/img/cast/07.jpg' alt='Weagle Cast #07' width='1200' height='675' loading='lazy'>
 
                         </div>
                     </a>
@@ -66,7 +66,7 @@
                                 <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
                             </div>
 
-                            <img src='assets/img/cast/06.jpg' alt='Weagle Cast #06' loading='lazy'>
+                            <img src='assets/img/cast/06.jpg' alt='Weagle Cast #06' width='1200' height='675' loading='lazy'>
 
                         </div>
                     </a>
@@ -80,7 +80,7 @@
                                 <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
                             </div>
 
-                            <img src='assets/img/cast/05.jpg' alt='Weagle Cast #05' loading='lazy'>
+                            <img src='assets/img/cast/05.jpg' alt='Weagle Cast #05' width='1200' height='675' loading='lazy'>
 
                         </div>
                     </a>

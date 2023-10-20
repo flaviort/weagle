@@ -8,7 +8,7 @@
 <section id='banner' data-scroll-section>
 
 	<div class='cover' data-scroll data-scroll-speed='-3' data-scroll-position='top'>
-		<img data-src='assets/img/blog/06.jpg' alt='Decifrando os Estágios Empresariais: O Guia para Reconhecer e Navegar pelos Momentos de Declínio, Estagnação e Crescimento' class='lazy cover'>
+		<img data-src='assets/img/blog/06.jpg' alt='Decifrando os Estágios Empresariais: O Guia para Reconhecer e Navegar pelos Momentos de Declínio, Estagnação e Crescimento' width='1200' height='700' class='lazy cover'>
 	</div>
 
 	<div class='container white z5 transitionUp'>
@@ -65,7 +65,7 @@
 
 		</div>
 
-		<img data-src='assets/img/blog/01.jpg' alt='Lorem ipsum dolor sit amet consectetur' class='lazy full-width'>
+		<img data-src='assets/img/blog/01.jpg' alt='Lorem ipsum dolor sit amet consectetur' width='1200' height='700' class='lazy full-width'>
 
 		<ul>
 
@@ -98,11 +98,11 @@
 		<div class='row'>
 
 			<div class='col-md-6'>
-				<img data-src='assets/img/blog/02.jpg' alt='Lorem ipsum dolor sit amet consectetur' class='lazy'>
+				<img data-src='assets/img/blog/02.jpg' alt='Lorem ipsum dolor sit amet consectetur' width='1200' height='700' class='lazy'>
 			</div>
 
 			<div class='col-md-6'>
-				<img data-src='assets/img/blog/03.jpg' alt='Lorem ipsum dolor sit amet consectetur' class='lazy'>
+				<img data-src='assets/img/blog/03.jpg' alt='Lorem ipsum dolor sit amet consectetur' width='1200' height='700' class='lazy'>
 			</div>
 
 		</div>

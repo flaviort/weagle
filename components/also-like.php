@@ -22,7 +22,7 @@
                     <a href='blog-inner' class='blog-item'>
                         
                         <div class='image'>
-                            <img src='assets/img/blog/04.jpg' alt='Como evitar os erros que impedem pequenas empresas de crescer? Questões Práticas!' loading='lazy'>
+                            <img src='assets/img/blog/04.jpg' alt='Como evitar os erros que impedem pequenas empresas de crescer? Questões Práticas!' width='1200' height='700' loading='lazy'>
                         </div>
 
                         <div class='infos'>
@@ -44,7 +44,7 @@
                     <a href='blog-inner' class='blog-item'>
                         
                         <div class='image'>
-                            <img src='assets/img/blog/05.jpg' alt='Empresário é tudo mentiroso. Eu fui enganado e estou morrendo.' loading='lazy'>
+                            <img src='assets/img/blog/05.jpg' alt='Empresário é tudo mentiroso. Eu fui enganado e estou morrendo.' width='1200' height='700' loading='lazy'>
                         </div>
 
                         <div class='infos'>
@@ -66,7 +66,7 @@
                     <a href='blog-inner' class='blog-item'>
                         
                         <div class='image'>
-                            <img src='assets/img/blog/03.jpg' alt='Guia Completo de Utilização do Scrum para Obter Resultados de Sucesso' loading='lazy'>
+                            <img src='assets/img/blog/03.jpg' alt='Guia Completo de Utilização do Scrum para Obter Resultados de Sucesso' width='1200' height='700' loading='lazy'>
                         </div>
 
                         <div class='infos'>
@@ -88,7 +88,7 @@
                     <a href='blog-inner' class='blog-item'>
                         
                         <div class='image'>
-                            <img src='assets/img/blog/02.jpg' alt='Pequenas e médias empresas precisam de Conselho?' loading='lazy'>
+                            <img src='assets/img/blog/02.jpg' alt='Pequenas e médias empresas precisam de Conselho?' width='1200' height='700' loading='lazy'>
                         </div>
 
                         <div class='infos'>

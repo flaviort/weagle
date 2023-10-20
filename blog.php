@@ -20,7 +20,7 @@
 
 		</div>
 
-		<img data-src='assets/img/books.png' alt='Livros' class='lazy'>
+		<img data-src='assets/img/books.png' alt='Livros' width='633' height='810' class='lazy'>
 
 	</div>
 </section>
@@ -38,7 +38,7 @@
 				<div class='blog-item'>
 					
 					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/06.jpg' alt='Decifrando os Estágios Empresariais: O Guia para Reconhecer e Navegar pelos Momentos de Declínio, Estagnação e Crescimento' class='lazy'>
+						<img data-src='assets/img/blog/06.jpg' alt='Decifrando os Estágios Empresariais: O Guia para Reconhecer e Navegar pelos Momentos de Declínio, Estagnação e Crescimento' width='1200' height='700' class='lazy'>
 					</a>
 
 					<div class='infos'>
@@ -64,7 +64,7 @@
 				<div class='blog-item'>
 					
 					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/05.jpg' alt='Empresário é tudo mentiroso. Eu fui enganado e estou morrendo.' class='lazy'>
+						<img data-src='assets/img/blog/05.jpg' alt='Empresário é tudo mentiroso. Eu fui enganado e estou morrendo.' width='1200' height='700' class='lazy'>
 					</a>
 
 					<div class='infos'>
@@ -90,7 +90,7 @@
 				<div class='blog-item'>
 					
 					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/04.jpg' alt='Como evitar os erros que impedem pequenas empresas de crescer? Questões Práticas!' class='lazy'>
+						<img data-src='assets/img/blog/04.jpg' alt='Como evitar os erros que impedem pequenas empresas de crescer? Questões Práticas!' width='1200' height='700' class='lazy'>
 					</a>
 
 					<div class='infos'>
@@ -116,7 +116,7 @@
 				<div class='blog-item'>
 					
 					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/03.jpg' alt='Guia Completo de Utilização do Scrum para Obter Resultados de Sucesso' class='lazy'>
+						<img data-src='assets/img/blog/03.jpg' alt='Guia Completo de Utilização do Scrum para Obter Resultados de Sucesso' width='1200' height='700' class='lazy'>
 					</a>
 
 					<div class='infos'>
@@ -142,7 +142,7 @@
 				<div class='blog-item'>
 					
 					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/02.jpg' alt='Pequenas e médias empresas precisam de Conselho?' class='lazy'>
+						<img data-src='assets/img/blog/02.jpg' alt='Pequenas e médias empresas precisam de Conselho?' width='1200' height='700' class='lazy'>
 					</a>
 
 					<div class='infos'>
@@ -168,7 +168,7 @@
 				<div class='blog-item'>
 					
 					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/01.jpg' alt='4 Segredos para Liderar Equipes e ter Sucesso no Negócio' class='lazy'>
+						<img data-src='assets/img/blog/01.jpg' alt='4 Segredos para Liderar Equipes e ter Sucesso no Negócio' width='1200' height='700' class='lazy'>
 					</a>
 
 					<div class='infos'>

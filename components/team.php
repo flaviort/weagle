@@ -7,7 +7,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-01.jpg' alt='Pedro Muschitz' loading='lazy' class='cover'>
+                            <img src='assets/img/team-01.jpg' alt='Pedro Muschitz' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -71,7 +71,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-02.jpg' alt='Sergio Luis' loading='lazy' class='cover'>
+                            <img src='assets/img/team-02.jpg' alt='Sergio Luis' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -135,7 +135,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-03.jpg' alt='Aline Dalmarco' loading='lazy' class='cover'>
+                            <img src='assets/img/team-03.jpg' alt='Aline Dalmarco' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -199,7 +199,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-04.jpg' alt='Renan Karas' loading='lazy' class='cover'>
+                            <img src='assets/img/team-04.jpg' alt='Renan Karas' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -263,7 +263,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-05.jpg' alt='Renan Tromm' loading='lazy' class='cover'>
+                            <img src='assets/img/team-05.jpg' alt='Renan Tromm' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -327,7 +327,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-06.jpg' alt='Gregorio Rossilho' loading='lazy' class='cover'>
+                            <img src='assets/img/team-06.jpg' alt='Gregorio Rossilho' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>

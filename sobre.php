@@ -26,7 +26,7 @@
 
 		</div>
 
-		<img data-src='assets/img/chess.png' alt='Peça de xadrez' class='lazy'>
+		<img data-src='assets/img/chess.png' alt='Peça de xadrez' width='599' height='767' class='lazy'>
 
 	</div>
 </section>
@@ -88,11 +88,11 @@
 	<div class='mountains-parallax' data-scroll data-scroll-speed='-2'>
 
 		<div class='mountain mountain-back'>
-			<img src='assets/img/mountains.png' alt='Montanhas de gelo'>
+			<img data-src='assets/img/mountains.png' alt='Montanhas de gelo' width='1819' height='585' class='lazy'>
 		</div>
 
 		<div class='mountain mountain-front'>
-			<img src='assets/img/mountains.png' alt='Montanhas de gelo'>
+			<img data-src='assets/img/mountains.png' alt='Montanhas de gelo' width='1819' height='585' class='lazy'>
 		</div>
 
 	</div>
@@ -138,7 +138,7 @@
 	</div>
 
 	<div class='container z5'>
-		<a href='#' data-fancybox class='video'>
+		<a href='https://www.youtube.com/watch?v=lTyUoaYV3-Q&ab_channel=WeagleGovernance' data-fancybox class='video'>
 
 			<div class='youtube-icon'>
 				<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>

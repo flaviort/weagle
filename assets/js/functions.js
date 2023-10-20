@@ -73,7 +73,7 @@ function initClickAndKeyFunctions() {
 			ease: 'elastic.out(.5, .3)',
 			pointerEvents: 'auto',
 			duration: 1
-		}, '-=.5')
+		}, '-=.2')
 
 	})
 
