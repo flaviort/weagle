@@ -56,7 +56,7 @@ function initClickAndKeyFunctions() {
 			$('.open-fs').addClass('active')
 		})
 
-		tl.to('.blur', {
+		tl.to('.blur-fs-bg', {
 			opacity: 1,
 			pointerEvents: 'auto',
 			duration: .5
@@ -82,7 +82,7 @@ function initClickAndKeyFunctions() {
 
 		var tl = gsap.timeline()
 
-		tl.to('.blur', {
+		tl.to('.blur-fs-bg', {
 			opacity: 0,
 			pointerEvents: 'none',
 			duration: .5
@@ -100,7 +100,7 @@ function initClickAndKeyFunctions() {
 			duration: .3
 		}, '-=.2')
 
-		tl.to('.blur', {
+		tl.to('.blur-fs-bg', {
 			pointerEvents: 'none',
 			duration: 0
 		})
@@ -117,7 +117,7 @@ function initClickAndKeyFunctions() {
 	}
 
 	// close fs
-	$('.close-fs, #fs-menu a, .blur').click(function(){
+	$('.close-fs, #fs-menu a, .blur-fs-bg').click(function(){
 		if (isDoubleClicked($(this))) return
 		closeFs()
 	})
@@ -452,6 +452,30 @@ function scrollTriggerAnimations() {
 					x: 0,
 					duration: 1,
 					ease: 'circ.out'
+				})
+			}
+		})
+
+	}
+
+	// stagger from bottom to top
+	if($('.stagger-bottom-top').length) {
+
+		gsap.set('.stagger-bottom-top > *', {
+			autoAlpha: 0,
+			y: vw(20)
+		})
+
+		ScrollTrigger.batch('.stagger-bottom-top > *', {
+			start: '0 100%',
+			once: true,
+			onEnter: elements => {
+				gsap.to(elements, {
+					autoAlpha: 1,
+					y: 0,
+					duration: 1,
+					ease: 'circ.out',
+					stagger: .175
 				})
 			}
 		})

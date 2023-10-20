@@ -6,7 +6,7 @@
         <div class='flex'>
 
             <h3 class='text-big reveal-text'>
-                Leia também
+                Weagle Blog
             </h3>
 
             <a href='<?php echo($blog); ?>' class='hover-underline'>

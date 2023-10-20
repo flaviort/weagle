@@ -1,20 +1,29 @@
 #testimonials {
     .testimonials-slider {
-        cursor: grab;
+        @media #{$mq-md-min} {
+            cursor: grab;
+        }
 
         &.is-dragging {
-            cursor: grabbing;
+            @media #{$mq-md-min} {
+                cursor: grabbing;
+            }
 
             .testimonial-box {
-                transform: scale(.85);
+                @media #{$mq-md-min} {
+                    transform: scale(.85);
+                }
             }
         }
 
         .testimonial-box {
-            transition: .6s ease-in-out;
             border-radius: clamp(.125rem, 1.5vw, 1rem);
             background-color: $pure-white;
             padding: clamp(1.5rem, 4vw, 2.5rem);
+
+            @media #{$mq-md-min} {
+                transition: .6s ease-in-out;
+            }
 
             .line {
                 display: block;

@@ -63,7 +63,7 @@
                                     </li>
 
                                     <li>
-                                        <a href='https://maps.app.goo.gl/NvDe7NpdLNwGBYY56' target='_blank' class='hover-underline'>
+                                        <a href='https://maps.app.goo.gl/NvDe7NpdLNwGBYY56' target='_blank' rel='noopener' class='hover-underline'>
                                             <?php echo($address); ?>
                                         </a>
                                     </li>
@@ -73,19 +73,19 @@
                                 <ul>
 
                                     <li>
-                                        <a href='<?php echo($linkedin); ?>' target='_blank' class='hover-underline'>
+                                        <a href='<?php echo($linkedin); ?>' target='_blank' rel='noopener' class='hover-underline'>
                                             Linkedin
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href='<?php echo($youtube); ?>' target='_blank' class='hover-underline'>
+                                        <a href='<?php echo($youtube); ?>' target='_blank' rel='noopener' class='hover-underline'>
                                             Youtube
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href='<?php echo($instagram); ?>' target='_blank' class='hover-underline'>
+                                        <a href='<?php echo($instagram); ?>' target='_blank' rel='noopener' class='hover-underline'>
                                             Instagram
                                         </a>
                                     </li>

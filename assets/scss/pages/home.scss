@@ -140,21 +140,30 @@
 
             .problems-slider {
                 clip-path: inset(0 -100% 0 0);
-                cursor: grab;
+
+                @media #{$mq-md-min} {
+                    cursor: grab;
+                }
 
                 &.is-dragging {
-                    cursor: grabbing;
+                    @media #{$mq-md-min} {
+                        cursor: grabbing;
+                    }
 
                     .inner {
-                        transform: scale(.85);
+                        @media #{$mq-md-min} {
+                            transform: scale(.85);
+                        }
                     }
                 }
 
                 .inner {
-                    transition: .6s ease-in-out;
-                    
                     @media #{$mq-sm-min} {
                         padding-right: 2rem;
+                    }
+
+                    @media #{$mq-md-min} {
+                        transition: .6s ease-in-out;
                     }
 
                     h3 {

@@ -10,18 +10,26 @@
     }
 
     .weagle-cast-slider {
-        cursor: grab;
+        @media #{$mq-md-min} {
+            cursor: grab;
+        }
 
         &.is-dragging {
-            cursor: grabbing;
+            @media #{$mq-md-min} {
+                cursor: grabbing;
+            }
 
-            .weagle-cast-box {
-                transform: scale(.85);
+            .weagle-cast-item {
+                @media #{$mq-md-min} {
+                    transform: scale(.85);
+                }
             }
         }
 
-        .weagle-cast-box {
-            transition: .6s ease-in-out;
+        .weagle-cast-item {
+            @media #{$mq-md-min} {
+                transition: .6s ease-in-out;
+            }
         }
     }
 }

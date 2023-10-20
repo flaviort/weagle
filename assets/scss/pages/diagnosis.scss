@@ -1,0 +1,314 @@
+#main-content {
+    &.diagnosis {
+        background-color: $gray-lightest;
+
+        #banner {
+            overflow: visible;
+            background-color: transparent;
+            padding-top: calc(4.275rem + 5vh);
+            text-align: center;
+
+            @media #{$mq-sm-min} {
+                padding-top: calc(3.75rem + 10vh);
+            }
+
+            @media #{$mq-md-min} {
+                text-align: left;
+            }
+
+            .container {
+                @media #{$mq-md-min} {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                }
+
+                .left {
+                    h1 {
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        display: block;
+                        margin: 1.5rem auto;
+                        max-width: 100%;
+
+                        @media #{$mq-md-min} {
+                            width: 25rem;
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
+
+                        @media #{$mq-lg-min} {
+                            width: 35rem;
+                        }
+                    }
+                }
+
+                img {
+                    width: 25rem;
+                    max-width: 85%;
+                    margin: 1.5rem auto;
+
+                    @media #{$mq-md-min} {
+                        width: 20rem;
+                        margin: -1rem 2% 0 0;
+                        max-height: 65vh;
+                        max-width: 45%;
+                    }
+                }
+            }
+        }
+
+        #levels {
+            background-color: transparent;
+
+            .animated-line {
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $black;
+                margin: 1.5rem 0 3rem 0;
+
+                @media #{$mq-sm-min} {
+                    margin: 2rem 0 4rem 0;
+                }
+            }
+
+            .stages {
+                > div {
+                    margin-bottom: 3rem;
+                    
+                    &:nth-child(1) {
+                        .icon {
+                            svg {
+                                path {
+                                    fill: transparent;
+                                    stroke-width: 1px;
+                                    stroke: $blue;
+
+                                    &:nth-child(1) {
+                                        fill: $blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .icon {
+                            svg {
+                                path {
+                                    fill: transparent;
+                                    stroke-width: 1px;
+                                    stroke: $blue;
+
+                                    &:nth-child(1),
+                                    &:nth-child(2) {
+                                        fill: $blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        .icon {
+                            svg {
+                                path {
+                                    fill: transparent;
+                                    stroke-width: 1px;
+                                    stroke: $blue;
+
+                                    &:nth-child(1),
+                                    &:nth-child(2),
+                                    &:nth-child(4) {
+                                        fill: $blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        .icon {
+                            svg {
+                                path {
+                                    fill: $blue;
+                                }
+                            }
+                        }
+                    }
+
+                    .icon {
+                        display: block;
+                        width: 8rem;
+                        max-width: 75%;
+
+                        svg {
+                            width: 100%;
+                        }
+                    }
+
+                    .blue {
+                        display: block;
+                        margin: .5rem 0;
+                    }
+                }
+            }
+        }
+
+        #benefits {
+            overflow: visible;
+            text-align: center;
+
+            @media #{$mq-md-min} {
+                padding-bottom: 2rem;
+            }
+
+            .top-side {
+                position: absolute;
+                z-index: 0;
+                top: -1px;
+                right: 0;
+                width: 15vw;
+                height: 15vw;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    color: $gray-lightest;
+                }
+            }
+
+            .red {
+                display: inline-block;
+                padding: .275rem 2rem;
+                border: 1px solid $red;
+                border-radius: 5rem;
+                margin-bottom: 3rem;
+            }
+
+            .icons {
+                > div {
+                    margin-bottom: 3rem;
+
+                    .icon {
+                        display: block;
+                        margin: 0 auto 1.5rem auto;
+                        max-width: 80%;
+                        width: 10rem;
+        
+                        img {
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        #blur {
+            text-align: center;
+
+            .wrapper {    
+                position: relative;
+                padding-bottom: 1rem;
+                margin-bottom: clamp(.1rem, 5vw, 4rem);
+
+                &:hover {
+                    .section-blurred {
+                        backdrop-filter: blur(0);
+                    }
+                }
+
+                .section-blurred {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    pointer-events: none;
+                    width: 100%;
+                    height: 100%;
+                    backdrop-filter: blur(.5rem);
+                    transition: backdrop-filter .6s ease-in-out;
+                    will-change: backdrop-filter;
+                }
+
+                h2 {
+                    margin-bottom: 1.5rem;
+                    text-transform: uppercase;
+
+                    @media #{$mq-sm-max} {
+                        font-size: 20vw;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .z5 {
+                text-align: center;
+
+                a {
+                    @media #{$mq-sm-max} {
+                        display: block;
+                        width: 100%;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+
+        #why {
+            margin-bottom: -1px;
+            overflow: visible;
+            z-index: 9;
+
+            @media #{$mq-lg-min} {
+                margin-bottom: -3rem;
+            }
+
+            @media #{$mq-xl-min} {
+                margin-bottom: -5rem;
+            }
+
+            h2 {
+                display: block;
+                margin-bottom: 2rem;
+            }
+
+            img {
+                @media #{$mq-lg-min} {
+                    margin-top: -2rem;
+                }
+
+                @media #{$mq-xl-min} {
+                    margin-top: -4rem;
+                }
+
+                @media #{$mq-lg-max} {
+                    display: block;
+                    width: 20rem;
+                    max-width: 70%;
+                    margin: 1.5rem auto -7vw auto;
+                }
+            }
+        }
+
+        .animated-blocks {
+            .bottom {
+                display: none;
+            }
+        }
+
+        #also-like {
+            padding-top: clamp(3rem, 9vw, 7rem);
+            padding-bottom: clamp(1.5rem, 4vw, 3rem);
+            
+            .animated-line {
+                display: none;
+            }
+        }
+    }
+}

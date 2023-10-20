@@ -78,6 +78,33 @@
     }
 }
 
+.hollow-gray-button {
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+    color: $gray-dark;
+    text-transform: uppercase;
+    padding: .5rem 1.75rem;
+    border: 1px solid $gray-dark;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    transition: border-radius .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
+    width: fit-content;
+
+    @media #{$mq-sm-min} {
+        padding: .75rem 3rem;
+    }
+
+    &:hover {
+        background-color: $gray-dark;
+        color: $white;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+    }
+}
+
 .blue-button {
     cursor: pointer;
     display: inline-block;

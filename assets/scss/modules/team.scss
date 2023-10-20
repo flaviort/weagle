@@ -1,17 +1,25 @@
 #team {
     .team-slider {
-        cursor: grab;
+        @media #{$mq-md-min} {
+            cursor: grab;
+        }
 
         &.is-dragging {
-            cursor: grabbing;
+            @media #{$mq-md-min} {
+                cursor: grabbing;
+            }
 
             .wrapper {
-                transform: scale(.9);
+                @media #{$mq-md-min} {
+                    transform: scale(.9);
+                }
             }
         }
 
         .wrapper {
-            transition: transform .3s ease-in-out;
+            @media #{$mq-md-min} {
+                transition: transform .3s ease-in-out;
+            }
 
             .bg {
                 position: absolute;

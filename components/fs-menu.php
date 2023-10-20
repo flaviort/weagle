@@ -59,19 +59,19 @@
                 <ul class='social'>
 
                     <li>
-                        <a href='<?php echo($linkedin); ?>' target='_blank' class='hover-underline'>
+                        <a href='<?php echo($linkedin); ?>' target='_blank' rel='noopener' class='hover-underline'>
                             Linkedin
                         </a>
                     </li>
 
                     <li>
-                        <a href='<?php echo($youtube); ?>' target='_blank' class='hover-underline'>
+                        <a href='<?php echo($youtube); ?>' target='_blank' rel='noopener' class='hover-underline'>
                             Youtube
                         </a>
                     </li>
 
                     <li>
-                        <a href='<?php echo($instagram); ?>' target='_blank' class='hover-underline'>
+                        <a href='<?php echo($instagram); ?>' target='_blank' rel='noopener' class='hover-underline'>
                             Instagram
                         </a>
                     </li>
@@ -88,4 +88,4 @@
     </div>
 </section>
 
-<div class='blur'></div>
+<div class='blur-fs-bg'></div>

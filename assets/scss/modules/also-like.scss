@@ -19,19 +19,28 @@
     }
 
     .also-like-slider {
-        cursor: grab;
+        @media #{$mq-md-min} {
+            cursor: grab;
+        }
 
         &.is-dragging {
-            cursor: grabbing;
+            @media #{$mq-md-min} {
+                cursor: grabbing;
+            }
 
             .blog-item {
-                transform: scale(.85);
+                @media #{$mq-md-min} {
+                    transform: scale(.85);
+                }
             }
         }
 
         .blog-item {
             display: block;
-            transition: .6s ease-in-out;
+
+            @media #{$mq-md-min} {
+                transition: .6s ease-in-out;
+            }
 
             &:hover {
                 .image {
