@@ -16,7 +16,50 @@
             }
         }
 
+        .swiper-slide {
+            /*
+            max-width: calc(100% - .75rem);
+            @media #{$mq-xs-min} { max-width: 95%; }
+            @media #{$mq-md-min} { max-width: 90%; }
+            @media #{$mq-2xl-min} { max-width: calc(100vw - 8rem) }
+            */
+            height: auto!important;
+            width: 55%;
+
+            @media #{$mq-sm-min} {
+                width: calc(50% - 1vw);
+            }
+
+            @media #{$mq-2xl-min} {
+                width: calc(50vw - 4rem - 30px);
+            }
+
+            &:first-child {
+                width: 100%;
+
+                @media #{$mq-2xl-min} {
+                    width: calc(100vw - 8rem - 30px);
+                }
+            }
+        }
+
+        .double {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            gap: 10px;
+
+            @media #{$mq-sm-min} {
+                gap: 2vw;
+            }
+        }
+
         .wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
             @media #{$mq-md-min} {
                 transition: transform .3s ease-in-out;
             }

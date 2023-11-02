@@ -28,10 +28,6 @@
         &:hover,
         &.active {
             background-color: darken(saturate($blue, 20), 10);
-            border-top-left-radius: 0;
-            border-bottom-right-radius: 0;
-            border-top-right-radius: 1.5rem;
-            border-bottom-left-radius: 1.5rem;
         }
     }
 }

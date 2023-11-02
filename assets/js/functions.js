@@ -743,7 +743,7 @@ function initSliders() {
 	if($('.team-slider').length) {
 
 		const team_slider = new Swiper('.team-slider', {
-			slidesPerView: 1,
+			slidesPerView: 'auto',
 			loop: false,
 			simulateTouch: true,
 			allowTouchMove: true,
@@ -751,6 +751,7 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 10,
 			speed: 600,
+			freeMode: true,
 			breakpoints: {
 				575: {
 					spaceBetween: 25
