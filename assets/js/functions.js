@@ -937,9 +937,15 @@ function initSmoothScroll(container) {
       	pinType: container.querySelector('[data-scroll-container]').style.transform ? 'transform' : 'fixed'
     })
 
-    ScrollTrigger.defaults({
-      	scroller: document.querySelector('[data-scroll-container]')
-    })
+    function isTouchScreendevice() {
+		return 'ontouchstart' in window || navigator.maxTouchPoints
+  	}
+
+	if(!isTouchScreendevice()){
+		ScrollTrigger.defaults({
+			scroller: document.querySelector('[data-scroll-container]')
+		})
+	}
 
     // each time the window updates, we should refresh scroll trigger and then update locomotive scroll
     ScrollTrigger.addEventListener('refresh', () => scroll.update())
