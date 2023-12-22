@@ -1,3 +1,25 @@
+<?php
+    $podcast = [
+		[
+			'link' => 'https://www.youtube.com/watch?v=sQ0NEcgRyLo',
+			'image' => '12.jpg',
+			'title' => 'Planejamento estratégico como você nunca viu antes! Passo a passo completo'
+		], [
+			'link' => 'https://www.youtube.com/watch?v=RsZYCwp6oYs',
+			'image' => '11.jpg',
+			'title' => 'A luta do século. Empresa vs. Família. Como empreender sem perder a família.'
+		], [
+			'link' => 'https://www.youtube.com/watch?v=QcxnFd6qFZk',
+			'image' => '10.jpg',
+			'title' => 'Quer paz? A guerra dentro de empresas familiares com Franklin Shun, CEO do Grupo JACTO'
+		], [
+			'link' => 'https://www.youtube.com/watch?v=KbSocZ_1t2Y',
+			'image' => '09.jpg',
+			'title' => 'De Office Boy... A Conselheiro - Saiba exatamente como eu fiz para vencer'
+		]
+	];
+?>
+
 <section id='weagle-cast' class='section-padding-top' data-scroll-section>
     <div class='container'>
         
@@ -16,75 +38,21 @@
         <div class='weagle-cast-slider animated-slider swiper-container'>
             <div class='swiper-wrapper'>
 
-                <div class='swiper-slide'>
-                    <a href='https://www.youtube.com/watch?v=RsZYCwp6oYs&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
-                        <div class='image'>
-                        
-                            <div class='youtube-icon'>
-                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                <?php foreach ($podcast as $item): ?>
+                    <div class='swiper-slide'>
+                        <a href='<?= $item['link'] ?>' target='_blank' rel='noopener' class='weagle-cast-item'>
+                            <div class='image'>
+                            
+                                <div class='youtube-icon'>
+                                    <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
+                                </div>
+
+                                <img src="assets/img/cast/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width='1280' height='720' loading='lazy'>
+
                             </div>
-
-                            <img src='assets/img/cast/09.jpg' alt='Weagle Cast #09' width='1200' height='675' loading='lazy'>
-
-                        </div>
-                    </a>
-                </div>
-
-                <div class='swiper-slide'>
-                    <a href='https://www.youtube.com/watch?v=QcxnFd6qFZk&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
-                        <div class='image'>
-                        
-                            <div class='youtube-icon'>
-                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
-                            </div>
-
-                            <img src='assets/img/cast/08.jpg' alt='Weagle Cast #08' width='1200' height='675' loading='lazy'>
-
-                        </div>
-                    </a>
-                </div>
-
-                <div class='swiper-slide'>
-                    <a href='https://www.youtube.com/watch?v=KbSocZ_1t2Y&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
-                        <div class='image'>
-                        
-                            <div class='youtube-icon'>
-                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
-                            </div>
-
-                            <img src='assets/img/cast/07.jpg' alt='Weagle Cast #07' width='1200' height='675' loading='lazy'>
-
-                        </div>
-                    </a>
-                </div>
-
-                <div class='swiper-slide'>
-                    <a href='https://www.youtube.com/watch?v=wEQjYCnqBDo&t=2s&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
-                        <div class='image'>
-                        
-                            <div class='youtube-icon'>
-                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
-                            </div>
-
-                            <img src='assets/img/cast/06.jpg' alt='Weagle Cast #06' width='1200' height='675' loading='lazy'>
-
-                        </div>
-                    </a>
-                </div>
-
-                <div class='swiper-slide'>
-                    <a href='https://www.youtube.com/watch?v=LRvhnCGAOhE&ab_channel=WeagleGovernance' target='_blank' rel='noopener' class='weagle-cast-item'>
-                        <div class='image'>
-                        
-                            <div class='youtube-icon'>
-                                <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
-                            </div>
-
-                            <img src='assets/img/cast/05.jpg' alt='Weagle Cast #05' width='1200' height='675' loading='lazy'>
-
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
 
             </div>
         </div>

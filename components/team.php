@@ -7,7 +7,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-01.jpg' alt='Pedro Muschitz' loading='lazy' width='1720' height='1300' class='cover'>
+                            <img src='assets/img/team/pedro-muschitz.jpg' alt='Pedro Muschitz' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -40,7 +40,7 @@
 
                             </div>
 
-                            <ul class='infos'>
+                            <!--ul class='infos'>
 
                                 <li>
                                     <p>
@@ -60,7 +60,7 @@
                                     </p>
                                 </li>
 
-                            </ul>
+                            </ul-->
 
                         </div>
 
@@ -71,135 +71,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-02.jpg' alt='Sergio Luis' loading='lazy' width='1720' height='1300' class='cover'>
-                        </div>
-
-                        <p class='top'>
-                            Weagle® Team
-                        </p>
-
-                        <div class='bottom'>
-
-                            <div class='left'>
-
-                                <h2 class='text-bigger'>
-                                    Sergio Luis
-                                </h2>
-
-                                <div class='position-social'>
-
-                                    <p>
-                                        CFO & Advisory Contábil
-                                    </p>
-
-                                    <ul class='social'>
-                                        <li>
-                                            <a href='https://www.linkedin.com/in/sergio-muschitz-861bb638/' target='_blank' rel='noopener'>
-                                                <?php echo file_get_contents('assets/svg/social/linkedin.svg'); ?>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                            <ul class='infos'>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>    
-                </div>
-
-                <div class='swiper-slide'>
-                    <div class='wrapper'>
-
-                        <div class='bg'>
-                            <img src='assets/img/team-03.jpg' alt='Aline Dalmarco' loading='lazy' width='1720' height='1300' class='cover'>
-                        </div>
-
-                        <p class='top'>
-                            Weagle® Team
-                        </p>
-
-                        <div class='bottom'>
-
-                            <div class='left'>
-
-                                <h2 class='text-bigger'>
-                                    Aline Dalmarco
-                                </h2>
-
-                                <div class='position-social'>
-
-                                    <p>
-                                        Advisory Familiar & Pessoas
-                                    </p>
-
-                                    <ul class='social'>
-                                        <li>
-                                            <a href='https://www.linkedin.com/in/aline-regina-dalmarco-041780183/' target='_blank' rel='noopener'>
-                                                <?php echo file_get_contents('assets/svg/social/linkedin.svg'); ?>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                            <ul class='infos'>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>    
-                </div>
-
-                <div class='swiper-slide'>
-                    <div class='wrapper'>
-
-                        <div class='bg'>
-                            <img src='assets/img/team-04.jpg' alt='Renan Karas' loading='lazy' width='1720' height='1300' class='cover'>
+                            <img src='assets/img/team/renan-karas.jpg' alt='Renan Karas' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -232,28 +104,6 @@
 
                             </div>
 
-                            <ul class='infos'>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                            </ul>
-
                         </div>
 
                     </div>    
@@ -263,7 +113,7 @@
                     <div class='wrapper'>
 
                         <div class='bg'>
-                            <img src='assets/img/team-05.jpg' alt='Renan Tromm' loading='lazy' width='1720' height='1300' class='cover'>
+                            <img src='assets/img/team/renan-tromm.jpg' alt='Renan Tromm' loading='lazy' width='1720' height='1300' class='cover'>
                         </div>
 
                         <p class='top'>
@@ -295,92 +145,6 @@
                                 </div>
 
                             </div>
-
-                            <ul class='infos'>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>    
-                </div>
-
-                <div class='swiper-slide'>
-                    <div class='wrapper'>
-
-                        <div class='bg'>
-                            <img src='assets/img/team-06.jpg' alt='Gregorio Rossilho' loading='lazy' width='1720' height='1300' class='cover'>
-                        </div>
-
-                        <p class='top'>
-                            Weagle® Team
-                        </p>
-
-                        <div class='bottom'>
-
-                            <div class='left'>
-
-                                <h2 class='text-bigger'>
-                                    Gregorio Rossilho
-                                </h2>
-
-                                <div class='position-social'>
-
-                                    <p>
-                                        Advisory de Inovação
-                                    </p>
-
-                                    <ul class='social'>
-                                        <li>
-                                            <a href='https://www.linkedin.com/in/gregorio-alvizi-rossilho/' target='_blank' rel='noopener'>
-                                                <?php echo file_get_contents('assets/svg/social/linkedin.svg'); ?>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-                            <ul class='infos'>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>
-                                        --
-                                    </p>
-                                </li>
-
-                            </ul>
 
                         </div>
 

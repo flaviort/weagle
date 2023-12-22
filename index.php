@@ -24,7 +24,7 @@
 		</h1>
 
 		<p class='text-medium desc'>
-			Vamos de ajudar a construir, organizar e vender o seu negócio. Frase em construção.
+			Vamos te ajudar a construir, organizar e vender o seu negócio.
 		</p>
 
 		<a href='<?php echo($diagnostico); ?>' class='rotating-button white magnetic' data-strength='100'>
@@ -61,7 +61,7 @@
 			</h2>
 
 			<p class='text-medium'>
-				Se o seu negócio enfrenta algum destes problemas, nos temos a solução para isso!
+				Se o seu negócio enfrenta algum destes problemas, nós temos a solução para isso!
 			</p>
 
 			<div class='line animated-line'></div>
@@ -75,11 +75,11 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
-							Sem Qualidade de Vida & Perspectiva de Futuro
+							Sobrecarga de trabalho sobre o proprietário
 						</h3>
 
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Não consegue confiar e delegar as responsabilidades com a equipe. <b>Tudo depende do empresário.</b> Tem uma empresa para ter mais liberdade de tempo, mas no fim trabalha numa prisão de porta aberta.
 						</p>
 
 					</div>
@@ -89,11 +89,11 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
-							Sem Planejamento & Profissionalização de Gestão
+							Incerteza nas finanças desorganizadas
 						</h3>
 
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Não sabe para onde o dinheiro vai, <b>não tem clareza dos indicadores.</b> Insegurança sobre o caminho para onde a empresa está indo. Sem projeção futura e estabilidade financeira em geral, decide no escuro.
 						</p>
 
 					</div>
@@ -103,11 +103,11 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
-							Falta de Planejamento & Estratégia Financeira
+							Equipe desengajada e desmotivada
 						</h3>
 
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							As pessoas não tem clareza do que precisa ser feito, trabalham duro mas <b>sem direção estratégica</b> e sem reconhecimento do trabalho. Não tem voz ativa na gestão do negócio e acabam só vivendo no operacional.
 						</p>
 
 					</div>
@@ -117,25 +117,11 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
-							Lorem Ipsum Dolot Sir Amet Consectetur 
+							Falta de execução consistente das metas
 						</h3>
 
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						</p>
-
-					</div>
-				</div>
-
-				<div class='swiper-slide'>
-					<div class='inner'>
-
-						<h3 class='text-medium-big'>
-							Sed do eiusmod tempor incididunt ut labore et
-						</h3>
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Não tem uma rotina organizada para execução das estratégias e metas, não fazem reuniões mensais de prestação de contas e não tem uma plataforma fácil para gestão da execução do trabalho e tarefas.
 						</p>
 
 					</div>
@@ -158,7 +144,7 @@
 		<div class='line animated-line'></div>
 
 		<p class='text-medium'>
-			A Weagle® oferece soluções abrangentes para os desafios corporativos. Nossa consultoria personalizada fortalece a governança, promovendo responsabilidade e transparência. Com o planejamento estratégico adaptável da Weagle®, você alcança metas com análises detalhadas e planos realistas.<br /><br />
+			A Weagle® oferece soluções abrangentes para os desafios corporativos. Nossa consultoria personalizada fortalece a governança, promovendo responsabilidade e transparência. Com o <b>planejamento estratégico adaptável da Weagle®</b>, você alcança metas com análises detalhadas e planos realistas.<br /><br />
 
 			Além disso, nossas soluções integradas de gerenciamento de riscos garantem conformidade regulatória e operações seguras. Conte com a Weagle® para moldar um futuro empresarial sólido e estratégico.
 		</p>
@@ -215,108 +201,8 @@
 		
 	</div>
 
-	<div class='accordion'>
-		<div class='container'>
-			
-			<div class='row'>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								01. Consultoria
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Metodologia desenvolvida com conhecimento prático no atendimento de diversas empresas de vários setores do mercado através de um material completo e estruturado em aulas, livros, mentorias, inteligencia artificial, playbooks e ferramentas para entregar o resultado prometido e alcançar o crescimento e perpetuidade do seu negócio.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								02. Mentoria Individual e Grupo
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Todos os meses você terá mentorias em grupo e individuais para tirar as dúvidas específicas com um conselheiro especialista na fase do sprint que você estiver.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								03. Clube Seleto de Empresários
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quaerat nisi maiores? Corporis ullam commodi, aperiam dolorem dolorum voluptate laboriosam ab ad dolore eius perferendis quasi voluptates veritatis obcaecati.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								04. Formação em Conselheiro Ágil
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quaerat nisi maiores? Corporis ullam commodi, aperiam dolorem dolorum voluptate laboriosam ab ad dolore eius perferendis quasi voluptates veritatis obcaecati.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-
-			<div class='bottom'>
-				<a href='<?php echo($diagnostico); ?>' class='gray-button'>
-					Diagnóstico do Futuro
-				</a>
-			</div>
-
-		</div>
+	<div class='container'>
+		<?php include('components/accordion-blocks.php'); ?>
 	</div>
 
 </section>

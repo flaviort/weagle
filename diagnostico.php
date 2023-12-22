@@ -133,7 +133,7 @@
 	</div>
 </section>
 
-<section id='benefits' class='section-padding-top-big' data-scroll-section>
+<!--section id='benefits' class='section-padding-top-big' data-scroll-section>
 
 	<div class='top-side'>
 		<?php echo file_get_contents('assets/svg/curve-top-right.svg'); ?>
@@ -198,9 +198,13 @@
 		</div>
 
 	</div>
-</section>
+</section-->
 
 <section id='blur' class='section-padding-bottom-big' data-scroll-section>
+
+	<div class='top-side'>
+		<?php echo file_get_contents('assets/svg/curve-top-right.svg'); ?>
+	</div>
 
 	<div class='wrapper section-margin-top-big'>
 
@@ -271,7 +275,7 @@
 
 <?php include('components/testimonials.php'); ?>
 
-<?php include('components/also-like.php'); ?>
+<?php include('components/weagle-cast.php'); ?>
 
 <section id='bottom-text' data-scroll-section>
     <div class='container'>

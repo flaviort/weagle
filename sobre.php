@@ -21,7 +21,7 @@
 			</h1>
 		
 			<p class='text'>
-				Mentoria Visionária, Resultados Revolucionários: O Poder do Nosso Time de Conselheiros Weagle. Texto em Construção
+				Consultoria visionária com Resultados Ágeis: Conselheiros especialistas e prontos para atender sua empresa de qualquer lugar do mundo.
 			</p>
 
 		</div>
@@ -35,13 +35,13 @@
 	<div class='container'>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Iniciamos a Weagle em 2012 para resolver uma dor, permitir que empresários pudessem gerenciar suas empresas de qualquer lugar do mundo, trazendo liberdade de tempo, financeira e geográfica. Por isso acreditamos que todo negócio não deveria escravizar os donos, mas proporcionar qualidade de vida.
 		</p>
 
 		<div class='line animated-line'></div>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Passamos a atender empresas no Brasil todo e começamos a receber propostas para realizar projetos em outros países. Foi então que pensamos: "vamos viver nosso método na prática!". Implantamos um escritório em Lisboa e passamos a atender clientes na Europa e Estados Unidos, gerenciando a Weagle, equipe, clientes e projetos.
 		</p>
 
 	</div>
@@ -71,13 +71,13 @@
 	<div class='container'>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Após termos atendido mais de 250 negócios e ajudado mais de 1.000 empresários, percebemos que toda empresa terá apenas 3 destinos: ela vai ser sucedida, vendida ou pode falir. Foi então que nos especializamos e focamos 100% de nossos esforços em implantação de boas práticas de governança nas empresas através de nosso método ágil.
 		</p>
 
 		<div class='line animated-line'></div>
 
 		<p class='text-medium'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			Hoje em dia focamos em ajudar empresários a terem o melhor destino do negócio. Através de nosso método de governança e gestão ágil de resultados preparamos a empresa e equipe para o processo sucessório de negócios e realizamos projetos de venda e fusão através de estratégias de M&A, gerando mais qualidade de vida para os donos de negócio.
 		</p>
 
 	</div>
@@ -99,11 +99,11 @@
 
 	<div class='container z5'>
 
-		<a href='consultoria' class='text magnetic hover-underline' data-strength='30'>
+		<a href='<?php echo($consultoria); ?>' class='text magnetic hover-underline' data-strength='30' target='_blank'>
 			Conheça a nossa consultoria NEXT
 		</a>
 
-		<a href='consultoria' class='logo magnetic' data-strength='30'>
+		<a href='<?php echo($consultoria); ?>' class='logo magnetic' data-strength='30' target='_blank'>
 
 			<?php echo file_get_contents('assets/svg/next.svg'); ?>
 
@@ -138,7 +138,7 @@
 	</div>
 
 	<div class='container z5'>
-		<a href='https://www.youtube.com/watch?v=lTyUoaYV3-Q?controls=0&showinfo=0&rel=0' data-fancybox class='video'>
+		<a href='https://www.youtube.com/watch?v=TBGyynQFDX0-Q?controls=0&showinfo=0&rel=0' data-fancybox class='video'>
 
 			<div class='youtube-icon'>
 				<?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
@@ -155,99 +155,7 @@
 
 <section id='methodology' class='section-padding-top' data-scroll-section>
 	<div class='container'>
-		<div class='accordion'>	
-			<div class='row'>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								01. Consultoria
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Metodologia desenvolvida com conhecimento prático no atendimento de diversas empresas de vários setores do mercado através de um material completo e estruturado em aulas, livros, mentorias, inteligencia artificial, playbooks e ferramentas para entregar o resultado prometido e alcançar o crescimento e perpetuidade do seu negócio.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								02. Mentoria Individual e Grupo
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Todos os meses você terá mentorias em grupo e individuais para tirar as dúvidas específicas com um conselheiro especialista na fase do sprint que você estiver.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								03. Clube Seleto de Empresários
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quaerat nisi maiores? Corporis ullam commodi, aperiam dolorem dolorum voluptate laboriosam ab ad dolore eius perferendis quasi voluptates veritatis obcaecati.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class='col-md-6'>
-					<div class='accordion-block'>
-
-						<div class='question'>
-							
-							<span>
-								04. Formação em Conselheiro Ágil
-							</span>
-
-							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
-
-						</div>
-
-						<div class='answer'>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque quaerat nisi maiores? Corporis ullam commodi, aperiam dolorem dolorum voluptate laboriosam ab ad dolore eius perferendis quasi voluptates veritatis obcaecati.
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
+		<?php include('components/accordion-blocks.php'); ?>
 	</div>
 </section>
 

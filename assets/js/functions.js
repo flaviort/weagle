@@ -602,11 +602,10 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 10,
 			speed: 600,
-			/*
-			autoplay: {
-				delay: 4000,
+			freeMode: true,
+			mousewheel: {  
+				forceToAxis: true
 			},
-			*/
 			breakpoints: {
 				575: {
 					slidesPerView: 1.5,
@@ -643,6 +642,10 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 10,
 			speed: 600,
+			freeMode: true,
+			mousewheel: {  
+				forceToAxis: true
+			},
 			breakpoints: {
 				575: {
 					slidesPerView: 1.5,
@@ -679,6 +682,10 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 10,
 			speed: 600,
+			freeMode: true,
+			mousewheel: {  
+				forceToAxis: true
+			},
 			breakpoints: {
 				575: {
 					slidesPerView: 1.5,
@@ -715,6 +722,10 @@ function initSliders() {
 			calculateHeight: false,
 			spaceBetween: 15,
 			speed: 600,
+			freeMode: true,
+			mousewheel: {  
+				forceToAxis: true
+			},
 			breakpoints: {
 				575: {
 					slidesPerView: 2,
@@ -743,7 +754,7 @@ function initSliders() {
 	if($('.team-slider').length) {
 
 		const team_slider = new Swiper('.team-slider', {
-			slidesPerView: 'auto',
+			slidesPerView: 1.1,
 			loop: false,
 			simulateTouch: true,
 			allowTouchMove: true,
@@ -752,12 +763,17 @@ function initSliders() {
 			spaceBetween: 10,
 			speed: 600,
 			freeMode: true,
+			mousewheel: {  
+				forceToAxis: true
+			},
 			breakpoints: {
 				575: {
-					spaceBetween: 25
+					spaceBetween: 25,
+					slidesPerView: 'auto',
 				},
 				1200: {
-					spaceBetween: 40
+					spaceBetween: 40,
+					slidesPerView: 'auto',
 				}
 			},
 			on: {

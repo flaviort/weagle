@@ -35,7 +35,7 @@
                 </li>
 
                 <li>
-                    <a href='<?php echo($consultoria); ?>'>
+                    <a href='<?php echo($consultoria); ?>' target='_blank'>
                         Consultoria
                     </a>
                 </li>
@@ -47,8 +47,8 @@
                 </li>
 
                 <li>
-                    <a href='<?php echo($blog); ?>'>
-                        Blog
+                    <a href='<?php echo($whatsapp); ?>'>
+                        Fale Conosco
                     </a>
                 </li>
 

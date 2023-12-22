@@ -18,6 +18,20 @@
 	}
 }
 
+@keyframes blur {
+	0% {
+		backdrop-filter: blur(0);
+	}
+
+	30% {
+		backdrop-filter: blur(0);
+	}
+
+	100% {
+		backdrop-filter: blur(.5rem);
+	}
+}
+
 .split-line {
 	* {
 		will-change: transform;
