@@ -52,18 +52,21 @@
 
                                     <li>
                                         <a href='tel:<?php echo preg_replace('/[^0-9]/', '', $phone); ?>' class='hover-underline'>
+                                            <?php echo file_get_contents('assets/svg/ux/phone.svg'); ?>
                                             <?php echo($phone); ?>
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href='tel:<?php echo preg_replace('/[^0-9]/', '', $phone2); ?>' class='hover-underline'>
+                                        <?php echo file_get_contents('assets/svg/ux/whatsapp.svg'); ?>
                                             <?php echo($phone2); ?>
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href='https://maps.app.goo.gl/NvDe7NpdLNwGBYY56' target='_blank' rel='noopener' class='hover-underline'>
+                                            <?php echo file_get_contents('assets/svg/ux/pin.svg'); ?>
                                             <?php echo($address); ?>
                                         </a>
                                     </li>

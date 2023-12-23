@@ -24,7 +24,7 @@
 		</h1>
 
 		<p class='text-medium desc'>
-			Vamos te ajudar a construir, organizar e vender o seu negócio.
+			Preparamos sua empresa para venda ou sucessão através de governança ágil.
 		</p>
 
 		<a href='<?php echo($diagnostico); ?>' class='rotating-button white magnetic' data-strength='100'>
@@ -89,6 +89,20 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
+							Incerteza do amanhã
+						</h3>
+
+						<p>
+							<b>Não sabe dizer qual o melhor caminho</b> para perpetuidade e lucratividade da empresa, realizar a sucessão e capacitar líderes ou fazer um processo de M&A e vender o negócio.
+						</p>
+
+					</div>
+				</div>
+
+				<div class='swiper-slide'>
+					<div class='inner'>
+
+						<h3 class='text-medium-big'>
 							Incerteza nas finanças desorganizadas
 						</h3>
 
@@ -134,7 +148,7 @@
 
 </section>
 
-<section id='solutions' class='section-padding-top section-padding-bottom-big' data-scroll-section>
+<section id='solutions' class='section-padding-top' data-scroll-section>
 	<div class='container'>
 
 		<h2 class='text-big blue reveal-text'>
@@ -144,9 +158,11 @@
 		<div class='line animated-line'></div>
 
 		<p class='text-medium'>
-			A Weagle® oferece soluções abrangentes para os desafios corporativos. Nossa consultoria personalizada fortalece a governança, promovendo responsabilidade e transparência. Com o <b>planejamento estratégico adaptável da Weagle®</b>, você alcança metas com análises detalhadas e planos realistas.<br /><br />
+			Todo negócio tem apenas 3 destinos, sucessão venda ou falência, e a Weagle® oferece soluções para empresas que estão em busca de realizar o planejamento sucessório ou a venda do negócio.<br /><br />
 
-			Além disso, nossas soluções integradas de gerenciamento de riscos garantem conformidade regulatória e operações seguras. Conte com a Weagle® para moldar um futuro empresarial sólido e estratégico.
+			Fazemos isso através de nossa solução contendo método de consultoria validado, conselheiros especializados e plataforma educacional.<br /><br />
+
+			Conte com a Weagle® para moldar um futuro empresarial sólido e estratégico rumo ao melhor destino.
 		</p>
 
 	</div>
@@ -155,19 +171,27 @@
 <section id='methodology' class='section-padding-top section-padding-bottom-big' data-scroll-section>
 	
 	<div class='container'>
+
 		<div class='top'>
 
 			<h2 class='text-big blue reveal-text'>
 				Metodologia
 			</h2>
 
-			<div class='line animated-line'></div>
+		</div>
+
+		<div class='content'>
 
 			<p class='text-medium'>
-				Nossa abordagem combina análise profunda, planejamento personalizado e ação ágil. Do diagnóstico ao desenvolvimento de equipes, criamos uma jornada transformadora. Adaptáveis e focados no resultado, somos o guia rumo a um futuro empolgante.
+				Fundamentado no manifesto ágil, nossa metodologia tem como principal objetivo a entrega de resultados durante o projeto. Sucessão é um processo não apenas um evento. A venda ou fusão de sua empresa é uma etapa da execução estratégica de futuro. Nada acontece por acaso e do dia para noite. Por isso em cada etapa realizamos entregas de valor e envolvemos os times de nível estratégico, tático e operacional na entrega de resultados voltados a meta e direção que os donos do negócio desejam.<br /><br />
+				
+				Assim, ajudamos a empresa chegar no melhor destino e durante a jornada desfrutamos dos resultados de uma equipe engajada elevando o valor da empresa.
 			</p>
 
+			<img data-src='assets/img/triangle.png' alt='Metodologia' class='lazy' width='1820' height='928'>
+
 		</div>
+
 	</div>
 
 	<div class='big-text section-margin-top section-margin-bottom'>
@@ -263,42 +287,47 @@
 
 					<li>
 						<b>02.</b>
-						<span>Reuniões que não levam a lugar nenhum</span>
+						<span>Reuniões improdutivas </span>
 					</li>
 
 					<li>
 						<b>03.</b>
-						<span>Dificuldade de inovar e reter talentos</span>
+						<span>Dificuldade de inovar</span>
 					</li>
 
 					<li>
 						<b>04.</b>
-						<span>Falta de engajamento dos colaboradores</span>
+						<span>Falta de engajamento da equipe</span>
 					</li>
 
 					<li>
 						<b>05.</b>
-						<span>Demora para reagir em momentos de crises</span>
+						<span>Lentidão no processo decisório</span>
 					</li>
 
 					<li>
 						<b>06.</b>
-						<span>Falta de um planejamento estratégico claro e objetivo</span>
+						<span>Falta planejamento e execução estratégica</span>
 					</li>
 
 					<li>
 						<b>07.</b>
-						<span>Quando tem um planejamento, mas não consegue alcançá-lo</span>
+						<span>Falta de foco e entrega de resultados</span>
 					</li>
 
 					<li>
 						<b>08.</b>
-						<span>Sem clareza dos reais problemas que estão enfrentando</span>
+						<span>Incerteza do amanhã</span>
 					</li>
 
 					<li>
 						<b>09.</b>
-						<span>Fundador da empresa está sempre sobrecarregado (conhecido “faz tudo”)</span>
+						<span>Fundador da empresa sobrecarregado</span>
+					</li>
+
+					<li>
+						<b>10.</b>
+						<span>Valuation duvidoso e falta de credibilidade</span>
 					</li>
 
 				</ul>

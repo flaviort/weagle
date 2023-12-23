@@ -3,9 +3,10 @@
         <div class='flex'>
 
             <h2 class='text-bigger'>
-                <span class='blue'>Eleve sua empresa: <br />
-                da média</span> à excelência <br />
-                com o Diagnóstico Weagle®
+                Realize um diagnóstico <br />
+                de  sua empresa e descubra <br />
+                se o melhor caminho é <br />
+                <span class='blue'>vender ou suceder.</span>
             </h2>
 
             <a href='<?php echo($diagnostico); ?>' class='rotating-button magnetic' data-strength='100'>

@@ -23,7 +23,7 @@
 	$whatsapp = "https://wa.me/5541992077739";
 	$email = "comercial@weagle.com.br";
 	$phone = "+55 41 3501-9556";
-	$phone2 = "+55 41 99511-6797";
+	$phone2 = "+55 41 9207-7739";
 	$address = "R. Verbo Divino, 14";
 
 	// links
