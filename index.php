@@ -75,11 +75,11 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
-							Sobrecarga de trabalho sobre o proprietário
+							Incerteza do amanhã
 						</h3>
 
 						<p>
-							Não consegue confiar e delegar as responsabilidades com a equipe. <b>Tudo depende do empresário.</b> Tem uma empresa para ter mais liberdade de tempo, mas no fim trabalha numa prisão de porta aberta.
+							<b>Não sabe dizer qual o melhor caminho</b> para perpetuidade e lucratividade da empresa, realizar a sucessão e capacitar líderes ou fazer um processo de M&A e vender o negócio.
 						</p>
 
 					</div>
@@ -89,11 +89,11 @@
 					<div class='inner'>
 
 						<h3 class='text-medium-big'>
-							Incerteza do amanhã
+							Sobrecarga de trabalho sobre o proprietário
 						</h3>
 
 						<p>
-							<b>Não sabe dizer qual o melhor caminho</b> para perpetuidade e lucratividade da empresa, realizar a sucessão e capacitar líderes ou fazer um processo de M&A e vender o negócio.
+							Não consegue confiar e delegar as responsabilidades com a equipe. <b>Tudo depende do empresário.</b> Tem uma empresa para ter mais liberdade de tempo, mas no fim trabalha numa prisão de porta aberta.
 						</p>
 
 					</div>
@@ -183,9 +183,11 @@
 		<div class='content'>
 
 			<p class='text-medium'>
-				Fundamentado no manifesto ágil, nossa metodologia tem como principal objetivo a entrega de resultados durante o projeto. Sucessão é um processo não apenas um evento. A venda ou fusão de sua empresa é uma etapa da execução estratégica de futuro. Nada acontece por acaso e do dia para noite. Por isso em cada etapa realizamos entregas de valor e envolvemos os times de nível estratégico, tático e operacional na entrega de resultados voltados a meta e direção que os donos do negócio desejam.<br /><br />
+				Fundamentado no manifesto ágil, nossa metodologia tem como principal objetivo a entrega de resultados durante o projeto.<br /><br />
 				
-				Assim, ajudamos a empresa chegar no melhor destino e durante a jornada desfrutamos dos resultados de uma equipe engajada elevando o valor da empresa.
+				Sucessão é um processo não apenas um evento. A venda ou fusão de sua empresa é uma etapa da execução estratégica de futuro. Nada acontece por acaso e do dia para noite. Por isso em cada etapa realizamos entregas de valor e envolvemos os times de nível estratégico, tático e operacional na entrega de resultados voltados a meta e direção que os donos do negócio desejam.<br /><br />
+				
+				Assim, ajudamos a empresa chegar no melhor destino e durante a jornada entregamos resultados junto com a equipe engajada elevando o valor da empresa.
 			</p>
 
 			<img data-src='assets/img/triangle.png' alt='Metodologia' class='lazy' width='1820' height='928'>
