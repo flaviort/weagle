@@ -4,7 +4,7 @@
 	$pageTitle = 'Podcast';
 	include('components/head.php');
 
-	$podcast = [
+	$posts = [
 		[
 			'link' => 'https://www.youtube.com/watch?v=sQ0NEcgRyLo',
 			'image' => '12.jpg',
@@ -102,7 +102,7 @@
 		</h2>
 
 		<div class='row'>
-			<?php foreach ($podcast as $item): ?>
+			<?php foreach ($posts as $item): ?>
 				<div class="col-md-6">
 					<a href="<?= $item['link'] ?>" target="_blank" rel="noopener" class="weagle-cast-item">
 

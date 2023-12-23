@@ -1,5 +1,5 @@
 <?php
-    $podcast = [
+    $posts = [
 		[
 			'link' => 'https://www.youtube.com/watch?v=sQ0NEcgRyLo',
 			'image' => '12.jpg',
@@ -38,7 +38,7 @@
         <div class='weagle-cast-slider animated-slider swiper-container'>
             <div class='swiper-wrapper'>
 
-                <?php foreach ($podcast as $item): ?>
+                <?php foreach ($posts as $item): ?>
                     <div class='swiper-slide'>
                         <a href='<?= $item['link'] ?>' target='_blank' rel='noopener' class='weagle-cast-item'>
                             <div class='image'>
