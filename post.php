@@ -1,4 +1,4 @@
-<base href='/clients/weagle/'>
+<base href='/'>
 
 <?php
     // set local time / language to brasil
