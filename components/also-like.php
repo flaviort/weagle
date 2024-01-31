@@ -81,7 +81,7 @@
 				        $formattedDate = strftime('%d de %B de %Y', $date->getTimestamp());
                 ?>
                     <div class='swiper-slide'>
-                        <a href='post?slug=<?= $item['slug'] ?>' class='blog-item'>
+                        <a href='blog/<?= $item['slug'] ?>' class='blog-item'>
                             
                             <div class='image'>
                                 <img src='<?= $item['featuredImage']['node']['mediaItemUrl'] ?>' alt='<?= $item['title'] ?>' width='1200' height='700' loading='lazy'>

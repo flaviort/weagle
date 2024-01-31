@@ -1,9 +1,6 @@
-<?php
-    $currentPage = 'blog-inner full-white-menu';
-    $nameSpace = 'internal blog-inner';
-    $pageTitle = 'Leia Mais';
-    include('components/head.php');
+<base href='/clients/weagle/'>
 
+<?php
     // set local time / language to brasil
     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
 
@@ -29,7 +26,9 @@
     $graphql_endpoint = 'https://weagle.com.br/lp/graphql';
 
     // get the post slug from the URL parameter
-    $slug = $_GET['slug'] ?? '';
+    $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri_segments = explode('/', $uri_path);
+    $slug = end($uri_segments);
 
     // curl request
     $curl = curl_init($graphql_endpoint);
@@ -61,8 +60,13 @@
 
     // close curl session
     curl_close($curl);
-?>
 
+    $currentPage = 'blog-inner full-white-menu';
+    $nameSpace = 'internal blog-inner';
+    $postTitle = $post['title'];
+    $pageTitle = 'Leia Mais';
+    include('components/head.php');
+?>
 
 <section id='banner' data-scroll-section>
 

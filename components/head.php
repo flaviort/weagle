@@ -12,7 +12,7 @@
 
 			<meta name='author' content='<?php echo($siteTitle); ?>'>
 
-			<title><?php echo($siteTitle); ?> <?php echo htmlspecialchars($page);?></title>
+			<title><?php echo $siteTitle . ' ' . (isset($postTitle) ? htmlspecialchars($postTitle) : htmlspecialchars($page)); ?></title>
 
 			<!-- google -->
 			<meta name='description' content='<?php echo($siteDesc); ?>' />

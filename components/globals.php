@@ -31,7 +31,7 @@
 	$diagnostico = "diagnostico";
 	$consultoria = "https://weagle.typeform.com/to/O04XAeB3";
 	$podcast = "podcast";
-	$blog = "blog";
+	$blog = "blogs";
 	$blogInner = "blog-inner";
 
 	$form = "https://weagle.typeform.com/nivelgovernanca";

@@ -1,7 +1,7 @@
 <?php
-	$currentPage = 'blog full-white-menu';
-	$nameSpace = 'internal blog';
-	$pageTitle = 'Blog';
+	$currentPage = 'blogs full-white-menu';
+	$nameSpace = 'internal blogs';
+	$pageTitle = 'Blogs';
 	include('components/head.php');
 
 	// set local time / language to brasil
@@ -94,13 +94,13 @@
 				<div class='col-md-6'>
 					<div class='blog-item'>
 						
-						<a href='post?slug=<?= $item['slug'] ?>' class='image'>
+						<a href='blog/<?= $item['slug'] ?>' class='image'>
 							<img data-src='<?= $item['featuredImage']['node']['mediaItemUrl'] ?>' alt='<?= $item['title'] ?>' width='1200' height='700' class='lazy'>
 						</a>
 
 						<div class='infos'>
 
-							<a href='post?slug=<?= $item['slug'] ?>' class='text-medium-big hover-underline'>
+							<a href='blog/<?= $item['slug'] ?>' class='text-medium-big hover-underline'>
 								<?= $item['title'] ?>
 							</a>
 
@@ -108,7 +108,7 @@
 								<?= $formattedDate ?>
 							</p>
 
-							<a href='post?slug=<?= $item['slug'] ?>' class='blue-button-small magnetic' data-strength='30'>
+							<a href='blog/<?= $item['slug'] ?>' class='blue-button-small magnetic' data-strength='30'>
 								Leia mais
 							</a>
 

@@ -199,7 +199,7 @@ function updateMenu() {
 			$('#fs-menu .menu li:nth-child(5) a').addClass('active')
 		}
 
-		else if ($('#main-content').attr('class').includes('blog')) {
+		else if ($('#main-content').attr('class').includes('blogs')) {
 			$('#fs-menu .menu li:nth-child(6) a').addClass('active')
 		}
 
