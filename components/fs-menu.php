@@ -47,6 +47,12 @@
                 </li>
 
                 <li>
+                    <a href='<?php echo($blog); ?>'>
+                        Blog
+                    </a>
+                </li>
+
+                <li>
                     <a href='<?php echo($whatsapp); ?>'>
                         Fale Conosco
                     </a>

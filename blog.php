@@ -3,6 +3,59 @@
 	$nameSpace = 'internal blog';
 	$pageTitle = 'Blog';
 	include('components/head.php');
+
+	// set local time / language to brasil
+	setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
+
+	// graphql query
+	$query = <<<'GRAPHQL'
+		query Posts {
+			posts(first: 100) {
+				nodes {
+					date
+					title
+					link
+					slug
+					id
+					featuredImage {
+						node {
+							mediaItemUrl
+						}
+					}
+				}
+			}
+		}
+	GRAPHQL;
+
+	// graphql endpoint url
+	$graphql_endpoint = 'https://weagle.com.br/lp/graphql';
+
+	// curl request
+	$curl = curl_init($graphql_endpoint);
+	curl_setopt_array($curl, [
+		CURLOPT_POST           => true,
+		CURLOPT_POSTFIELDS     => json_encode(['query' => $query]),
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_HTTPHEADER     => ['Content-Type: application/json']
+	]);
+
+	// execute curl request and decode json response
+	$response = curl_exec($curl);
+	$data = json_decode($response, true);
+
+	// check for errors and data presence
+	if (curl_errno($curl)) {
+		echo 'Error: ' . curl_error($curl);
+	} elseif (!isset($data['data']['posts']['nodes'])) {
+		echo 'Nenhum post encontrado.';
+	} else {
+		$posts = $data['data']['posts']['nodes'];
+		// now $posts contains the podcast data fetched from wp
+		// proceed to render the content as before
+	}
+
+	// close curl session
+	curl_close($curl);
 ?>
 
 <section id='banner' class='z5' data-scroll-section>
@@ -34,198 +87,37 @@
 	<div class='container z5'>
 		<div class='row'>
 			
-			<div class='col-md-6'>
-				<div class='blog-item'>
-					
-					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/06.jpg' alt='Decifrando os Estágios Empresariais: O Guia para Reconhecer e Navegar pelos Momentos de Declínio, Estagnação e Crescimento' width='1200' height='700' class='lazy'>
-					</a>
-
-					<div class='infos'>
-
-						<a href='blog-inner' class='text-medium-big hover-underline'>
-							Decifrando os Estágios Empresariais: O Guia para Reconhecer e Navegar pelos Momentos de Declínio, Estagnação e Crescimento
+			<?php foreach ($posts as $item) :
+				$date = new DateTime($item['date']);
+				$formattedDate = strftime('%d de %B de %Y', $date->getTimestamp());
+			?>
+				<div class='col-md-6'>
+					<div class='blog-item'>
+						
+						<a href='post?slug=<?= $item['slug'] ?>' class='image'>
+							<img data-src='<?= $item['featuredImage']['node']['mediaItemUrl'] ?>' alt='<?= $item['title'] ?>' width='1200' height='700' class='lazy'>
 						</a>
 
-						<p class='date'>
-							24 de agosto de 2023
-						</p>
+						<div class='infos'>
 
-						<a href='blog-inner' class='blue-button-small magnetic' data-strength='30'>
-							Leia mais
-						</a>
+							<a href='post?slug=<?= $item['slug'] ?>' class='text-medium-big hover-underline'>
+								<?= $item['title'] ?>
+							</a>
+
+							<p class='date'>
+								<?= $formattedDate ?>
+							</p>
+
+							<a href='post?slug=<?= $item['slug'] ?>' class='blue-button-small magnetic' data-strength='30'>
+								Leia mais
+							</a>
+
+						</div>
 
 					</div>
-
 				</div>
-			</div>
+			<?php endforeach; ?>
 
-			<div class='col-md-6'>
-				<div class='blog-item'>
-					
-					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/05.jpg' alt='Empresário é tudo mentiroso. Eu fui enganado e estou morrendo.' width='1200' height='700' class='lazy'>
-					</a>
-
-					<div class='infos'>
-
-						<a href='blog-inner' class='text-medium-big hover-underline'>
-							Empresário é tudo mentiroso. Eu fui enganado e estou morrendo.
-						</a>
-
-						<p class='date'>
-							24 de agosto de 2023
-						</p>
-
-						<a href='blog-inner' class='blue-button-small magnetic' data-strength='30'>
-							Leia mais
-						</a>
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class='col-md-6'>
-				<div class='blog-item'>
-					
-					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/04.jpg' alt='Como evitar os erros que impedem pequenas empresas de crescer? Questões Práticas!' width='1200' height='700' class='lazy'>
-					</a>
-
-					<div class='infos'>
-
-						<a href='blog-inner' class='text-medium-big hover-underline'>
-							Como evitar os erros que impedem pequenas empresas de crescer? Questões Práticas!
-						</a>
-
-						<p class='date'>
-							24 de agosto de 2023
-						</p>
-
-						<a href='blog-inner' class='blue-button-small magnetic' data-strength='30'>
-							Leia mais
-						</a>
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class='col-md-6'>
-				<div class='blog-item'>
-					
-					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/03.jpg' alt='Guia Completo de Utilização do Scrum para Obter Resultados de Sucesso' width='1200' height='700' class='lazy'>
-					</a>
-
-					<div class='infos'>
-
-						<a href='blog-inner' class='text-medium-big hover-underline'>
-							Guia Completo de Utilização do Scrum para Obter Resultados de Sucesso
-						</a>
-
-						<p class='date'>
-							24 de agosto de 2023
-						</p>
-
-						<a href='blog-inner' class='blue-button-small magnetic' data-strength='30'>
-							Leia mais
-						</a>
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class='col-md-6'>
-				<div class='blog-item'>
-					
-					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/02.jpg' alt='Pequenas e médias empresas precisam de Conselho?' width='1200' height='700' class='lazy'>
-					</a>
-
-					<div class='infos'>
-
-						<a href='blog-inner' class='text-medium-big hover-underline'>
-							Pequenas e médias empresas precisam de Conselho?
-						</a>
-
-						<p class='date'>
-							24 de agosto de 2023
-						</p>
-
-						<a href='blog-inner' class='blue-button-small magnetic' data-strength='30'>
-							Leia mais
-						</a>
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class='col-md-6'>
-				<div class='blog-item'>
-					
-					<a href='blog-inner' class='image'>
-						<img data-src='assets/img/blog/01.jpg' alt='4 Segredos para Liderar Equipes e ter Sucesso no Negócio' width='1200' height='700' class='lazy'>
-					</a>
-
-					<div class='infos'>
-
-						<a href='blog-inner' class='text-medium-big hover-underline'>
-							4 Segredos para Liderar Equipes e ter Sucesso no Negócio
-						</a>
-
-						<p class='date'>
-							24 de agosto de 2023
-						</p>
-
-						<a href='blog-inner' class='blue-button-small magnetic' data-strength='30'>
-							Leia mais
-						</a>
-
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-
-		<div class='bottom-section'>
-			<ul class='pagination text-small'>
-
-				<li>
-					<a href='#' class='active'>
-						1
-					</a>
-				</li>
-
-				<li>
-					<a href='#'>
-						2
-					</a>
-				</li>
-
-				<li>
-					<a href='#'>
-						3
-					</a>
-				</li>
-
-				<li>
-					<a href='#'>
-						4
-					</a>
-				</li>
-
-				<li>
-					<a href='#'>
-						5
-					</a>
-				</li>
-
-			</ul>
 		</div>
 
 	</div>

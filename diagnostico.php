@@ -275,7 +275,7 @@
 
 <?php include('components/testimonials.php'); ?>
 
-<?php include('components/weagle-cast.php'); ?>
+<?php include('components/also-like.php'); ?>
 
 <section id='bottom-text' data-scroll-section>
     <div class='container'>

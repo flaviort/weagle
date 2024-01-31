@@ -115,6 +115,10 @@
             img,
             iframe {
                 display: block;
+            }
+
+            ul,
+            ol {
                 margin-bottom: 1.25rem;
 
                 @media #{$mq-sm-min} {
@@ -129,13 +133,29 @@
             }
 
             h1,
-            h2,
+            h2 {
+                font-size: clamp(1.5rem, 3vw, 2.5rem);
+	            line-height: 1.1;
+                font-weight: $bold;
+                color: $blue;
+
+                * {
+                    font-weight: $bold;
+                    color: inherit;
+                }
+            }
+
             h3,
             h4,
             h5,
             h6 {
-                font-size: 2rem;
-                line-height: 1.15;
+                font-size: clamp(1.25rem, 1.75vw, 1.5rem);
+	            line-height: 1.1;
+                font-weight: $bold;
+
+                * {
+                    font-weight: $bold;
+                }
             }
 
             ul {

@@ -1,23 +1,53 @@
 <?php
-    $posts = [
-		[
-			'link' => 'https://www.youtube.com/watch?v=sQ0NEcgRyLo',
-			'image' => '12.jpg',
-			'title' => 'Planejamento estratégico como você nunca viu antes! Passo a passo completo'
-		], [
-			'link' => 'https://www.youtube.com/watch?v=RsZYCwp6oYs',
-			'image' => '11.jpg',
-			'title' => 'A luta do século. Empresa vs. Família. Como empreender sem perder a família.'
-		], [
-			'link' => 'https://www.youtube.com/watch?v=QcxnFd6qFZk',
-			'image' => '10.jpg',
-			'title' => 'Quer paz? A guerra dentro de empresas familiares com Franklin Shun, CEO do Grupo JACTO'
-		], [
-			'link' => 'https://www.youtube.com/watch?v=KbSocZ_1t2Y',
-			'image' => '09.jpg',
-			'title' => 'De Office Boy... A Conselheiro - Saiba exatamente como eu fiz para vencer'
-		]
-	];
+
+    // graphql query
+	$query = <<<'GRAPHQL'
+		query Podcasts {
+			podcasts {
+				nodes {
+					title
+					featuredImage {
+						node {
+							mediaItemUrl
+						}
+					}
+					weaglecast {
+						youtubeLink
+					}
+				}
+			}
+		}
+	GRAPHQL;
+
+	// graphql endpoint url
+	$graphql_endpoint = 'https://weagle.com.br/lp/graphql';
+
+	// curl request
+	$curl = curl_init($graphql_endpoint);
+	curl_setopt_array($curl, [
+		CURLOPT_POST           => true,
+		CURLOPT_POSTFIELDS     => json_encode(['query' => $query]),
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_HTTPHEADER     => ['Content-Type: application/json']
+	]);
+
+	// execute curl request and decode json response
+	$response = curl_exec($curl);
+	$data = json_decode($response, true);
+
+	// check for errors and data presence
+	if (curl_errno($curl)) {
+		echo 'Error: ' . curl_error($curl);
+	} elseif (!isset($data['data']['podcasts']['nodes'])) {
+		echo 'Nenhum podcast encontrado.';
+	} else {
+		$posts = $data['data']['podcasts']['nodes'];
+		// now $posts contains the podcast data fetched from wp
+		// proceed to render the content as before
+	}
+
+	// close curl session
+	curl_close($curl);
 ?>
 
 <section id='weagle-cast' class='section-padding-top' data-scroll-section>
@@ -38,16 +68,19 @@
         <div class='weagle-cast-slider animated-slider swiper-container'>
             <div class='swiper-wrapper'>
 
-                <?php foreach ($posts as $item): ?>
+                <?php
+                    foreach ($posts as $index => $item):
+                        if ($index >= 4) break;
+                ?>
                     <div class='swiper-slide'>
-                        <a href='<?= $item['link'] ?>' target='_blank' rel='noopener' class='weagle-cast-item'>
+                        <a href='<?= $item['weaglecast']['youtubeLink'] ?>' target='_blank' rel='noopener' class='weagle-cast-item'>
                             <div class='image'>
                             
                                 <div class='youtube-icon'>
                                     <?php echo file_get_contents('assets/svg/social/youtube.svg'); ?>
                                 </div>
 
-                                <img src="assets/img/cast/<?= $item['image'] ?>" alt="<?= $item['title'] ?>" width='1280' height='720' loading='lazy'>
+                                <img src="<?= $item['featuredImage']['node']['mediaItemUrl'] ?>" alt="<?= $item['title'] ?>" width='1280' height='720' loading='lazy'>
 
                             </div>
                         </a>

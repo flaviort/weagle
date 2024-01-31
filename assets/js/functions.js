@@ -200,11 +200,11 @@ function updateMenu() {
 		}
 
 		else if ($('#main-content').attr('class').includes('blog')) {
-			$('#fs-menu .menu li:last-child a').addClass('active')
+			$('#fs-menu .menu li:nth-child(6) a').addClass('active')
 		}
 
 		else if ($('#main-content').attr('class').includes('blog-inner')) {
-			$('#fs-menu .menu li:last-child a').addClass('active')
+			$('#fs-menu .menu li:nth-child(6) a').addClass('active')
 		}
 		
 	}, 50)

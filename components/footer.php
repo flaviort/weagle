@@ -98,7 +98,7 @@
                                 <ul class='last'>
 
                                     <li>
-                                        <a href='<?php echo($email); ?>' class='hover-underline'>
+                                        <a href='maito:<?php echo($email); ?>' class='hover-underline'>
                                             comercial@<br />
                                             weagle.com.br
                                         </a>
