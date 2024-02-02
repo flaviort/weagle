@@ -1,6 +1,6 @@
 <?php
 	$currentPage = 'about';
-	$nameSpace = 'internal about';
+	$nameSpace = 'about';
 	$pageTitle = 'Sobre Nós';
 	include('components/head.php');
 ?>

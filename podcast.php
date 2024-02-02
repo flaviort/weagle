@@ -1,6 +1,6 @@
 <?php
 	$currentPage = 'podcast';
-	$nameSpace = 'internal podcast';
+	$nameSpace = 'podcast';
 	$pageTitle = 'Podcast';
 	include('components/head.php');
 

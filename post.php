@@ -1,5 +1,3 @@
-<base href='/'>
-
 <?php
     // set local time / language to brasil
     setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
@@ -62,7 +60,7 @@
     curl_close($curl);
 
     $currentPage = 'blog-inner full-white-menu';
-    $nameSpace = 'internal blog-inner';
+    $nameSpace = 'blog-inner';
     $postTitle = $post['title'];
     $pageTitle = 'Leia Mais';
     include('components/head.php');

@@ -44,6 +44,7 @@
 		<body data-barba='wrapper'>
 
 			<header>
+				<base href='/'>
 				<?php include('components/opening.php');?>
 				<?php include('components/page-transition.php');?>
 				<?php include('components/floating-menu.php');?>

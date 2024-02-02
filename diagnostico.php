@@ -1,6 +1,6 @@
 <?php
 	$currentPage = 'diagnosis';
-	$nameSpace = 'internal diagnosis';
+	$nameSpace = 'diagnosis';
 	$pageTitle = 'Diagnóstico';
 	include('components/head.php');
 ?>

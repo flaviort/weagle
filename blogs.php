@@ -1,6 +1,6 @@
 <?php
 	$currentPage = 'blogs full-white-menu';
-	$nameSpace = 'internal blogs';
+	$nameSpace = 'blogs';
 	$pageTitle = 'Blogs';
 	include('components/head.php');
 

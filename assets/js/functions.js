@@ -1292,7 +1292,7 @@ function initBarba() {
 	barba.init({
 		sync: true,
 		timeout: 6000,
-		debug: true,
+		debug: false,
 		transitions: [
 			{
 				once(data) {
@@ -1369,18 +1369,9 @@ function initBarba() {
 					})
 				}
 			}, {
-				namespace: 'internal',
+				namespace: 'blog-inner',
 				afterEnter() {
-
-					// about us / contact pages functions
-					if ($('#main-content').hasClass('about-us') || $('#main-content').hasClass('contact')) {
-						
-					}
-
-					// services page functions
-					if ($('#main-content').hasClass('services')) {
-						
-					}
+					
 				}
 			}
 		]
