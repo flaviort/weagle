@@ -115,6 +115,7 @@
             img,
             iframe {
                 display: block;
+                padding-left: 0!important;
             }
 
             ul,
@@ -143,6 +144,12 @@
                     font-weight: $bold;
                     color: inherit;
                 }
+            }
+
+            iframe {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
             }
 
             h3,

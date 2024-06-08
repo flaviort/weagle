@@ -9,3 +9,7 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
 # Rewrite blog URL
 RewriteRule ^blog/(.*)$ post?slug=$1 [L,QSA]
+
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

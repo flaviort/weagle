@@ -12,19 +12,19 @@ const vw = (coef) => window.innerWidth * (coef/100)
 // locomotive scroll
 let scroll
 
+// prevent barba from double clicking buttons more than once
+// https://stackoverflow.com/a/36794629/4658966
+function isDoubleClicked(e) {
+	if (e.data('isclicked')) return true
+	e.data('isclicked', true)
+	setTimeout(function () {
+		e.removeData('isclicked')
+	}, 300)
+	return false
+}
+
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
-
-	// prevent barba from double clicking buttons more than once
-	// https://stackoverflow.com/a/36794629/4658966
-	function isDoubleClicked(e) {
-		if (e.data('isclicked')) return true
-		e.data('isclicked', true)
-		setTimeout(function () {
-			e.removeData('isclicked')
-		}, 300)
-		return false
-	}
 
 	// make anchor links scroll smoothy
 	$('.sliding-link').click(function(e) {
@@ -1108,7 +1108,8 @@ function pageTransitionIn() {
 	})
 
 	tl.set('body', {
-		overflow: 'hidden'
+		overflow: 'hidden',
+		pointerEvents: 'none'
 	})
 
 	tl.set('.page-transition', {
@@ -1262,6 +1263,7 @@ function pageTransitionOut() {
 
 	tl.to('body', {
 		overflow: 'auto',
+		pointerEvents: 'auto',
 		duration: 0
 	})
 

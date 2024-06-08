@@ -31,13 +31,12 @@
 			<meta property='og:image:height' content='630' />
 
 			<!-- css -->
-			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' />
-			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css' />
-			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css' />
-			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' />
-			
-			<link rel='stylesheet' href='assets/css/bootstrap-grid.css' type='text/css'>
-			<link rel='stylesheet' href='assets/css/main.css' type='text/css'>
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/normalize.min.css' />
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/fancybox.css' />
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/locomotive-scroll.min.css' />
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/swiper-bundle.min.css' />
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/bootstrap-grid.css' />
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/main.min.css' />
 			
 		</head>
 
