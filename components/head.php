@@ -35,7 +35,7 @@
 			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/fancybox.css' />
 			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/locomotive-scroll.min.css' />
 			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/swiper-bundle.min.css' />
-			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/bootstrap-grid.css' />
+			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/vendor/bootstrap-grid.min.css' />
 			<link rel='stylesheet' type='text/css' href='https://www.weagle.com.br/assets/css/main.min.css' />
 			
 		</head>
