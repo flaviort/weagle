@@ -79,6 +79,11 @@
         @media #{$mq-md-min} {
             padding-bottom: 1.75rem;
         }
+        
+        @media #{$mq-md-max} {
+            display: flex;
+            flex-direction: column-reverse;
+        }
 
         .container {
             text-align: center;
@@ -181,12 +186,77 @@
                             gap: .5rem;
                             width: fit-content;
 
+                            @media #{$mq-md-max} {
+                                margin: auto;
+                            }
+
                             svg {
                                 min-width: 1rem;
                                 width: 1rem;
                                 height: 1rem;
                                 vertical-align: middle;
                             }
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                width: 100%;
+                color: $white;
+                --bottom: .5rem;
+
+                @media #{$mq-md-min} {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    border-top: 1px solid $white;
+                    padding-top: 2rem;
+                    margin-top: 1rem;
+                }
+
+                @media #{$mq-lg-min} {
+                    gap: 3rem;
+                }
+
+                h3 {
+                    @media #{$mq-md-min} {
+                        line-height: 1;
+                    }
+                    br {
+                        @media #{$mq-md-max} {
+                            display: none;
+                        }
+                    }
+
+                    span {
+                        @media #{$mq-md-min} {
+                            font-size: 80%;
+                        }
+                    }
+                }
+
+                .bottom-wrapper {
+                    padding-bottom: 3rem;
+
+                    @media #{$mq-md-min} {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                        gap: 2rem;
+                        padding-bottom: 1rem;
+                    }
+
+                    @media #{$mq-lg-min} {
+                        gap: 3rem;
+                    }
+
+                    p {
+                        display: block;
+
+                        @media #{$mq-md-max} {
+                            margin-top: 1rem;
                         }
                     }
                 }

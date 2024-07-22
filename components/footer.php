@@ -114,7 +114,84 @@
                                 </ul>
 
                             </div>
+
                         </div>
+
+                        <div class='container'>
+                            <div class='bottom'>
+
+                                <h3 class='text-big'>
+                                    <span>
+                                        Consultoria <br />
+                                        Inovativa
+                                    </span>
+                                </h3>
+
+                                <div class='bottom-wrapper'>
+                                    
+                                    <ul>
+
+                                        <li>
+                                            <p>
+                                                <b>
+                                                    São Paulo
+                                                </b>
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <a href='#' class='hover-underline'>
+                                                Alameda Rio Negro, nº 1477 <br />
+                                                Alphaville - SP, 06454-040
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul>
+
+                                        <li>
+                                            <p>
+                                                <b>
+                                                    Curitiba
+                                                </b>
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <a href='#' class='hover-underline'>
+                                                Alameda Pres. Taunay, nº 130 <br />
+                                                Batel, Curitiba - PR, 80420-180
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                    <ul>
+
+                                        <li>
+                                            <p>
+                                                <b>
+                                                    Orlando
+                                                </b>
+                                            </p>
+                                        </li>
+
+                                        <li>
+                                            <a href='#' class='hover-underline'>
+                                                255 S Orange Av. Suite 104 #1279 <br />
+                                                Orlando, Florida 32801 US
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            
+                            </div>
+
+                        </div>
+
                     </div>
                 </section>
 
