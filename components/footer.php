@@ -64,12 +64,12 @@
                                         </a>
                                     </li>
 
-                                    <li>
+                                    <!--li>
                                         <a href='https://maps.app.goo.gl/NvDe7NpdLNwGBYY56' target='_blank' rel='noopener' class='hover-underline'>
                                             <?php echo file_get_contents('assets/svg/ux/pin.svg'); ?>
                                             <?php echo($address); ?>
                                         </a>
-                                    </li>
+                                    </li-->
 
                                 </ul>
 
