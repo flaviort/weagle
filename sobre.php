@@ -71,7 +71,7 @@
 	<div class='container'>
 
 		<p class='text-medium'>
-			Após termos atendido mais de 250 negócios e ajudado mais de 1.000 empresários, percebemos que toda empresa terá apenas 3 destinos: ela vai ser sucedida, vendida ou pode falir. Foi então que nos especializamos e focamos 100% de nossos esforços em implantação de boas práticas de governança nas empresas através de nosso método ágil.
+			Após termos atendido mais de 300 negócios e ajudado mais de 1.000 empresários, percebemos que toda empresa terá apenas 3 destinos: ela vai ser sucedida, vendida ou pode falir. Foi então que nos especializamos e focamos 100% de nossos esforços em implantação de boas práticas de governança nas empresas através de nosso método ágil.
 		</p>
 
 		<div class='line animated-line'></div>

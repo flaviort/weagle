@@ -37,7 +37,7 @@
                 <div class='rounded-blue-block'>
 
                     <p class='animated-number text-biggest bold'>
-                        +<span>250</span>
+                        +<span>300</span>
                     </p>
 
                     <p class='desc'>

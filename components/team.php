@@ -56,7 +56,7 @@
 
                                 <li>
                                     <p>
-                                        Atendeu mais de 250 empresas no Brasil, EUA e Portugal
+                                        Atendeu mais de 300 empresas no Brasil, EUA e Portugal
                                     </p>
                                 </li>
 

@@ -36,7 +36,7 @@
 
                 <li>
                     <a href='<?php echo($consultoria); ?>' target='_blank'>
-                        Consultoria
+                        Serviços
                     </a>
                 </li>
 
